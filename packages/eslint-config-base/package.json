@@ -1,0 +1,30 @@
+{
+	"name": "@abinnovision/eslint-config-base",
+	"packageManager": "yarn@3.4.1",
+	"version": "0.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"author": {
+		"name": "AB INNOVISION UG (limited liability)",
+		"email": "info@abinnovision.com",
+		"url": "https://abinnovision.com/"
+	},
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"eslint-config-alloy": "^4.9.0"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.21.1",
+		"@types/node": "^18.14.1",
+		"typescript": "^4.9.5"
+	},
+	"peerDependencies": {
+		"eslint": "^8.0.0",
+		"eslint-plugin-import": "^2.0.0"
+	}
+}

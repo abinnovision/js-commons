@@ -1,0 +1,59 @@
+{
+	"name": "@internal/eslint-config",
+	"packageManager": "yarn@3.4.1",
+	"scripts": {
+		"build": "yarn workspaces foreach --topological -p run build",
+		"clean": "rimraf packages/*/dist",
+		"fix": "concurrently 'yarn:eslint:fix' 'yarn:prettier:fix'",
+		"check": "concurrently 'yarn:eslint:check' 'yarn:prettier:check'",
+		"commitlint:check": "commitlint --config .commitlintrc.yaml --edit",
+		"eslint:check": "eslint --ignore-path .gitignore 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
+		"eslint:fix": "eslint --ignore-path .gitignore --fix 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
+		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
+		"prettier:fix": "prettier --ignore-path .gitignore --write 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
+		"postinstall": "husky install",
+		"prepack": "pinst --disable",
+		"postpack": "pinst --enable"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@abinnovision/eslint-config-base": "workspace:^",
+		"@abinnovision/eslint-config-typescript": "workspace:^",
+		"@babel/eslint-parser": "^7.19.1",
+		"@commitlint/cli": "^17.4.4",
+		"@commitlint/config-conventional": "^17.4.4",
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"@typescript-eslint/parser": "^5.53.0",
+		"concurrently": "^7.6.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-import": "^2.27.5",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.1.2",
+		"pinst": "^3.0.0",
+		"prettier": "^2.8.4",
+		"rimraf": "^4.1.2"
+	},
+	"eslintConfig": {
+		"extends": [
+			"@abinnovision/base",
+			"@abinnovision/typescript",
+			"prettier"
+		]
+	},
+	"lint-staged": {
+		"packages/*/src/**/*.{ts,tsx,js}": [
+			"prettier",
+			"eslint"
+		],
+		"packages/*/*.{ts,js}": [
+			"prettier",
+			"eslint"
+		],
+		"**/*.{json,json5,yaml,yml}": [
+			"prettier"
+		]
+	}
+}

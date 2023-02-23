@@ -1,0 +1,1 @@
+# @abinnovision/eslint-config-typescript

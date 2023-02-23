@@ -1,0 +1,64 @@
+# Contains different utility checks for Pull Requests.
+name: PR Utils
+
+# Only apply to PRs which target 'master' branch.
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  lint-commits:
+    name: Lint commits
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Run linter
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: .commitlintrc.yaml
+          helpUrl: https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
+  dependabot:
+    name: "Dependabot automations"
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    permissions:
+      pull-requests: write
+      issues: write
+      repository-projects: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - id: status
+        name: Resolve current status
+        run: |
+          echo "::set-output name=HAS_REVIEWS::$(if [[ $(gh pr status --json reviews | jq '.currentBranch.reviews | length') -eq '0' ]];then echo 'false'; else echo 'true'; fi)"
+          echo "::set-output name=LAST_REVIEW_DISMISSED::$(if [[ $(gh pr status --json reviews | jq '.currentBranch.reviews[-1].state' | sed 's/"//g') -eq 'DISMISSED' ]];then echo 'true'; else echo 'false'; fi)"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.3.6
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-rebase
+        id: enable-auto-rebase
+        run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: "Approve (minor & patch)"
+        id: approve
+        if: (steps.status.outputs.HAS_REVIEWS == 'false' || steps.status.outputs.LAST_REVIEW_DISMISSED == 'true') && steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

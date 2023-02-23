@@ -1,0 +1,33 @@
+{
+	"name": "@abinnovision/eslint-config-typescript",
+	"packageManager": "yarn@3.4.1",
+	"version": "0.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"author": {
+		"name": "AB INNOVISION UG (limited liability)",
+		"email": "info@abinnovision.com",
+		"url": "https://abinnovision.com/"
+	},
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"eslint-config-alloy": "^4.9.0"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.21.1",
+		"@types/node": "^18.14.1",
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"eslint": "^8.34.0",
+		"typescript": "^4.9.5"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"eslint": "^8.0.0"
+	}
+}

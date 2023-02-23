@@ -1,0 +1,25 @@
+name: PR Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check_build:
+    name: Check & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+          cache: yarn
+      - name: Install
+        run: yarn install --immutable
+      - name: Build
+        run: yarn run build
+      - name: Test
+        run: yarn run test
