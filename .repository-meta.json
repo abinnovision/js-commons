@@ -1,0 +1,6 @@
+{
+	"$schema": "http://meta.hk.abinnovision.com/schemas/repository-meta.json",
+	"apps": {
+		"releaser": true
+	}
+}
