@@ -1,5 +1,5 @@
 {
-	"name": "@abinnovisiono/eslint-config-react",
+	"name": "@abinnovision/eslint-config-react",
 	"packageManager": "yarn@3.4.1",
 	"version": "0.0.0",
 	"main": "dist/index.js",

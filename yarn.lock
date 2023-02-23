@@ -19,6 +19,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@abinnovision/eslint-config-react@workspace:packages/eslint-config-react":
+  version: 0.0.0-use.local
+  resolution: "@abinnovision/eslint-config-react@workspace:packages/eslint-config-react"
+  dependencies:
+    "@types/eslint": ^8.21.1
+    "@types/node": ^18.14.1
+    eslint: ^8.34.0
+    eslint-config-alloy: ^4.9.0
+    typescript: ^4.9.5
+  peerDependencies:
+    eslint: ^8.0.0
+    eslint-plugin-react: ^7.0.0
+  languageName: unknown
+  linkType: soft
+
 "@abinnovision/eslint-config-typescript@workspace:^, @abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript":
   version: 0.0.0-use.local
   resolution: "@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript"
@@ -33,21 +48,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.0.0
     "@typescript-eslint/parser": ^5.0.0
     eslint: ^8.0.0
-  languageName: unknown
-  linkType: soft
-
-"@abinnovisiono/eslint-config-react@workspace:packages/eslint-config-react":
-  version: 0.0.0-use.local
-  resolution: "@abinnovisiono/eslint-config-react@workspace:packages/eslint-config-react"
-  dependencies:
-    "@types/eslint": ^8.21.1
-    "@types/node": ^18.14.1
-    eslint: ^8.34.0
-    eslint-config-alloy: ^4.9.0
-    typescript: ^4.9.5
-  peerDependencies:
-    eslint: ^8.0.0
-    eslint-plugin-react: ^7.0.0
   languageName: unknown
   linkType: soft
 
