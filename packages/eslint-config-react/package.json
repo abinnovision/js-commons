@@ -9,6 +9,9 @@
 		"email": "info@abinnovision.com",
 		"url": "https://abinnovision.com/"
 	},
+	"repository": {
+		"url": "https://github.com/abinnovision/eslint-config"
+	},
 	"files": [
 		"dist/"
 	],
