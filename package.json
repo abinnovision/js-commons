@@ -11,7 +11,7 @@
 		"eslint:fix": "eslint --ignore-path .gitignore --fix 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
 		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
 		"prettier:fix": "prettier --ignore-path .gitignore --write 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
-		"postinstall": "husky install && sync-editorconfig",
+		"postinstall": "husky install",
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable"
 	},
