@@ -51,6 +51,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@abinnovision/prettier-config@workspace:^, @abinnovision/prettier-config@workspace:packages/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@abinnovision/prettier-config@workspace:packages/prettier-config"
+  dependencies:
+    "@types/node": ^18.14.1
+    "@types/prettier": ^2.7.2
+    typescript: ^4.9.5
+  bin:
+    sync-editorconfig: ./dist/sync-editorconfig.js
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0":
   version: 7.18.6
   resolution: "@babel/code-frame@npm:7.18.6"
@@ -346,6 +358,7 @@ __metadata:
   dependencies:
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/eslint-config-typescript": "workspace:^"
+    "@abinnovision/prettier-config": "workspace:^"
     "@babel/eslint-parser": ^7.19.1
     "@commitlint/cli": ^17.4.4
     "@commitlint/config-conventional": ^17.4.4
@@ -500,6 +513,13 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: e87bccbf11f95035c89a132b52b79ce69a1e3652fe55962363063c9c0dae0fe2477ebc585e03a9652adc6f381d24ba5589cc5e51849df4ced3d3e004a7d40ed5
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:^2.7.2":
+  version: 2.7.2
+  resolution: "@types/prettier@npm:2.7.2"
+  checksum: b47d76a5252265f8d25dd2fe2a5a61dc43ba0e6a96ffdd00c594cb4fd74c1982c2e346497e3472805d97915407a09423804cc2110a0b8e1b22cffcab246479b7
   languageName: node
   linkType: hard
 

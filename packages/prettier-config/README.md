@@ -1,0 +1,1 @@
+# @abinnovision/prettier-config

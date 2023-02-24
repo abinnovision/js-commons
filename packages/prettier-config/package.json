@@ -1,0 +1,30 @@
+{
+	"name": "@abinnovision/prettier-config",
+	"packageManager": "yarn@3.4.1",
+	"version": "0.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"author": {
+		"name": "AB INNOVISION UG (limited liability)",
+		"email": "info@abinnovision.com",
+		"url": "https://abinnovision.com/"
+	},
+	"repository": {
+		"url": "https://github.com/abinnovision/eslint-config"
+	},
+	"files": [
+		"dist/",
+		"assets/"
+	],
+	"bin": {
+		"sync-editorconfig": "./dist/sync-editorconfig.js"
+	},
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.1",
+		"@types/prettier": "^2.7.2",
+		"typescript": "^4.9.5"
+	}
+}
