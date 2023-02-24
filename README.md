@@ -78,7 +78,8 @@ Example configuration in the `package.json`:
 ```shell
 yarn add --dev \
 	@abinnovision/eslint-config-base \
-	eslint eslint-plugin-import
+	eslint eslint-plugin-import \
+	eslint-config-prettier
 ```
 
 ### Typescript
@@ -110,7 +111,8 @@ Example configuration in the `package.json`:
 yarn add --dev \
 	@abinnovision/eslint-config-base @abinnovision/eslint-config-typescript \
 	eslint eslint-plugin-import \
-	@typescript-eslint/eslint-plugin @typescript-eslint/parser
+	@typescript-eslint/eslint-plugin @typescript-eslint/parser \
+	eslint-config-prettier
 ```
 
 ### Typescript React
@@ -145,7 +147,8 @@ yarn add --dev \
 	@abinnovision/eslint-config-base @abinnovision/eslint-config-typescript @abinnovision/eslint-config-react \
 	eslint eslint-plugin-import \
 	@typescript-eslint/eslint-plugin @typescript-eslint/parser \
-	eslint-plugin-react
+	eslint-plugin-react \
+	eslint-config-prettier
 ```
 
 ## Prettier
