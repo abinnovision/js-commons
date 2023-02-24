@@ -340,9 +340,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@internal/eslint-config@workspace:.":
+"@internal/js-commons@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@internal/eslint-config@workspace:."
+  resolution: "@internal/js-commons@workspace:."
   dependencies:
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/eslint-config-typescript": "workspace:^"

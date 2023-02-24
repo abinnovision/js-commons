@@ -1,5 +1,5 @@
 {
-	"name": "@internal/eslint-config",
+	"name": "@internal/js-commons",
 	"packageManager": "yarn@3.4.1",
 	"scripts": {
 		"build": "yarn workspaces foreach --topological -p run build",

@@ -1,2 +1,2 @@
-# abinnovision/eslint-config
+# abinnovision/js-commons
 
