@@ -18,6 +18,11 @@ Currently, the following packages exist:
 * [prettier-config](./packages/prettier-config): Shared Prettier config for all
 	projects.
 
+All packages are published under the `@abinnovision`-scope to the GitHub
+Packages Registry. _See here for a guide on how to set up the Private Registry on
+your local machine:
+[abinnovision/commons#private-npm-registry](https://github.com/abinnovision/commons/blob/master/topics/private-npm-registry.md)_
+
 ## ESLint
 
 ESLint is a popular open-source static code analysis tool for JavaScript. It is
@@ -68,6 +73,14 @@ Example configuration in the `package.json`:
 }
 ```
 
+#### Installation
+
+```shell
+yarn add --dev \
+	@abinnovision/eslint-config-base \
+	eslint eslint-plugin-import
+```
+
 ### Typescript
 
 For Typescript only projects, the following configs will be used:
@@ -89,6 +102,15 @@ Example configuration in the `package.json`:
 	},
 	// ...
 }
+```
+
+#### Installation
+
+```shell
+yarn add --dev \
+	@abinnovision/eslint-config-base @abinnovision/eslint-config-typescript \
+	eslint eslint-plugin-import \
+	@typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 ### Typescript React
@@ -114,6 +136,16 @@ Example configuration in the `package.json`:
 	},
 	// ...
 }
+```
+
+#### Installation
+
+```shell
+yarn add --dev \
+	@abinnovision/eslint-config-base @abinnovision/eslint-config-typescript @abinnovision/eslint-config-react \
+	eslint eslint-plugin-import \
+	@typescript-eslint/eslint-plugin @typescript-eslint/parser \
+	eslint-plugin-react
 ```
 
 ## Prettier
@@ -164,4 +196,10 @@ with the one defined in this project.
 	},
 	// ...
 }
+```
+
+#### Installation
+
+```shell
+yarn add --dev @abinnovision/prettier-config 
 ```
