@@ -135,3 +135,33 @@ EditorConfig.
 The following package use used for the Prettier config:
 
 * [@abinnovision/prettier-config](./packages/prettier-config)
+
+Example configuration in the `package.json`:
+
+```json5
+{
+	// ...
+	"prettier": "@abinnovision/prettier-config"
+	// ...
+}
+```
+
+To synchronize the `.editorconfig` file from this package use the following:
+
+```shell
+yarn sync-editorconfig
+```
+
+Optionally, you can put it into your `postinstall` hook to always keep in sync
+with the one defined in this project.
+
+```json5
+{
+	// ...
+	"scripts": {
+		// ...
+		"postinstall": "sync-editorconfig"
+	},
+	// ...
+}
+```
