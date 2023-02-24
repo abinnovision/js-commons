@@ -9,8 +9,8 @@
 		"commitlint:check": "commitlint --config .commitlintrc.yaml --edit",
 		"eslint:check": "eslint --ignore-path .gitignore 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
 		"eslint:fix": "eslint --ignore-path .gitignore --fix 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
-		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
-		"prettier:fix": "prettier --ignore-path .gitignore --write 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{json,json5,yaml,yml}'",
+		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"prettier:fix": "prettier --ignore-path .gitignore --write 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"postinstall": "husky install",
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable"
@@ -54,7 +54,7 @@
 			"prettier",
 			"eslint"
 		],
-		"**/*.{json,json5,yaml,yml}": [
+		"**/*.{md,json,json5,yaml,yml}": [
 			"prettier"
 		]
 	}
