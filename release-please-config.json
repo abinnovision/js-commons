@@ -3,6 +3,7 @@
 	"changelog-path": "CHANGELOG.md",
 	"release-type": "node",
 	"packages": {
+		"packages/commitlint-config": {},
 		"packages/eslint-config-base": {},
 		"packages/eslint-config-react": {},
 		"packages/eslint-config-typescript": {},
