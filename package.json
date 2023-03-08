@@ -6,7 +6,7 @@
 		"clean": "rimraf packages/*/dist",
 		"fix": "concurrently 'yarn:eslint:fix' 'yarn:prettier:fix'",
 		"check": "concurrently 'yarn:eslint:check' 'yarn:prettier:check'",
-		"commitlint:check": "commitlint --config .commitlintrc.yaml --edit",
+		"commitlint:check": "commitlint --edit",
 		"eslint:check": "eslint --ignore-path .gitignore 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
 		"eslint:fix": "eslint --ignore-path .gitignore --fix 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
 		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
@@ -22,6 +22,7 @@
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/eslint-config-typescript": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
+		"@abinnovision/commitlint-config": "workspace:^",
 		"@babel/eslint-parser": "^7.19.1",
 		"@commitlint/cli": "^17.4.4",
 		"@commitlint/config-conventional": "^17.4.4",
@@ -36,6 +37,11 @@
 		"pinst": "^3.0.0",
 		"prettier": "^2.8.4",
 		"rimraf": "^4.1.2"
+	},
+	"commitlint": {
+		"extends": [
+			"@abinnovision/commitlint-config"
+		]
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"eslintConfig": {
