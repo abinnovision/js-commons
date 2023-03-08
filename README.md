@@ -17,9 +17,12 @@ Currently, the following packages exist:
 	related projects.
 * [prettier-config](./packages/prettier-config): Shared Prettier config for all
 	projects.
+* [commitlint-config](./packages/commitlint-config): Shared Commitlint config or
+	all projects.
 
 All packages are published under the `@abinnovision`-scope to the GitHub
-Packages Registry. _See here for a guide on how to set up the Private Registry on
+Packages Registry. _See here for a guide on how to set up the Private Registry
+on
 your local machine:
 [abinnovision/commons#private-npm-registry](https://github.com/abinnovision/commons/blob/master/topics/private-npm-registry.md)_
 
@@ -201,8 +204,45 @@ with the one defined in this project.
 }
 ```
 
-#### Installation
+### Installation
 
 ```shell
 yarn add --dev @abinnovision/prettier-config 
+```
+
+## Commitlint
+
+Commitlint is a popular open-source tool used to enforce consistent commit
+message formatting in Git repositories. It can be used to ensure that commit
+messages follow a specific format, contain all the required information, and
+provide a clear and concise summary of the changes made.
+
+Using Commitlint in your project can help to improve the quality of your commit
+messages, making it easier to track changes and understand what has been done in
+each commit. It can also help to enforce specific commit message guidelines or
+standards, such as those used in semantic versioning or Conventional Commits.
+
+For the [AB innovision](https://github.com/abinnovision) organization we use a
+custom shared Commitlint config.
+
+The following package use used for the Commitlint config:
+
+* [@abinnovision/commitlint-config](./packages/commitlint-config)
+
+Example configuration in the `package.json`:
+
+```json5
+{
+	// ...
+	"commitlint": {
+		"extends": ["@abinnovision/commitlint-config"]
+	}
+	// ...
+}
+```
+
+### Installation
+
+```shell
+yarn add --dev @abinnovision/commitlint-config 
 ```
