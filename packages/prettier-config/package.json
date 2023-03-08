@@ -10,7 +10,7 @@
 		"url": "https://abinnovision.com/"
 	},
 	"repository": {
-		"url": "https://github.com/abinnovision/eslint-config"
+		"url": "https://github.com/abinnovision/js-commons"
 	},
 	"files": [
 		"dist/",
