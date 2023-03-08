@@ -5,6 +5,17 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@abinnovision/commitlint-config@workspace:packages/commitlint-config":
+  version: 0.0.0-use.local
+  resolution: "@abinnovision/commitlint-config@workspace:packages/commitlint-config"
+  dependencies:
+    "@commitlint/config-conventional": ^17.4.4
+    "@commitlint/types": ^17.4.4
+    "@types/node": ^18.14.1
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
 "@abinnovision/eslint-config-base@workspace:^, @abinnovision/eslint-config-base@workspace:packages/eslint-config-base":
   version: 0.0.0-use.local
   resolution: "@abinnovision/eslint-config-base@workspace:packages/eslint-config-base"
