@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@abinnovision/commitlint-config@workspace:packages/commitlint-config":
+"@abinnovision/commitlint-config@workspace:^, @abinnovision/commitlint-config@workspace:packages/commitlint-config":
   version: 0.0.0-use.local
   resolution: "@abinnovision/commitlint-config@workspace:packages/commitlint-config"
   dependencies:
@@ -367,6 +367,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/js-commons@workspace:."
   dependencies:
+    "@abinnovision/commitlint-config": "workspace:^"
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/eslint-config-typescript": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"

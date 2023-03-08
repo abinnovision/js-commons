@@ -19,10 +19,10 @@
 		"packages/*"
 	],
 	"devDependencies": {
+		"@abinnovision/commitlint-config": "workspace:^",
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/eslint-config-typescript": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
-		"@abinnovision/commitlint-config": "workspace:^",
 		"@babel/eslint-parser": "^7.19.1",
 		"@commitlint/cli": "^17.4.4",
 		"@commitlint/config-conventional": "^17.4.4",
