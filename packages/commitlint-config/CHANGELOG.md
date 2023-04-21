@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.2...commitlint-config-v1.0.3) (2023-04-21)
+
+
+### Bug Fixes
+
+* add correct license to all packages ([af7343d](https://github.com/abinnovision/js-commons/commit/af7343dbdb93329a0321a369f81e9b37da9068fa))
+
 ## [1.0.2](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.1...commitlint-config-v1.0.2) (2023-04-21)
 
 
