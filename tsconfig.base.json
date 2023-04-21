@@ -8,6 +8,7 @@
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
-		"removeComments": true
+		"removeComments": true,
+		"declaration": true
 	}
 }
