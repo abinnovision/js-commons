@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.1...commitlint-config-v1.0.2) (2023-04-21)
+
+
+### Bug Fixes
+
+* add conventional-changelog-conventionalcommits dependency ([fafd176](https://github.com/abinnovision/js-commons/commit/fafd1767992b916d2cd0deb99a333f7e5b7d7e43))
+
 ## [1.0.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.0...commitlint-config-v1.0.1) (2023-03-08)
 
 
