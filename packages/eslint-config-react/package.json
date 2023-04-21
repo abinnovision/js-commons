@@ -1,7 +1,7 @@
 {
 	"name": "@abinnovision/eslint-config-react",
 	"packageManager": "yarn@3.4.1",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"license": "Apache-2.0",
