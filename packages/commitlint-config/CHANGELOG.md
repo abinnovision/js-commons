@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.3...commitlint-config-v1.0.4) (2023-04-21)
+
+
+### Bug Fixes
+
+* emit declarations ([616f817](https://github.com/abinnovision/js-commons/commit/616f817ca7701e160325e1e81d633df345244cc3))
+
 ## [1.0.3](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.2...commitlint-config-v1.0.3) (2023-04-21)
 
 
