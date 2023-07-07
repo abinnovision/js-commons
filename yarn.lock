@@ -23,7 +23,7 @@ __metadata:
   dependencies:
     "@types/eslint": ^8.21.1
     "@types/node": ^18.14.1
-    eslint-config-alloy: ^4.9.0
+    eslint-config-alloy: ^5.0.0
     typescript: ^5.0.2
   peerDependencies:
     eslint: ^8.0.0
@@ -38,7 +38,7 @@ __metadata:
     "@types/eslint": ^8.21.1
     "@types/node": ^18.14.1
     eslint: ^8.34.0
-    eslint-config-alloy: ^4.9.0
+    eslint-config-alloy: ^5.0.0
     typescript: ^5.0.2
   peerDependencies:
     eslint: ^8.0.0
@@ -54,7 +54,7 @@ __metadata:
     "@types/node": ^18.14.1
     "@typescript-eslint/eslint-plugin": ^5.53.0
     eslint: ^8.34.0
-    eslint-config-alloy: ^4.9.0
+    eslint-config-alloy: ^5.0.0
     typescript: ^5.0.2
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^5.0.0
@@ -1395,18 +1395,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-alloy@npm:^4.9.0":
-  version: 4.9.0
-  resolution: "eslint-config-alloy@npm:4.9.0"
+"eslint-config-alloy@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "eslint-config-alloy@npm:5.0.0"
   peerDependencies:
     "@babel/eslint-parser": 7.x
     "@babel/preset-react": 7.x
-    "@typescript-eslint/eslint-plugin": ">=5.38.1"
+    "@typescript-eslint/eslint-plugin": ">=5.55.0"
     "@typescript-eslint/parser": 5.x
     eslint: ">=8.24.0"
     eslint-plugin-react: ">=7.31.8"
     eslint-plugin-vue: ">=9.5.1"
-    typescript: 4.x
+    typescript: 5.x
     vue-eslint-parser: 9.x
   peerDependenciesMeta:
     "@babel/eslint-parser":
@@ -1425,7 +1425,7 @@ __metadata:
       optional: true
     vue-eslint-parser:
       optional: true
-  checksum: 32b65d9d65c4a94332aaeeede591b0958863ed7771983e08eea2801c110e66931c79ae69f8fee45eb391f6bdf24c12f6979c53ec9d8f9634a26ae5d5d871121e
+  checksum: 0bdc7522744a87a81e575c77648d1bf389832eeb5debd0f97e09d63033c5da7741a03e635a03154bfdd00b4234c078b0031ec5be6751dfeb788d2f46a318fa28
   languageName: node
   linkType: hard
 
@@ -3052,11 +3052,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:^2.8.4":
-  version: 2.8.4
-  resolution: "prettier@npm:2.8.4"
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
   bin:
     prettier: bin-prettier.js
-  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  checksum: b49e409431bf129dd89238d64299ba80717b57ff5a6d1c1a8b1a28b590d998a34e083fa13573bc732bb8d2305becb4c9a4407f8486c81fa7d55100eb08263cf8
   languageName: node
   linkType: hard
 

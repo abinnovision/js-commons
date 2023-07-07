@@ -20,7 +20,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"eslint-config-alloy": "^4.9.0"
+		"eslint-config-alloy": "^5.0.0"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.21.1",
