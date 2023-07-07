@@ -11,7 +11,6 @@ __metadata:
   dependencies:
     "@commitlint/config-conventional": ^17.4.4
     "@commitlint/types": ^17.4.4
-    "@types/node": ^18.14.1
     conventional-changelog-conventionalcommits: ^5.0.0
     typescript: ^5.1.0
   languageName: unknown
@@ -22,7 +21,6 @@ __metadata:
   resolution: "@abinnovision/eslint-config-base@workspace:packages/eslint-config-base"
   dependencies:
     "@types/eslint": ^8.21.1
-    "@types/node": ^18.14.1
     eslint-config-alloy: ^5.0.0
     typescript: ^5.1.0
   peerDependencies:
@@ -36,7 +34,6 @@ __metadata:
   resolution: "@abinnovision/eslint-config-react@workspace:packages/eslint-config-react"
   dependencies:
     "@types/eslint": ^8.21.1
-    "@types/node": ^18.14.1
     eslint: ^8.34.0
     eslint-config-alloy: ^5.0.0
     typescript: ^5.1.0
@@ -51,7 +48,6 @@ __metadata:
   resolution: "@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript"
   dependencies:
     "@types/eslint": ^8.21.1
-    "@types/node": ^18.14.1
     "@typescript-eslint/eslint-plugin": ^5.53.0
     eslint: ^8.34.0
     eslint-config-alloy: ^5.0.0
