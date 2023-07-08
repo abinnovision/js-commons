@@ -24,7 +24,6 @@
 		"typescript": "^5.1.0"
 	},
 	"dependencies": {
-		"@commitlint/config-conventional": "^17.4.4",
-		"conventional-changelog-conventionalcommits": "^5.0.0"
+		"@commitlint/config-conventional": "^17.4.4"
 	}
 }
