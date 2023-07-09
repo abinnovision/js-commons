@@ -28,8 +28,11 @@ jobs:
               echo "COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
           fi
 
-  check:
-    name: Check
+  # Build and checks are unified into one job. This is because the build
+  # needs to be done before the checks, as the checks will use the built
+  # packages.
+  check_build:
+    name: Check & Build
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     needs:
@@ -56,33 +59,13 @@ jobs:
         run: |
           yarn dedupe
           git diff --exit-code --quiet yarn.lock || (echo "yarn.lock is not up to date, run 'yarn dedupe'" && exit 1)
-  build:
-    name: Build
-    runs-on: ubuntu-22.04
-    timeout-minutes: 5
-    needs:
-      - configure
-      - check
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ needs.configure.outputs.commit-sha }}
-      - name: Setup Node
-        uses: abinnovision/actions/actions/setup-node@master
-      - name: Setup Turborepo cache
-        uses: dtinth/setup-github-actions-caching-for-turbo@v1
-      - name: Install dependencies
-        run: yarn install --immutable
-      - name: Build
-        run: yarn run build
 
   # Will check if the release is needed and create a release PR if so.
   release:
     name: Release
     needs:
       - configure
-      - build
+      - check_build
     uses: abinnovision/workflows/.github/workflows/release-please.yaml@master
     secrets: inherit
     # Only run on push to "master" branch.
