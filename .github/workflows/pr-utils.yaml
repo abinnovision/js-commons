@@ -70,8 +70,12 @@ jobs:
           persist-credentials: false
       - name: Setup Node
         uses: abinnovision/actions/actions/setup-node@master
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Install dependencies
+        run: yarn build
       - name: Fix format
         run: yarn run prettier:fix
       # Update the PR with the changes if needed.
