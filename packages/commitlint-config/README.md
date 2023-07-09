@@ -15,4 +15,3 @@ yarn add --dev \
 	# Commitlint itself.
 	@commitlint/cli
 ```
-	

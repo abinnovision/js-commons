@@ -29,9 +29,9 @@ with the one defined in this project.
 ```json5
 {
 	// ...
-	"scripts": {
+	scripts: {
 		// ...
-		"postinstall": "sync-editorconfig"
+		postinstall: "sync-editorconfig",
 	},
 	// ...
 }
