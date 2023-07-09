@@ -1,0 +1,121 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request_target:
+    branches:
+      - master
+
+jobs:
+  # Configure the commit SHA to use.
+  configure:
+    name: Configure
+    runs-on: ubuntu-22.04
+    timeout-minutes: 2
+    outputs:
+      commit-sha: ${{ env.COMMIT_SHA }}
+    steps:
+      - name: Evaluate commit
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request_target" ]]; then
+              echo "PR is #${{ github.event.number }}..."
+              echo "PR Head SHA is ${{ github.event.pull_request.head.sha }}..."
+              echo "COMMIT_SHA=${{ github.event.pull_request.head.sha }}" >> $GITHUB_ENV
+          else
+              echo "Head SHA is ${{ github.sha }}..."
+              echo "COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
+          fi
+
+  check:
+    name: Check
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    needs:
+      - configure
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.configure.outputs.commit-sha }}
+      - name: Setup Node
+        uses: abinnovision/actions/actions/setup-node@master
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Check (lint & format)
+        run: yarn run check
+      - name: Check Dependencies
+        run: |
+          yarn dedupe
+          git diff --exit-code --quiet yarn.lock || (echo "yarn.lock is not up to date, run 'yarn dedupe'" && exit 1)
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    needs:
+      - configure
+      - check
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.configure.outputs.commit-sha }}
+      - name: Setup Node
+        uses: abinnovision/actions/actions/setup-node@master
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Build
+        run: yarn run build
+
+  # Will check if the release is needed and create a release PR if so.
+  release:
+    name: Release
+    needs:
+      - configure
+      - build
+    uses: abinnovision/workflows/.github/workflows/release-please.yaml@master
+    secrets: inherit
+    # Only run on push to "master" branch.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+
+  # If needed, will publish the release to GitHub Packages and NPM.
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    needs:
+      - configure
+      - release
+    if: needs.release.outputs.releases_created
+    permissions:
+      contents: "write"
+      id-token: "write"
+      packages: "write"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.configure.outputs.commit-sha }}
+      - name: Setup Node
+        uses: abinnovision/actions/actions/setup-node@master
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Build
+        run: yarn run build
+      - name: Publish
+        run: |
+          echo '${{ needs.release.outputs.paths_released }}' | jq -cr '.[]' | while read path; do
+            # Publish to GitHub Packages
+            yarn config set -H --json npmScopes '{"abinnovision": {"npmPublishRegistry": "https://npm.pkg.github.com", "npmRegistryServer": "https://npm.pkg.github.com", "npmAuthToken": "${{ secrets.GITHUB_TOKEN }}"}}'
+            yarn --cwd "$path" npm publish
+
+            # Publish to NPM
+            yarn config set -H --json npmScopes '{"abinnovision": {"npmPublishRegistry": "https://registry.npmjs.org", "npmRegistryServer": "https://registry.npmjs.org", "npmAuthToken": "${{ secrets.NPM_AUTH_TOKEN }}"}}'
+            yarn --cwd "$path" npm publish --access public
+          done
