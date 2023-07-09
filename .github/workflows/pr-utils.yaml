@@ -66,8 +66,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
       - name: Setup Node
         uses: abinnovision/actions/actions/setup-node@master
       - name: Setup Turborepo cache
@@ -78,7 +76,15 @@ jobs:
         run: yarn build
       - name: Fix format
         run: yarn run prettier:fix
-      # Update the PR with the changes if needed.
-      - uses: gr2m/create-or-update-pull-request-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          if ! [[ `git status --porcelain` ]]; then
+            exit 0;
+          fi
+
+          git add .
+          git commit -m "style: fix formatting"
+          git push
