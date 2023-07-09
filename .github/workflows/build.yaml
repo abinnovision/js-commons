@@ -45,6 +45,11 @@ jobs:
         uses: dtinth/setup-github-actions-caching-for-turbo@v1
       - name: Install dependencies
         run: yarn install --immutable
+      # This is a special case for just this repository.
+      # As it will use packages from the workspace to lint and format,
+      # we need to build them first.
+      - name: Build
+        run: yarn run build
       - name: Check (lint & format)
         run: yarn run check
       - name: Check Dependencies
