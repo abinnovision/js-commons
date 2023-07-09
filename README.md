@@ -9,16 +9,16 @@ the [packages](./packages) directory.
 
 Currently, the following packages exist:
 
-* [eslint-config-base](./packages/eslint-config-base): ESLint config which acts
-	as base for all others, can be used standalone for Javascript only.
-* [eslint-config-typescript](./packages/eslint-config-typescript): ESLint config
-	for Typescript related projects.
-* [eslint-config-react](./packages/eslint-config-react): ESLint config for React
-	related projects.
-* [prettier-config](./packages/prettier-config): Shared Prettier config for all
-	projects.
-* [commitlint-config](./packages/commitlint-config): Shared Commitlint config or
-	all projects.
+- [eslint-config-base](./packages/eslint-config-base): ESLint config which acts
+  as base for all others, can be used standalone for Javascript only.
+- [eslint-config-typescript](./packages/eslint-config-typescript): ESLint config
+  for Typescript related projects.
+- [eslint-config-react](./packages/eslint-config-react): ESLint config for React
+  related projects.
+- [prettier-config](./packages/prettier-config): Shared Prettier config for all
+  projects.
+- [commitlint-config](./packages/commitlint-config): Shared Commitlint config or
+  all projects.
 
 All packages are published under the `@abinnovision`-scope to the GitHub
 Packages Registry. _See here for a guide on how to set up the Private Registry
@@ -55,7 +55,7 @@ comes to rescue for this case.
 
 For plain Javascript projects, the following config will be used:
 
-* [@abinnovision/eslint-config-base](./packages/eslint-config-base)
+- [@abinnovision/eslint-config-base](./packages/eslint-config-base)
 
 _(This section just exists for the sake of completeness. We should never use
 plain
@@ -66,11 +66,8 @@ Example configuration in the `package.json`:
 ```json5
 {
 	// ...
-	"eslintConfig": {
-		"extends": [
-			"@abinnovision/base",
-			"prettier"
-		]
+	eslintConfig: {
+		extends: ["@abinnovision/base", "prettier"],
 	},
 	// ...
 }
@@ -89,20 +86,16 @@ yarn add --dev \
 
 For Typescript only projects, the following configs will be used:
 
-* [@abinnovision/eslint-config-base](./packages/eslint-config-base)
-* [@abinnovision/eslint-config-typescript](./packages/eslint-config-typescript)
+- [@abinnovision/eslint-config-base](./packages/eslint-config-base)
+- [@abinnovision/eslint-config-typescript](./packages/eslint-config-typescript)
 
 Example configuration in the `package.json`:
 
 ```json5
 {
 	// ...
-	"eslintConfig": {
-		"extends": [
-			"@abinnovision/base",
-			"@abinnovision/typescript",
-			"prettier"
-		]
+	eslintConfig: {
+		extends: ["@abinnovision/base", "@abinnovision/typescript", "prettier"],
 	},
 	// ...
 }
@@ -122,22 +115,22 @@ yarn add --dev \
 
 For Typescript & React projects, the following configs will be used:
 
-* [@abinnovision/eslint-config-base](./packages/eslint-config-base)
-* [@abinnovision/eslint-config-typescript](./packages/eslint-config-typescript)
-* [@abinnovision/eslint-config-react](./packages/eslint-config-react)
+- [@abinnovision/eslint-config-base](./packages/eslint-config-base)
+- [@abinnovision/eslint-config-typescript](./packages/eslint-config-typescript)
+- [@abinnovision/eslint-config-react](./packages/eslint-config-react)
 
 Example configuration in the `package.json`:
 
 ```json5
 {
 	// ...
-	"eslintConfig": {
-		"extends": [
+	eslintConfig: {
+		extends: [
 			"@abinnovision/base",
 			"@abinnovision/typescript",
 			"@abinnovision/react",
-			"prettier"
-		]
+			"prettier",
+		],
 	},
 	// ...
 }
@@ -172,14 +165,14 @@ EditorConfig.
 
 The following package use used for the Prettier config:
 
-* [@abinnovision/prettier-config](./packages/prettier-config)
+- [@abinnovision/prettier-config](./packages/prettier-config)
 
 Example configuration in the `package.json`:
 
 ```json5
 {
 	// ...
-	"prettier": "@abinnovision/prettier-config"
+	prettier: "@abinnovision/prettier-config",
 	// ...
 }
 ```
@@ -196,9 +189,9 @@ with the one defined in this project.
 ```json5
 {
 	// ...
-	"scripts": {
+	scripts: {
 		// ...
-		"postinstall": "sync-editorconfig"
+		postinstall: "sync-editorconfig",
 	},
 	// ...
 }
@@ -207,7 +200,7 @@ with the one defined in this project.
 ### Installation
 
 ```shell
-yarn add --dev @abinnovision/prettier-config 
+yarn add --dev @abinnovision/prettier-config
 ```
 
 ## Commitlint
@@ -227,16 +220,16 @@ custom shared Commitlint config.
 
 The following package use used for the Commitlint config:
 
-* [@abinnovision/commitlint-config](./packages/commitlint-config)
+- [@abinnovision/commitlint-config](./packages/commitlint-config)
 
 Example configuration in the `package.json`:
 
 ```json5
 {
 	// ...
-	"commitlint": {
-		"extends": ["@abinnovision/commitlint-config"]
-	}
+	commitlint: {
+		extends: ["@abinnovision/commitlint-config"],
+	},
 	// ...
 }
 ```
@@ -244,5 +237,5 @@ Example configuration in the `package.json`:
 ### Installation
 
 ```shell
-yarn add --dev @abinnovision/commitlint-config 
+yarn add --dev @abinnovision/commitlint-config
 ```

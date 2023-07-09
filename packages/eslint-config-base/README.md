@@ -19,6 +19,5 @@ yarn add --dev \
 
 This config requires the following dependencies (defined as peer dependencies):
 
-* [eslint](https://www.npmjs.com/package/eslint)
-* [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
-	
+- [eslint](https://www.npmjs.com/package/eslint)
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
