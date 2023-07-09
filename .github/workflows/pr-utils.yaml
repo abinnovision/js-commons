@@ -55,3 +55,26 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  # Will fix the formatting of a release PR if needed.
+  # Release-please generate / override a few files
+  # which do not match the formatting of the repo
+  fix-format:
+    name: "Fix format for release PR"
+    runs-on: ubuntu-latest
+    # Only run if the PR has the 'autorelease: pending' label.
+    if: "github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: abinnovision/actions/actions/setup-node@master
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Fix format
+        run: yarn run prettier:fix
+      # Update the PR with the changes if needed.
+      - uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
