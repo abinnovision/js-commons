@@ -39,7 +39,7 @@ jobs:
       - configure
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ needs.configure.outputs.commit-sha }}
       - name: Setup Node
@@ -85,7 +85,7 @@ jobs:
       packages: "write"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ needs.configure.outputs.commit-sha }}
       - name: Setup Node
