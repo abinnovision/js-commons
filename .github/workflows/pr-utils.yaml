@@ -99,7 +99,7 @@ jobs:
           if ! [[ `git status --porcelain` ]]; then
             exit 0;
           fi
-          
+
           git config user.name "abi-releaser[bot]"
           git config user.email "125614851+abi-releaser[bot]@users.noreply.github.com"
           git commit -a -m "style: fix codestyle"
