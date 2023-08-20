@@ -1,0 +1,66 @@
+{
+	"name": "@internal/js-commons",
+	"packageManager": "yarn@3.6.1",
+	"scripts": {
+		"build": "turbo build",
+		"clean": "rimraf packages/*/dist",
+		"fix": "concurrently 'yarn:eslint:fix' 'yarn:prettier:fix'",
+		"check": "concurrently 'yarn:eslint:check' 'yarn:prettier:check'",
+		"eslint:check": "eslint --ignore-path .gitignore 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
+		"eslint:fix": "eslint --ignore-path .gitignore --fix 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}'",
+		"prettier:check": "prettier --ignore-path .gitignore --check 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"prettier:fix": "prettier --ignore-path .gitignore --write 'packages/*/src/**/*.{tsx,ts}' 'packages/*/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"postinstall": "husky install",
+		"prepack": "pinst --disable",
+		"postpack": "pinst --enable"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@abinnovision/commitlint-config": "workspace:^",
+		"@abinnovision/eslint-config-base": "workspace:^",
+		"@abinnovision/eslint-config-typescript": "workspace:^",
+		"@abinnovision/prettier-config": "workspace:^",
+		"@commitlint/cli": "^17.4.4",
+		"@commitlint/config-conventional": "^17.4.4",
+		"@typescript-eslint/eslint-plugin": "^5.61.0",
+		"@typescript-eslint/parser": "^5.61.0",
+		"concurrently": "^8.2.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-import": "^2.27.5",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.1.2",
+		"pinst": "^3.0.0",
+		"prettier": "^3.0.0",
+		"rimraf": "^5.0.1",
+		"turbo": "^1.10.7"
+	},
+	"commitlint": {
+		"extends": [
+			"@abinnovision/commitlint-config"
+		]
+	},
+	"prettier": "@abinnovision/prettier-config",
+	"eslintConfig": {
+		"extends": [
+			"@abinnovision/base",
+			"@abinnovision/typescript",
+			"prettier"
+		]
+	},
+	"lint-staged": {
+		"packages/*/src/**/*.{ts,tsx,js}": [
+			"prettier",
+			"eslint"
+		],
+		"packages/*/*.{ts,js}": [
+			"prettier",
+			"eslint"
+		],
+		"**/*.{md,json,json5,yaml,yml}": [
+			"prettier"
+		]
+	}
+}
