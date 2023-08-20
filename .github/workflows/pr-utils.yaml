@@ -94,6 +94,12 @@ jobs:
         run: yarn run prettier:fix
       - name: Commit
         run: |
+          # Check if there are any changes
+          # If not, exit with 0
+          if ! [[ `git status --porcelain` ]]; then
+            exit 0;
+          fi
+          
           git config user.name "abi-releaser[bot]"
           git config user.email "125614851+abi-releaser[bot]@users.noreply.github.com"
           git commit -a -m "style: fix codestyle"
