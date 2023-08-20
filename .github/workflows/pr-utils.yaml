@@ -63,7 +63,7 @@ jobs:
     name: "Fix format for release PR"
     runs-on: ubuntu-latest
     # Only run if the PR has the 'autorelease: pending' label.
-    if: "github.event_name == 'pull_request' && github.event.pull_request.user.name == 'abi-releaser[bot]'"
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'abi-releaser[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
