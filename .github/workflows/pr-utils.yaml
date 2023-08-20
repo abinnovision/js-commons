@@ -1,0 +1,105 @@
+# Contains different utility checks for Pull Requests.
+name: PR Utils
+
+# Only apply to PRs which target 'master' branch.
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+
+jobs:
+  lint-commits:
+    name: Lint commits
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Run linter
+        uses: abinnovision/actions/actions/run-commitlint@master
+  dependabot:
+    name: "Dependabot automations"
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    permissions:
+      pull-requests: write
+      issues: write
+      repository-projects: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - id: status
+        name: Resolve current status
+        run: |
+          echo "::set-output name=HAS_REVIEWS::$(if [[ $(gh pr status --json reviews | jq '.currentBranch.reviews | length') -eq '0' ]];then echo 'false'; else echo 'true'; fi)"
+          echo "::set-output name=LAST_REVIEW_DISMISSED::$(if [[ $(gh pr status --json reviews | jq '.currentBranch.reviews[-1].state' | sed 's/"//g') -eq 'DISMISSED' ]];then echo 'true'; else echo 'false'; fi)"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.6.0
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-rebase
+        id: enable-auto-rebase
+        run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: "Approve (minor & patch)"
+        id: approve
+        if: (steps.status.outputs.HAS_REVIEWS == 'false' || steps.status.outputs.LAST_REVIEW_DISMISSED == 'true') && steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  # Will fix the formatting of a release PR if needed.
+  # Release-please generate / override a few files
+  # which do not match the formatting of the repo
+  fix-format:
+    name: "Fix format for release PR"
+    runs-on: ubuntu-latest
+    # Only run if the PR has the 'autorelease: pending' label.
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'abi-releaser[bot]'
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          persist-credentials: false
+      - name: Setup Node
+        uses: abinnovision/actions/actions/setup-node@master
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+      - name: Setup GCP Authentication
+        uses: abinnovision/actions/actions/setup-gcp@master
+        with:
+          auth: ${{ vars.GCP_AUTH }}
+      - id: token
+        name: Generate GitHub App token
+        uses: abinnovision/actions/actions/get-github-app-token@master
+        with:
+          identification: ${{ secrets.GH_APP_IDENTIFICATION_RELEASER }}
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Install dependencies
+        run: yarn build
+      - name: Fix format
+        run: yarn run prettier:fix
+      - name: Commit
+        run: |
+          git config user.name "abi-releaser[bot]"
+          git config user.email "125614851+abi-releaser[bot]@users.noreply.github.com"
+          git commit --amend -a --no-edit
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ steps.token.outputs.token }}
+          branch: ${{ github.event.pull_request.head.ref }}
+          force: true
