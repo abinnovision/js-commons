@@ -80,7 +80,7 @@ jobs:
       - name: Setup GCP Authentication
         uses: abinnovision/actions/actions/setup-gcp@master
         with:
-          auth: ${{ inputs.gcp-auth }}
+          auth: ${{ vars.GCP_AUTH }}
       - id: token
         name: Generate GitHub App token
         uses: abinnovision/actions/actions/get-github-app-token@master
