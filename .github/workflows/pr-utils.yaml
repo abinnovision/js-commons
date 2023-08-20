@@ -96,7 +96,7 @@ jobs:
         run: |
           git config user.name "abi-releaser[bot]"
           git config user.email "125614851+abi-releaser[bot]@users.noreply.github.com"
-          git commit --amend -a -m "style: fix formatting"
+          git commit --amend -a
       - name: Push
         uses: ad-m/github-push-action@master
         with:
