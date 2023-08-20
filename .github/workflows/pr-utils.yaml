@@ -64,6 +64,9 @@ jobs:
     runs-on: ubuntu-latest
     # Only run if the PR has the 'autorelease: pending' label.
     if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'abi-releaser[bot]'
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -99,3 +102,4 @@ jobs:
         with:
           github_token: ${{ steps.token.outputs.token }}
           branch: ${{ github.event.pull_request.head.ref }}
+          force: true
