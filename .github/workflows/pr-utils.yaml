@@ -74,6 +74,10 @@ jobs:
         uses: abinnovision/actions/actions/setup-node@master
       - name: Setup Turborepo cache
         uses: dtinth/setup-github-actions-caching-for-turbo@v1
+      - name: Setup GCP Authentication
+        uses: abinnovision/actions/actions/setup-gcp@master
+        with:
+          auth: ${{ inputs.gcp-auth }}
       - id: token
         name: Generate GitHub App token
         uses: abinnovision/actions/actions/get-github-app-token@master
