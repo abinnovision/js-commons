@@ -1,0 +1,54 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /packages/eslint-config-base
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: Europe/Berlin
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps/dev)"
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+  - package-ecosystem: npm
+    directory: /packages/eslint-config-react
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: Europe/Berlin
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps/dev)"
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+
+  - package-ecosystem: npm
+    directory: /packages/eslint-config-typescript
+    schedule:
+      interval: weekly
+      day: monday
+      time: "13:00"
+      timezone: Europe/Berlin
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps/dev)"
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: saturday
+      time: "13:00"
+      timezone: Europe/Berlin
+    commit-message:
+      prefix: "build(deps/gha)"
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
