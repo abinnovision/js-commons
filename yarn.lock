@@ -398,7 +398,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^17.4.4"
     "@typescript-eslint/eslint-plugin": "npm:^5.61.0"
     "@typescript-eslint/parser": "npm:^5.61.0"
-    concurrently: "npm:^8.2.0"
+    concurrently: "npm:^8.2.2"
     eslint: "npm:^8.34.0"
     eslint-config-prettier: "npm:^8.6.0"
     eslint-plugin-import: "npm:^2.27.5"
@@ -1121,9 +1121,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:^8.2.0":
-  version: 8.2.0
-  resolution: "concurrently@npm:8.2.0"
+"concurrently@npm:^8.2.2":
+  version: 8.2.2
+  resolution: "concurrently@npm:8.2.2"
   dependencies:
     chalk: "npm:^4.1.2"
     date-fns: "npm:^2.30.0"
@@ -1137,7 +1137,7 @@ __metadata:
   bin:
     conc: dist/bin/concurrently.js
     concurrently: dist/bin/concurrently.js
-  checksum: 2ee313c485ebdb7098ec9acdb7eddf48bb0c7db89354f1be975b3496d7d527ab51d76d9c58df232228939d2c4770309824ebe972dac09ee6c72694c9fd4b4000
+  checksum: dcb1aa69d9c611a7bda9d4fc0fe1e388f971d1744acec7e0d52dffa2ef55743f1266ec9292f414c5789b9f61734b3fce772bd005d4de9564a949fb121b97bae1
   languageName: node
   linkType: hard
 
