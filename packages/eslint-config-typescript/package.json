@@ -23,7 +23,7 @@
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
-		"@types/eslint": "^8.21.1",
+		"@types/eslint": "^8.44.6",
 		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
