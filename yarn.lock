@@ -27,7 +27,7 @@ __metadata:
   resolution: "@abinnovision/eslint-config-base@workspace:packages/eslint-config-base"
   dependencies:
     "@types/eslint": "npm:^8.21.1"
-    eslint-config-alloy: "npm:^5.0.0"
+    eslint-config-alloy: "npm:^5.1.2"
     typescript: "npm:^5.1.0"
   peerDependencies:
     eslint: ^8.0.0
@@ -41,7 +41,7 @@ __metadata:
   dependencies:
     "@types/eslint": "npm:^8.21.1"
     eslint: "npm:^8.34.0"
-    eslint-config-alloy: "npm:^5.0.0"
+    eslint-config-alloy: "npm:^5.1.2"
     typescript: "npm:^5.1.0"
   peerDependencies:
     eslint: ^8.0.0
@@ -54,7 +54,7 @@ __metadata:
   resolution: "@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript"
   dependencies:
     "@types/eslint": "npm:^8.21.1"
-    eslint-config-alloy: "npm:^5.0.0"
+    eslint-config-alloy: "npm:^5.1.2"
     typescript: "npm:^5.1.0"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^5.0.0
@@ -1458,14 +1458,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-alloy@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "eslint-config-alloy@npm:5.0.0"
+"eslint-config-alloy@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "eslint-config-alloy@npm:5.1.2"
   peerDependencies:
     "@babel/eslint-parser": 7.x
     "@babel/preset-react": 7.x
     "@typescript-eslint/eslint-plugin": ">=5.55.0"
-    "@typescript-eslint/parser": 5.x
+    "@typescript-eslint/parser": ">=5.0.0"
     eslint: ">=8.24.0"
     eslint-plugin-react: ">=7.31.8"
     eslint-plugin-vue: ">=9.5.1"
@@ -1488,7 +1488,7 @@ __metadata:
       optional: true
     vue-eslint-parser:
       optional: true
-  checksum: ba3a30320db05ac2b3469d853b55ffd86450e267a12d7d76d7de8c86a41b12e4b15b946479b1c2b14a05755663feee4a4980933a54b50d260f967fc2d93d7913
+  checksum: b3c34a1e0319b6bb6af07eba6c29ffaafc8092f7d379648073ec79f0c64d04b401251978e056ab8e54113e22c33162b83711181dd4ecc286a28bcfaa690b1104
   languageName: node
   linkType: hard
 
