@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.21.1",
-		"typescript": "^5.1.0"
+		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
 		"eslint": "^8.0.0",
