@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v1.1.0...eslint-config-base-v1.2.0) (2023-10-27)
+
+
+### Features
+
+* update eslint-config-alloy to v5.0.0 ([6acd7da](https://github.com/abinnovision/js-commons/commit/6acd7dacca62218dc3b72611dae6b0154ba16388))
+
 ## [1.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v1.0.2...eslint-config-base-v1.1.0) (2023-04-21)
 
 ### Features
