@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@commitlint/types": "^17.4.4",
-		"typescript": "^5.1.0"
+		"typescript": "^5.2.2"
 	},
 	"dependencies": {
 		"@commitlint/config-conventional": "^17.4.4"
