@@ -1,6 +1,6 @@
 {
 	"name": "@internal/js-commons",
-	"packageManager": "yarn@3.6.1",
+	"packageManager": "yarn@4.0.0",
 	"scripts": {
 		"build": "turbo build",
 		"clean": "rimraf packages/*/dist",
