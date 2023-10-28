@@ -21,14 +21,42 @@
 		"sync-editorconfig": "./dist/sync-editorconfig.js"
 	},
 	"scripts": {
-		"build": "tsc"
+		"build": "tsc",
+		"lint:check": "eslint 'src/**/*.{ts,js}'",
+		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'",
+		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
 	},
 	"devDependencies": {
 		"@types/node": "^18.16.19",
 		"@types/prettier": "^2.7.2",
+		"@typescript-eslint/eslint-plugin": "^6.9.0",
+		"@typescript-eslint/parser": "^6.9.0",
+		"eslint": "^8.52.0",
+		"eslint-plugin-import": "^2.29.0",
+		"prettier": "^3.0.3",
 		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
 		"prettier": "^2.4.0 || ^3.0.0"
+	},
+	"eslintConfig": {
+		"extends": [
+			"../eslint-config-base/dist/index.js",
+			"../eslint-config-typescript/dist/index.js"
+		],
+		"parserOptions": {
+			"project": "./tsconfig.json"
+		}
+	},
+	"prettier": "./dist/index.js",
+	"lint-staged": {
+		"src/**/*.{ts,js}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"**/*.{md,json,json5,yaml,yml}": [
+			"prettier --write"
+		]
 	}
 }

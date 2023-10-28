@@ -17,17 +17,47 @@
 		"dist/"
 	],
 	"scripts": {
-		"build": "tsc"
+		"build": "tsc",
+		"lint:check": "eslint 'src/**/*.{ts,js}'",
+		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'",
+		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
 	},
 	"dependencies": {
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
+		"@abinnovision/eslint-config-typescript": "workspace:^",
+		"@abinnovision/prettier-config": "workspace:^",
 		"@types/eslint": "^8.21.1",
+		"@typescript-eslint/eslint-plugin": "^6.9.0",
+		"@typescript-eslint/parser": "^6.9.0",
+		"eslint": "^8.52.0",
+		"eslint-plugin-import": "^2.29.0",
+		"prettier": "^3.0.3",
 		"typescript": "^5.2.2"
+	},
+	"eslintConfig": {
+		"extends": [
+			"./dist/index.js",
+			"@abinnovision/eslint-config-typescript"
+		],
+		"parserOptions": {
+			"project": "./tsconfig.json"
+		}
 	},
 	"peerDependencies": {
 		"eslint": "^8.0.0",
 		"eslint-plugin-import": "^2.0.0"
+	},
+	"prettier": "@abinnovision/prettier-config",
+	"lint-staged": {
+		"src/**/*.{ts,js}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"**/*.{md,json,json5,yaml,yml}": [
+			"prettier --write"
+		]
 	}
 }
