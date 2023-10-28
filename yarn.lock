@@ -20,7 +20,7 @@ __metadata:
     "@abinnovision/eslint-config-typescript": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"
     "@commitlint/config-conventional": "npm:^18.1.0"
-    "@commitlint/types": "npm:^17.4.4"
+    "@commitlint/types": "npm:^18.1.0"
     eslint: "npm:^8.52.0"
     prettier: "npm:^3.0.3"
     typescript: "npm:^5.2.2"
@@ -323,15 +323,6 @@ __metadata:
   dependencies:
     find-up: "npm:^5.0.0"
   checksum: 62729536fdf602f07613df194b7adfb76ee68624fd504bc05cb0d2e1eab3c099926f18987f29e79b1bbc2bd75b385f565fe867487f024a15d67ad090a9023b78
-  languageName: node
-  linkType: hard
-
-"@commitlint/types@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/types@npm:17.4.4"
-  dependencies:
-    chalk: "npm:^4.1.0"
-  checksum: 03c52429052d161710896d198000196bd2e60be0fd71459b22133dd83dee43e8d05ea8ee703c8369823bc40f77a54881b80d8aa4368ac52aea7f30fb234b73d2
   languageName: node
   linkType: hard
 

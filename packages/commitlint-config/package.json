@@ -27,7 +27,7 @@
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/eslint-config-typescript": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
-		"@commitlint/types": "^17.4.4",
+		"@commitlint/types": "^18.1.0",
 		"eslint": "^8.52.0",
 		"prettier": "^3.0.3",
 		"typescript": "^5.2.2"
