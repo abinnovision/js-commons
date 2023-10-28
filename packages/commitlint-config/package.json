@@ -33,7 +33,7 @@
 		"typescript": "^5.2.2"
 	},
 	"dependencies": {
-		"@commitlint/config-conventional": "^17.4.4"
+		"@commitlint/config-conventional": "^18.1.0"
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"lint-staged": {
