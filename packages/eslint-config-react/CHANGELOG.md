@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v1.1.0...eslint-config-react-v1.2.0) (2023-10-28)
+
+
+### Features
+
+* update eslint-config-alloy to v5.0.0 ([6acd7da](https://github.com/abinnovision/js-commons/commit/6acd7dacca62218dc3b72611dae6b0154ba16388))
+
+
+### Bug Fixes
+
+* align peer dependency versions ([#88](https://github.com/abinnovision/js-commons/issues/88)) ([62e752d](https://github.com/abinnovision/js-commons/commit/62e752d625fd3f454a50c58119f52fa4bbba297d))
+
 ## [1.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v1.0.2...eslint-config-react-v1.1.0) (2023-04-21)
 
 ### Features
