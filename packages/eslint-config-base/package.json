@@ -47,7 +47,7 @@
 		}
 	},
 	"peerDependencies": {
-		"eslint": "^8.0.0",
+		"eslint": "^8.24.0",
 		"eslint-plugin-import": "^2.0.0"
 	},
 	"prettier": "@abinnovision/prettier-config",

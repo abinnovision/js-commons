@@ -42,7 +42,7 @@ __metadata:
     prettier: "npm:^3.0.3"
     typescript: "npm:^5.2.2"
   peerDependencies:
-    eslint: ^8.0.0
+    eslint: ^8.24.0
     eslint-plugin-import: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -61,7 +61,7 @@ __metadata:
     eslint-config-alloy: "npm:^5.1.2"
     typescript: "npm:^5.2.2"
   peerDependencies:
-    eslint: ^8.0.0
+    eslint: ^8.24.0
     eslint-plugin-react: ^7.0.0
   languageName: unknown
   linkType: soft
@@ -79,9 +79,9 @@ __metadata:
     prettier: "npm:^3.0.3"
     typescript: "npm:^5.2.2"
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0
-    "@typescript-eslint/parser": ^5.0.0
-    eslint: ^8.0.0
+    "@typescript-eslint/eslint-plugin": ^6.0.0
+    "@typescript-eslint/parser": ^6.0.0
+    eslint: ^8.24.0
   languageName: unknown
   linkType: soft
 
