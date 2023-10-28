@@ -30,12 +30,12 @@
 		"@abinnovision/eslint-config-typescript": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
 		"@types/eslint": "^8.21.1",
-		"typescript": "^5.2.2",
 		"@typescript-eslint/eslint-plugin": "^6.9.0",
 		"@typescript-eslint/parser": "^6.9.0",
 		"eslint": "^8.52.0",
 		"eslint-plugin-import": "^2.29.0",
-		"prettier": "^3.0.3"
+		"prettier": "^3.0.3",
+		"typescript": "^5.2.2"
 	},
 	"eslintConfig": {
 		"extends": [
