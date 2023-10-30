@@ -33,7 +33,7 @@ __metadata:
   dependencies:
     "@abinnovision/eslint-config-typescript": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"
-    "@types/eslint": "npm:^8.21.1"
+    "@types/eslint": "npm:^8.44.6"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.0"
     "@typescript-eslint/parser": "npm:^6.9.0"
     eslint: "npm:^8.52.0"
@@ -54,7 +54,7 @@ __metadata:
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/eslint-config-typescript": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"
-    "@types/eslint": "npm:^8.21.1"
+    "@types/eslint": "npm:^8.44.6"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.0"
     "@typescript-eslint/parser": "npm:^6.9.0"
     eslint: "npm:^8.52.0"
@@ -71,7 +71,7 @@ __metadata:
   resolution: "@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript"
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
-    "@types/eslint": "npm:^8.21.1"
+    "@types/eslint": "npm:^8.44.6"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.0"
     "@typescript-eslint/parser": "npm:^6.9.0"
     eslint: "npm:^8.52.0"
@@ -466,13 +466,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^8.21.1":
-  version: 8.21.1
-  resolution: "@types/eslint@npm:8.21.1"
+"@types/eslint@npm:^8.44.6":
+  version: 8.44.6
+  resolution: "@types/eslint@npm:8.44.6"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
-  checksum: 5487762695b2c81933628c6cb23cf2d81275114954918f93824f18258388d3ece71a4cd33230e18bf99e0a864646669ccf7b3ebeb9f13d0132a8007896f14361
+  checksum: 07ee27c1803fce2d732800d4972462e4c08f2ac84c70a6addb0ae2566de392eb92e39ccc8f6ab487348f751b4b253c4724d3490ea8856abcd8917acae676a2d6
   languageName: node
   linkType: hard
 
