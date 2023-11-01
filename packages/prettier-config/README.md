@@ -7,8 +7,7 @@ is compatible with most editors.
 ## Installation
 
 ```shell
-yarn add --dev \
-	@abinnovision/prettier-config
+yarn add --dev @abinnovision/prettier-config
 ```
 
 ## EditorConfig
