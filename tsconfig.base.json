@@ -1,4 +1,5 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"strict": true,
 		"target": "ES5",
@@ -9,6 +10,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
 		"removeComments": true,
-		"declaration": true
+		"declaration": true,
+		"skipLibCheck": true
 	}
 }

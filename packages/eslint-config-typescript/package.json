@@ -24,30 +24,20 @@
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
 	},
 	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.9.0",
+		"@typescript-eslint/parser": "^6.9.0",
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
 		"@types/eslint": "^8.44.6",
-		"@typescript-eslint/eslint-plugin": "^6.9.0",
-		"@typescript-eslint/parser": "^6.9.0",
 		"eslint": "^8.52.0",
+		"globals": "^13.23.0",
 		"prettier": "^3.0.3",
 		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
 		"eslint": "^8.24.0"
-	},
-	"eslintConfig": {
-		"extends": [
-			"@abinnovision/eslint-config-base",
-			"./dist/index.js"
-		],
-		"parserOptions": {
-			"project": "./tsconfig.json"
-		}
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"lint-staged": {
