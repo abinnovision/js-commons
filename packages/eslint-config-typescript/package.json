@@ -41,8 +41,8 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.9.0",
-		"@typescript-eslint/parser": "^6.9.0",
+		"@typescript-eslint/eslint-plugin": "^6.9.1",
+		"@typescript-eslint/parser": "^6.9.1",
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
