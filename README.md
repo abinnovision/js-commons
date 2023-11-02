@@ -256,7 +256,3 @@ export default [
 	// here goes the config
 ];
 ```
-
-```
-
-```
