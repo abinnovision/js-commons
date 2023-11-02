@@ -10,16 +10,16 @@ the [packages](./packages) directory.
 Presently, the following packages are available:
 
 - [eslint-config-base](./packages/eslint-config-base): ESLint configuration,
-  serving as a base for all others. It can be used independently for JavaScript
-  projects.
+	serving as a base for all others. It can be used independently for JavaScript
+	projects.
 - [eslint-config-typescript](./packages/eslint-config-typescript): ESLint
-  configuration tailored for TypeScript projects.
+	configuration tailored for TypeScript projects.
 - [eslint-config-react](./packages/eslint-config-react): ESLint configuration
-  designed for React projects.
+	designed for React projects.
 - [prettier-config](./packages/prettier-config): Shared Prettier configuration
-  for all projects.
+	for all projects.
 - [commitlint-config](./packages/commitlint-config): Shared Commitlint
-  configuration for all projects.
+	configuration for all projects.
 
 All packages are published under
 the [`@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
@@ -175,7 +175,9 @@ Example configuration in `package.json`:
 {
 	// ...
 	commitlint: {
-		extends: ["@abinnovision/commitlint-config"],
+		extends: [
+			"@abinnovision/commitlint-config"
+		],
 	},
 	// ...
 }
@@ -186,3 +188,60 @@ Example configuration in `package.json`:
 ```shell
 yarn add --dev @abinnovision/commitlint-config
 ```
+
+## Appendix
+
+### ESLint with Globals
+
+If you need to use global variables in your project, you can easily add them
+by yourself to the `eslint.config.js` file.
+
+For example, to add the `window` global variable, use the following:
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	...require("@abinnovision/eslint-config-base"),
+	{
+		files: ["**/*.js"],
+		languageOptions: {
+			globals: {
+				window: true
+			}
+		}
+	},
+];
+```
+
+If you're within a default environment (e.g. node), it's possible to use
+the [globals package](https://www.npmjs.com/package/globals) to add all
+available globals for that environment.
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	...require("@abinnovision/eslint-config-base"),
+	{
+		files: ["**/*.js"],
+		languageOptions: {
+			globals: require("globals").node
+		}
+	},
+];
+```
+
+### ESLint flat-config with types
+
+The ESLint configuration is defined as a flat config file (`eslint.config.js`).
+This is just a basic JavaScript file that exports an array of ESLint
+configuration objects.
+The type of this array is defined in `@types/eslint` and can be imported to get
+type support.
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	// here goes the config
+];
+```
+
