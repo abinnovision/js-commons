@@ -1,18 +1,33 @@
 {
 	"name": "@internal/js-commons",
-	"packageManager": "yarn@4.0.0",
-	"scripts": {
-		"build": "turbo build",
-		"clean": "rimraf packages/*/dist",
-		"fix": "concurrently 'yarn:prettier:fix' 'turbo fix'",
-		"check": "concurrently 'yarn:prettier:check' 'turbo check'",
-		"format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
-		"format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
-		"postinstall": "husky install"
-	},
 	"workspaces": [
 		"packages/*"
 	],
+	"scripts": {
+		"build": "turbo build",
+		"check": "concurrently 'yarn:prettier:check' 'turbo check'",
+		"clean": "rimraf packages/*/dist",
+		"fix": "concurrently 'yarn:prettier:fix' 'turbo fix'",
+		"format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+		"format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+		"postinstall": "husky install",
+		"sort:check": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json' --check",
+		"sort:fix": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json'"
+	},
+	"commitlint": {
+		"extends": [
+			"@abinnovision/commitlint-config"
+		]
+	},
+	"lint-staged": {
+		"{*,.github/**/*}.{md,json,json5,yaml,yml}": [
+			"prettier --write"
+		],
+		"**/package.json": [
+			"sort-package-json"
+		]
+	},
+	"prettier": "@abinnovision/prettier-config",
 	"devDependencies": {
 		"@abinnovision/commitlint-config": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
@@ -22,17 +37,8 @@
 		"lint-staged": "^15.0.2",
 		"prettier": "^3.0.0",
 		"rimraf": "^5.0.5",
+		"sort-package-json": "^2.6.0",
 		"turbo": "^1.10.16"
 	},
-	"commitlint": {
-		"extends": [
-			"@abinnovision/commitlint-config"
-		]
-	},
-	"prettier": "@abinnovision/prettier-config",
-	"lint-staged": {
-		"{*,.github/**/*}.{md,json,json5,yaml,yml}": [
-			"prettier --write"
-		]
-	}
+	"packageManager": "yarn@4.0.0"
 }

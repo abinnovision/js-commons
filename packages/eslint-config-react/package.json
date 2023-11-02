@@ -1,22 +1,15 @@
 {
 	"name": "@abinnovision/eslint-config-react",
-	"packageManager": "yarn@3.4.1",
 	"version": "1.2.0",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
+	"repository": {
+		"url": "https://github.com/abinnovision/js-commons"
+	},
 	"license": "Apache-2.0",
 	"author": {
 		"name": "AB INNOVISION GmbH",
 		"email": "info@abinnovision.com",
 		"url": "https://abinnovision.com/"
 	},
-	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
-	},
-	"files": [
-		"dist/"
-	],
 	"exports": {
 		".": {
 			"import": "./dist/index.mjs",
@@ -24,13 +17,29 @@
 			"types": "./dist/index.d.ts"
 		}
 	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist/"
+	],
 	"scripts": {
 		"build": "tsup src/index.ts --dts --format esm,cjs --clean",
-		"lint:check": "eslint 'src/**/*.{ts,js}'",
-		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
-		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
+		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"lint:check": "eslint 'src/**/*.{ts,js}'",
+		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'"
 	},
+	"lint-staged": {
+		"src/**/*.{ts,js}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"{**/*,*}.{md,json,json5,yaml,yml}": [
+			"prettier --write"
+		]
+	},
+	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
 		"eslint-config-alloy": "^5.1.2",
 		"eslint-plugin-react": "^7.0.0"
@@ -48,14 +57,5 @@
 	"peerDependencies": {
 		"eslint": "^8.24.0"
 	},
-	"prettier": "@abinnovision/prettier-config",
-	"lint-staged": {
-		"src/**/*.{ts,js}": [
-			"prettier --write",
-			"eslint --fix"
-		],
-		"{**/*,*}.{md,json,json5,yaml,yml}": [
-			"prettier --write"
-		]
-	}
+	"packageManager": "yarn@3.4.1"
 }

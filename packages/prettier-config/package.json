@@ -1,23 +1,15 @@
 {
 	"name": "@abinnovision/prettier-config",
-	"packageManager": "yarn@3.4.1",
 	"version": "1.1.0",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
+	"repository": {
+		"url": "https://github.com/abinnovision/js-commons"
+	},
 	"license": "Apache-2.0",
 	"author": {
 		"name": "AB INNOVISION GmbH",
 		"email": "info@abinnovision.com",
 		"url": "https://abinnovision.com/"
 	},
-	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
-	},
-	"files": [
-		"dist/",
-		"assets/"
-	],
 	"exports": {
 		".": {
 			"import": "./dist/index.mjs",
@@ -25,16 +17,33 @@
 			"types": "./dist/index.d.ts"
 		}
 	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
 	"bin": {
 		"sync-editorconfig": "./dist/bin/sync-editorconfig.js"
 	},
+	"files": [
+		"dist/",
+		"assets/"
+	],
 	"scripts": {
 		"build": "tsup src/index.ts --dts --format esm,cjs --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
-		"lint:check": "eslint 'src/**/*.{ts,js}'",
-		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
-		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
+		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
+		"lint:check": "eslint 'src/**/*.{ts,js}'",
+		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'"
 	},
+	"lint-staged": {
+		"src/**/*.{ts,js}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"{**/*,*}.{md,json,json5,yaml,yml}": [
+			"prettier --write"
+		]
+	},
+	"prettier": "./dist/index.js",
 	"devDependencies": {
 		"@types/node": "^20.8.10",
 		"@types/prettier": "^3.0.0",
@@ -47,14 +56,5 @@
 	"peerDependencies": {
 		"prettier": "^2.4.0 || ^3.0.0"
 	},
-	"prettier": "./dist/index.js",
-	"lint-staged": {
-		"src/**/*.{ts,js}": [
-			"prettier --write",
-			"eslint --fix"
-		],
-		"{**/*,*}.{md,json,json5,yaml,yml}": [
-			"prettier --write"
-		]
-	}
+	"packageManager": "yarn@3.4.1"
 }
