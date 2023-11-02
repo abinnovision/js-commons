@@ -31,8 +31,8 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"lint-staged": {
-		"**/*.{md,json,json5,yaml,yml}": [
-			"prettier"
+		"{*,.github/**/*}.{md,json,json5,yaml,yml}": [
+			"prettier --write"
 		]
 	}
 }
