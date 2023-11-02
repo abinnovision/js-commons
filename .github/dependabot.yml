@@ -13,6 +13,18 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - dependencies
+    groups:
+      commitlint-related:
+        patterns:
+          - "@commitlint/*"
+          - "commitlint-*"
+      eslint-related:
+        patterns:
+          - "eslint"
+          - "eslint-plugin-*"
+          - "eslint-config-*"
+          - "@typescript-eslint/*"
+          - "@types/eslint"
 
   - package-ecosystem: github-actions
     directory: /
