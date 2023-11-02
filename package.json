@@ -6,8 +6,8 @@
 		"clean": "rimraf packages/*/dist",
 		"fix": "concurrently 'yarn:prettier:fix' 'turbo fix'",
 		"check": "concurrently 'yarn:prettier:check' 'turbo check'",
-		"prettier:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
-		"prettier:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+		"format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+		"format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
 		"postinstall": "husky install"
 	},
 	"workspaces": [
