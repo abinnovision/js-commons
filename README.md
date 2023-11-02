@@ -10,16 +10,16 @@ the [packages](./packages) directory.
 Presently, the following packages are available:
 
 - [eslint-config-base](./packages/eslint-config-base): ESLint configuration,
-	serving as a base for all others. It can be used independently for JavaScript
-	projects.
+  serving as a base for all others. It can be used independently for JavaScript
+  projects.
 - [eslint-config-typescript](./packages/eslint-config-typescript): ESLint
-	configuration tailored for TypeScript projects.
+  configuration tailored for TypeScript projects.
 - [eslint-config-react](./packages/eslint-config-react): ESLint configuration
-	designed for React projects.
+  designed for React projects.
 - [prettier-config](./packages/prettier-config): Shared Prettier configuration
-	for all projects.
+  for all projects.
 - [commitlint-config](./packages/commitlint-config): Shared Commitlint
-	configuration for all projects.
+  configuration for all projects.
 
 All packages are published under
 the [`@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
@@ -175,9 +175,7 @@ Example configuration in `package.json`:
 {
 	// ...
 	commitlint: {
-		extends: [
-			"@abinnovision/commitlint-config"
-		],
+		extends: ["@abinnovision/commitlint-config"],
 	},
 	// ...
 }
@@ -206,9 +204,9 @@ module.exports = [
 		files: ["**/*.js"],
 		languageOptions: {
 			globals: {
-				window: true
-			}
-		}
+				window: true,
+			},
+		},
 	},
 ];
 ```
@@ -224,8 +222,8 @@ module.exports = [
 	{
 		files: ["**/*.js"],
 		languageOptions: {
-			globals: require("globals").node
-		}
+			globals: require("globals").node,
+		},
 	},
 ];
 ```
@@ -234,9 +232,8 @@ module.exports = [
 
 The ESLint configuration is defined as a flat config file (`eslint.config.js`).
 This is just a basic JavaScript file that exports an array of ESLint
-configuration objects.
-The type of this array is defined in `@types/eslint` and can be imported to get
-type support.
+configuration objects. The type of this array is defined in `@types/eslint` and
+can be imported to get type support.
 
 ```javascript
 /** @type {import("@types/eslint").Linter.FlatConfig[]} */
@@ -245,3 +242,21 @@ module.exports = [
 ];
 ```
 
+### ESLint flat-config within a module (ESM)
+
+If you're using ESM modules (`"type": "module"`),
+you can use the following syntax to use the ESLint configuration:
+
+```javascript
+import configBase from "@abinnovision/eslint-config-base";
+
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+export default [
+	...configBase,
+	// here goes the config
+];
+```
+
+```
+
+```
