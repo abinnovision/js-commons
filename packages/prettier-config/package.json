@@ -28,7 +28,7 @@
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.9",
+		"@types/node": "^20.8.10",
 		"@types/prettier": "^3.0.0",
 		"eslint": "^8.52.0",
 		"globals": "^13.23.0",
