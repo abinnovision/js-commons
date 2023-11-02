@@ -2,8 +2,9 @@
 	"name": "@abinnovision/eslint-config-typescript",
 	"packageManager": "yarn@3.4.1",
 	"version": "1.2.0",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
 	"license": "Apache-2.0",
 	"author": {
 		"name": "AB INNOVISION UG (limited liability)",
@@ -16,8 +17,15 @@
 	"files": [
 		"dist/"
 	],
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"scripts": {
-		"build": "tsc",
+		"build": "tsup src/index.ts --dts --format esm,cjs --clean",
 		"lint:check": "eslint 'src/**/*.{ts,js}'",
 		"lint:fix": "eslint --fix 'src/**/*.{ts,js}'",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
@@ -34,6 +42,7 @@
 		"eslint": "^8.52.0",
 		"globals": "^13.23.0",
 		"prettier": "^3.0.3",
+		"tsup": "^7.2.0",
 		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
