@@ -5,9 +5,9 @@
 	],
 	"scripts": {
 		"build": "turbo build",
-		"check": "concurrently 'yarn:prettier:check' 'turbo check'",
+		"check": "concurrently 'yarn:format:check' 'turbo check'",
 		"clean": "rimraf packages/*/dist",
-		"fix": "concurrently 'yarn:prettier:fix' 'turbo fix'",
+		"fix": "concurrently 'yarn:format:fix' 'turbo fix'",
 		"format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
 		"format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
 		"postinstall": "husky install",
