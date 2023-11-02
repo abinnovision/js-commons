@@ -13,7 +13,7 @@ const DISABLE_ENV_VAR = "DISABLE_SYNC_EDITORCONFIG";
 
 	// Just override the configuration for now.
 	await fs.copyFile(
-		path.resolve(__dirname, "../assets/.editorconfig"),
+		path.resolve(__dirname, "../../assets/.editorconfig"),
 		path.resolve(process.cwd(), ".editorconfig")
 	);
 })();

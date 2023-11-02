@@ -2,15 +2,14 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"strict": true,
-		"target": "ES5",
-		"module": "commonjs",
-		"moduleResolution": "node",
+		"target": "ES2022",
+		"module": "CommonJS",
+		"moduleResolution": "Node10",
 		"sourceMap": false,
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
-		"removeComments": true,
-		"declaration": true,
+		"noEmit": true,
 		"skipLibCheck": true
 	}
 }
