@@ -186,3 +186,77 @@ Example configuration in `package.json`:
 ```shell
 yarn add --dev @abinnovision/commitlint-config
 ```
+
+## Appendix
+
+### ESLint with Globals
+
+If you need to use global variables in your project, you can easily add them
+by yourself to the `eslint.config.js` file.
+
+For example, to add the `window` global variable, use the following:
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	...require("@abinnovision/eslint-config-base"),
+	{
+		files: ["**/*.js"],
+		languageOptions: {
+			globals: {
+				window: true,
+			},
+		},
+	},
+];
+```
+
+If you're within a default environment (e.g. node), it's possible to use
+the [globals package](https://www.npmjs.com/package/globals) to add all
+available globals for that environment.
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	...require("@abinnovision/eslint-config-base"),
+	{
+		files: ["**/*.js"],
+		languageOptions: {
+			globals: require("globals").node,
+		},
+	},
+];
+```
+
+### ESLint flat-config with types
+
+The ESLint configuration is defined as a flat config file (`eslint.config.js`).
+This is just a basic JavaScript file that exports an array of ESLint
+configuration objects. The type of this array is defined in `@types/eslint` and
+can be imported to get type support.
+
+```javascript
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+module.exports = [
+	// here goes the config
+];
+```
+
+### ESLint flat-config within a module (ESM)
+
+If you're using ESM modules (`"type": "module"`),
+you can use the following syntax to use the ESLint configuration:
+
+```javascript
+import configBase from "@abinnovision/eslint-config-base";
+
+/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+export default [
+	...configBase,
+	// here goes the config
+];
+```
+
+```
+
+```
