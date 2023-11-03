@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.1.0...commitlint-config-v2.0.0) (2023-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* will drop support for legacy eslint configs
+
+### Features
+
+* disable "body-max-line-length" rule ([#105](https://github.com/abinnovision/js-commons/issues/105)) ([29ce203](https://github.com/abinnovision/js-commons/commit/29ce203272e148e66cd6e7291e399b2195c944f9))
+* migrate to eslint flat config ([#93](https://github.com/abinnovision/js-commons/issues/93)) ([7568ba1](https://github.com/abinnovision/js-commons/commit/7568ba1782f912357e18619ab3e4e56a0c738a1c))
+
 ## [1.1.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.0.4...commitlint-config-v1.1.0) (2023-04-21)
 
 ### Features

@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v1.2.0...eslint-config-base-v2.0.0) (2023-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* will drop support for legacy eslint configs
+
+### Features
+
+* enable new ESLint rules ([#104](https://github.com/abinnovision/js-commons/issues/104)) ([ffac1dc](https://github.com/abinnovision/js-commons/commit/ffac1dc4bc2c6794c2f7d1bd1ec72542e20cd06d))
+* migrate to eslint flat config ([#93](https://github.com/abinnovision/js-commons/issues/93)) ([7568ba1](https://github.com/abinnovision/js-commons/commit/7568ba1782f912357e18619ab3e4e56a0c738a1c))
+
 ## [1.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v1.1.0...eslint-config-base-v1.2.0) (2023-10-28)
 
 
