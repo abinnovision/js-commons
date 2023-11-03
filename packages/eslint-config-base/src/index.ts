@@ -66,6 +66,11 @@ const config = [
 			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
 			 */
 			"import/newline-after-import": "error",
+
+			/**
+			 * Disable the "no-return-await" rule.
+			 */
+			"no-return-await": "off",
 		},
 	},
 ] satisfies Linter.FlatConfig[];
