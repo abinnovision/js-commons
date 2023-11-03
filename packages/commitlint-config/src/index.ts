@@ -4,13 +4,18 @@ import type { UserConfig } from "@commitlint/types";
 
 /**
  * The config is mostly based on the Conventional config.
- * Some limits have been increased to make them work with some tooling (e.g. Dependabot).
  */
 const config: UserConfig = {
 	...ConventionalConfig,
 	rules: {
 		...ConventionalConfig.rules,
-		"body-max-line-length": [2, "always", 200],
+
+		/**
+		 * Disable the rule to limit the body line length.
+		 * This is because sometimes commit messages can contain structured data
+		 * by some kind of tool (e.g. Dependabot), which can't be changed.
+		 */
+		"body-max-line-length": [0],
 	},
 };
 
