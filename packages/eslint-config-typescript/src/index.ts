@@ -13,6 +13,9 @@ const config = [
 		},
 		languageOptions: {
 			parser: TypescriptEslintParser,
+			parserOptions: {
+				project: "./tsconfig.json",
+			},
 		},
 		rules: {
 			/**
