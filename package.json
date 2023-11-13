@@ -34,7 +34,7 @@
 		"@commitlint/cli": "^18.2.0",
 		"concurrently": "^8.2.0",
 		"husky": "^8.0.0",
-		"lint-staged": "^15.0.2",
+		"lint-staged": "^15.1.0",
 		"prettier": "^3.0.0",
 		"rimraf": "^5.0.5",
 		"sort-package-json": "^2.6.0",
