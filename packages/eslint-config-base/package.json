@@ -42,12 +42,12 @@
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
 		"eslint-config-alloy": "^5.1.2",
-		"eslint-plugin-import": "^2.29.0"
+		"eslint-plugin-import": "^2.29.1"
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
-		"@types/eslint": "^8.44.6",
-		"eslint": "^8.53.0",
+		"@types/eslint": "^8.44.9",
+		"eslint": "^8.56.0",
 		"globals": "^13.23.0",
 		"prettier": "^3.0.3",
 		"tsup": "^8.0.1"
