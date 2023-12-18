@@ -45,7 +45,7 @@
 	},
 	"prettier": "./dist/index.js",
 	"devDependencies": {
-		"@types/node": "^20.10.4",
+		"@types/node": "^20.10.5",
 		"@types/prettier": "^3.0.0",
 		"eslint": "^8.53.0",
 		"globals": "^13.23.0",
