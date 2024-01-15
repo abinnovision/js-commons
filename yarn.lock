@@ -20,7 +20,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.1.0"
     "@commitlint/types": "npm:^18.1.0"
     eslint: "npm:^8.56.0"
-    prettier: "npm:^3.0.3"
+    prettier: "npm:^3.2.2"
     tsup: "npm:^8.0.1"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -36,7 +36,7 @@ __metadata:
     eslint-config-alloy: "npm:^5.1.2"
     eslint-plugin-import: "npm:^2.29.1"
     globals: "npm:^13.23.0"
-    prettier: "npm:^3.0.3"
+    prettier: "npm:^3.2.2"
     tsup: "npm:^8.0.1"
   peerDependencies:
     eslint: ^8.24.0
@@ -73,7 +73,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-alloy: "npm:^5.1.2"
     globals: "npm:^13.23.0"
-    prettier: "npm:^3.0.3"
+    prettier: "npm:^3.2.2"
     tsup: "npm:^8.0.1"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -89,7 +89,7 @@ __metadata:
     "@types/prettier": "npm:^3.0.0"
     eslint: "npm:^8.56.0"
     globals: "npm:^13.23.0"
-    prettier: "npm:^3.0.3"
+    prettier: "npm:^3.2.2"
     tsup: "npm:^8.0.1"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -561,7 +561,7 @@ __metadata:
     concurrently: "npm:^8.2.0"
     husky: "npm:^8.0.0"
     lint-staged: "npm:^15.0.2"
-    prettier: "npm:^3.0.0"
+    prettier: "npm:^3.2.2"
     rimraf: "npm:^5.0.5"
     sort-package-json: "npm:^2.6.0"
     turbo: "npm:^1.11.3"
@@ -4213,12 +4213,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:*, prettier@npm:^3.0.0, prettier@npm:^3.0.3":
+"prettier@npm:*":
   version: 3.0.3
   resolution: "prettier@npm:3.0.3"
   bin:
     prettier: bin/prettier.cjs
   checksum: ccf1ead9794b017be6b42d0873f459070beef2069eb393c8b4c0d11aa3430acefc54f6d5f44a5b7ce9af05ad8daf694b912f0aa2808d1c22dfa86e61e9d563f8
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "prettier@npm:3.2.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: ab9470ff6cfd19f28bc424f22e58f2fc4a488d148b9384f6c3739235017c8350cae82b3697392c23d9b098b9d8dfaa1cc9ff4ef25fd45f54c97b95f9cc7a1f7d
   languageName: node
   linkType: hard
 
