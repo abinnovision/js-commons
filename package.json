@@ -38,7 +38,7 @@
 		"prettier": "^3.0.0",
 		"rimraf": "^5.0.5",
 		"sort-package-json": "^2.8.0",
-		"turbo": "^1.12.5"
+		"turbo": "^1.13.0"
 	},
 	"packageManager": "yarn@4.0.0"
 }
