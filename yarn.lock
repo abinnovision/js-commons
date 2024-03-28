@@ -18,7 +18,7 @@ __metadata:
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
     "@commitlint/config-conventional": "npm:^18.0.0 || ^19.0.0"
-    "@commitlint/types": "npm:^18.1.0"
+    "@commitlint/types": "npm:^19.0.3"
     eslint: "npm:^8.56.0"
     prettier: "npm:^3.0.3"
     tsup: "npm:^8.0.2"
@@ -314,15 +314,6 @@ __metadata:
   dependencies:
     find-up: "npm:^7.0.0"
   checksum: 47b0994d03f26caf2812110ead535bd10157beed6b3dff9cbb4eea165de9245673ba7d31829cd54af5855f7b075ebbf812b1f79586248be3932797888efeadf5
-  languageName: node
-  linkType: hard
-
-"@commitlint/types@npm:^18.1.0":
-  version: 18.1.0
-  resolution: "@commitlint/types@npm:18.1.0"
-  dependencies:
-    chalk: "npm:^4.1.0"
-  checksum: 50501399dd2e280e06d9b6605a9b9b09a01977a662fc30c57fa70ac84a679f74cdcc7d8d3204937423be94707208983f5fcc43e4d488bbea25d4a2cdc80f3e82
   languageName: node
   linkType: hard
 
@@ -1350,7 +1341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
