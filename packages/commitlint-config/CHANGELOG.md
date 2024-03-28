@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.0.0...commitlint-config-v2.0.1) (2024-03-28)
+
+
+### Bug Fixes
+
+* allow ^19 of package "@commitlint/config-conventional" ([09359df](https://github.com/abinnovision/js-commons/commit/09359dfe9355f04ab36239ffa29e0371f15ba87b))
+
 ## [2.0.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v1.1.0...commitlint-config-v2.0.0) (2023-11-03)
 
 
