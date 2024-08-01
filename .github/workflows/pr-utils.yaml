@@ -16,7 +16,7 @@ jobs:
   lint-commits:
     name: Lint commits
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
     steps:
       - name: Run linter
         uses: abinnovision/actions@run-commitlint-v1
