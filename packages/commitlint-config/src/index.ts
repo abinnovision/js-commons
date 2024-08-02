@@ -16,6 +16,30 @@ const config: UserConfig = {
 		 * by some kind of tool (e.g. Dependabot), which can't be changed.
 		 */
 		"body-max-line-length": [0],
+
+		/**
+		 * Add "deps" to the list of allowed commit types.
+		 * This allows us to support the case where release-please should
+		 * create releases for dependabot updates.
+		 */
+		"type-enum": [
+			2,
+			"always",
+			[
+				"build",
+				"chore",
+				"ci",
+				"docs",
+				"feat",
+				"fix",
+				"perf",
+				"refactor",
+				"revert",
+				"style",
+				"test",
+				"deps",
+			],
+		],
 	},
 };
 
