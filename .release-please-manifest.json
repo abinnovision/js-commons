@@ -3,5 +3,5 @@
 	"packages/eslint-config-react": "2.0.0",
 	"packages/eslint-config-typescript": "2.0.0",
 	"packages/prettier-config": "2.0.0",
-	"packages/commitlint-config": "2.0.1"
+	"packages/commitlint-config": "2.1.0"
 }
