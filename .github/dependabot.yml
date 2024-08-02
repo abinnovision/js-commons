@@ -8,8 +8,8 @@ updates:
       time: "13:00"
       timezone: Europe/Berlin
     commit-message:
-      prefix: "build(deps)"
-      prefix-development: "build(deps/dev)"
+      prefix: "deps"
+      prefix-development: "deps(dev)"
     open-pull-requests-limit: 10
     labels:
       - dependencies
