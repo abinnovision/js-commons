@@ -35,7 +35,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-alloy: "npm:^5.1.2"
     eslint-plugin-import: "npm:^2.29.1"
-    globals: "npm:^15.8.0"
+    globals: "npm:^15.9.0"
     prettier: "npm:^3.3.3"
     tsup: "npm:^8.2.3"
   peerDependencies:
@@ -54,7 +54,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-alloy: "npm:^5.1.2"
     eslint-plugin-react: "npm:^7.0.0"
-    globals: "npm:^15.8.0"
+    globals: "npm:^15.9.0"
     tsup: "npm:^8.2.3"
     typescript: "npm:^5.5.4"
   peerDependencies:
@@ -72,7 +72,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.14.0"
     eslint: "npm:^8.56.0"
     eslint-config-alloy: "npm:^5.1.2"
-    globals: "npm:^15.8.0"
+    globals: "npm:^15.9.0"
     prettier: "npm:^3.3.3"
     tsup: "npm:^8.2.3"
     typescript: "npm:^5.5.4"
@@ -88,7 +88,7 @@ __metadata:
     "@types/node": "npm:^20.11.30"
     "@types/prettier": "npm:^3.0.0"
     eslint: "npm:^8.56.0"
-    globals: "npm:^15.8.0"
+    globals: "npm:^15.9.0"
     prettier: "npm:^3.3.3"
     tsup: "npm:^8.2.3"
     typescript: "npm:^5.5.4"
@@ -2625,10 +2625,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.8.0":
-  version: 15.8.0
-  resolution: "globals@npm:15.8.0"
-  checksum: fbca69cc1084c28a5155fea06224f6f0fcd9a371d8b8057db9c1851adc4bf2aad8016dd0db4e161e0ad1da0953e4286b90c826ff9ef5dbfb864493f2bba806df
+"globals@npm:^15.9.0":
+  version: 15.9.0
+  resolution: "globals@npm:15.9.0"
+  checksum: 19bca70131c5d3e0d4171deed0f8ae16adda19f18d39b67421056f1eaa160b4433c3ffc8eb69b8b19adebbbdad4834d8a0494c5fe1ae295f0f769a5c0331d794
   languageName: node
   linkType: hard
 
