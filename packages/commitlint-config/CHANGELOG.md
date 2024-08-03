@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.0.1...commitlint-config-v2.1.0) (2024-08-02)
+
+
+### Features
+
+* add type deps to commitlint config ([534c603](https://github.com/abinnovision/js-commons/commit/534c6030ce9695d91247067ef411fd666f79bf00))
+
 ## [2.0.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.0.0...commitlint-config-v2.0.1) (2024-03-28)
 
 
