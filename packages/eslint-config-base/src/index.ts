@@ -1,3 +1,4 @@
+import { fixupPluginRules } from "@eslint/compat";
 import * as AlloyBase from "eslint-config-alloy/base";
 import * as eslintPluginImport from "eslint-plugin-import";
 
@@ -10,7 +11,13 @@ const config = [
 			ecmaVersion: "latest",
 		},
 		plugins: {
-			import: eslintPluginImport,
+			/**
+			 * eslint-plugin-import is not yet compatible with ESLint v9.
+			 * This is a temporary fix to make it compatible in the meantime.
+			 *
+			 * @see https://github.com/import-js/eslint-plugin-import/issues/2948
+			 */
+			import: fixupPluginRules(eslintPluginImport),
 		},
 		rules: {
 			/**
