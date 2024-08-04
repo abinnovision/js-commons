@@ -1,7 +1,7 @@
-import * as TypescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
+import TypescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 // @ts-ignore
-import * as TypescriptEslintParser from "@typescript-eslint/parser";
-import * as AlloyTypescript from "eslint-config-alloy/typescript";
+import TypescriptEslintParser from "@typescript-eslint/parser";
+import AlloyTypescript from "eslint-config-alloy/typescript.js";
 
 import type { Linter } from "eslint";
 

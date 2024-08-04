@@ -95,7 +95,7 @@ __metadata:
   peerDependencies:
     prettier: ^2.4.0 || ^3.0.0
   bin:
-    sync-editorconfig: ./dist/bin/sync-editorconfig.js
+    sync-editorconfig: ./dist/bin/sync-editorconfig.cjs
   languageName: unknown
   linkType: soft
 

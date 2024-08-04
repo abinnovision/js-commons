@@ -1,4 +1,4 @@
-import * as ConventionalConfig from "@commitlint/config-conventional";
+import ConventionalConfig from "@commitlint/config-conventional";
 
 import type { UserConfig } from "@commitlint/types";
 
