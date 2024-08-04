@@ -9,7 +9,7 @@ const config = [
 	{
 		files: ["**/*.{ts,tsx}"],
 		plugins: {
-			"@typescript-eslint": TypescriptEslintPlugin,
+			"@typescript-eslint": TypescriptEslintPlugin as any,
 		},
 		languageOptions: {
 			parser: TypescriptEslintParser,
@@ -40,4 +40,4 @@ const config = [
 	},
 ] satisfies Linter.FlatConfig[];
 
-export = config;
+export default config;

@@ -43,4 +43,4 @@ const config: UserConfig = {
 	},
 };
 
-export = config;
+export default config;

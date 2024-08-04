@@ -11,15 +11,7 @@
 		"email": "info@abinnovision.com",
 		"url": "https://abinnovision.com/"
 	},
-	"exports": {
-		".": {
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
-		}
-	},
-	"main": "./dist/index.cjs",
-	"module": "./dist/index.js",
+	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"bin": {
 		"sync-editorconfig": "./dist/bin/sync-editorconfig.cjs"
@@ -29,7 +21,7 @@
 		"assets/"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --dts --format esm,cjs --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
+		"build": "tsup src/index.ts --dts --format esm --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"lint:check": "eslint 'src/**/*.{ts,js}'",

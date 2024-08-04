@@ -15,4 +15,4 @@ const config = [
 	},
 ] satisfies Linter.FlatConfig[];
 
-export = config;
+export default config;
