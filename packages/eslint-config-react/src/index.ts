@@ -1,5 +1,5 @@
-import * as AlloyReact from "eslint-config-alloy/react";
-import * as eslintPluginReact from "eslint-plugin-react";
+import AlloyReact from "eslint-config-alloy/react.js";
+import eslintPluginReact from "eslint-plugin-react";
 
 import type { Linter } from "eslint";
 
@@ -15,4 +15,4 @@ const config = [
 	},
 ] satisfies Linter.FlatConfig[];
 
-export = config;
+export default config;

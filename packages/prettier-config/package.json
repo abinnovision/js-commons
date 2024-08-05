@@ -1,6 +1,7 @@
 {
 	"name": "@abinnovision/prettier-config",
 	"version": "2.0.0",
+	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
@@ -10,25 +11,17 @@
 		"email": "info@abinnovision.com",
 		"url": "https://abinnovision.com/"
 	},
-	"exports": {
-		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.js",
-			"types": "./dist/index.d.ts"
-		}
-	},
 	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"bin": {
-		"sync-editorconfig": "./dist/bin/sync-editorconfig.js"
+		"sync-editorconfig": "./dist/bin/sync-editorconfig.cjs"
 	},
 	"files": [
 		"dist/",
 		"assets/"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --dts --format esm,cjs --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
+		"build": "tsup src/index.ts --dts --format esm --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"lint:check": "eslint 'src/**/*.{ts,js}'",

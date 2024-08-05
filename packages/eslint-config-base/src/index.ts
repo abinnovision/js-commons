@@ -1,5 +1,5 @@
-import * as AlloyBase from "eslint-config-alloy/base";
-import * as eslintPluginImport from "eslint-plugin-import";
+import AlloyBase from "eslint-config-alloy/base.js";
+import eslintPluginImport from "eslint-plugin-import";
 
 import type { Linter } from "eslint";
 
@@ -75,4 +75,4 @@ const config = [
 	},
 ] satisfies Linter.FlatConfig[];
 
-export = config;
+export default config;

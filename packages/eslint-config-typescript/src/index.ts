@@ -1,7 +1,7 @@
-import * as TypescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
+import TypescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 // @ts-ignore
-import * as TypescriptEslintParser from "@typescript-eslint/parser";
-import * as AlloyTypescript from "eslint-config-alloy/typescript";
+import TypescriptEslintParser from "@typescript-eslint/parser";
+import AlloyTypescript from "eslint-config-alloy/typescript.js";
 
 import type { Linter } from "eslint";
 
@@ -9,7 +9,7 @@ const config = [
 	{
 		files: ["**/*.{ts,tsx}"],
 		plugins: {
-			"@typescript-eslint": TypescriptEslintPlugin,
+			"@typescript-eslint": TypescriptEslintPlugin as any,
 		},
 		languageOptions: {
 			parser: TypescriptEslintParser,
@@ -40,4 +40,4 @@ const config = [
 	},
 ] satisfies Linter.FlatConfig[];
 
-export = config;
+export default config;

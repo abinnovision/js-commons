@@ -1,4 +1,4 @@
-declare module "eslint-config-alloy/base" {
+declare module "eslint-config-alloy/base.js" {
 	import { Linter } from "eslint";
 
 	import BaseConfig = Linter.BaseConfig;

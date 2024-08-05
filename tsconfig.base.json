@@ -3,13 +3,14 @@
 	"compilerOptions": {
 		"strict": true,
 		"target": "ES2022",
-		"module": "CommonJS",
-		"moduleResolution": "Node10",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"sourceMap": false,
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
 		"noEmit": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"esModuleInterop": true
 	}
 }
