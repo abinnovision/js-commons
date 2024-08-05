@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.0.0...eslint-config-base-v2.1.0) (2024-08-05)
+
+
+### Features
+
+* migrate to esm ([#278](https://github.com/abinnovision/js-commons/issues/278)) ([fed850d](https://github.com/abinnovision/js-commons/commit/fed850d979f7ba83fae75adadcfd0024f2acd242))
+
+
+### Bug Fixes
+
+* wrap eslint-plugin-import with compat package ([#280](https://github.com/abinnovision/js-commons/issues/280)) ([2f61aca](https://github.com/abinnovision/js-commons/commit/2f61aca45ccfb248868815906d87d4be6656dcf5))
+
 ## [2.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v1.2.0...eslint-config-base-v2.0.0) (2023-11-03)
 
 

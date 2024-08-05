@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/commitlint-config",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
