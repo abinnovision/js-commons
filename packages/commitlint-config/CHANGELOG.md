@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.1.0...commitlint-config-v2.2.0) (2024-08-05)
+
+
+### Features
+
+* migrate to esm ([#278](https://github.com/abinnovision/js-commons/issues/278)) ([fed850d](https://github.com/abinnovision/js-commons/commit/fed850d979f7ba83fae75adadcfd0024f2acd242))
+
 ## [2.1.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.0.1...commitlint-config-v2.1.0) (2024-08-02)
 
 
