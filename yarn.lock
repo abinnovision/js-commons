@@ -40,7 +40,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     tsup: "npm:^8.2.4"
   peerDependencies:
-    eslint: ^8.24.0
+    eslint: ^8.24.0 || ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -59,7 +59,7 @@ __metadata:
     tsup: "npm:^8.2.4"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    eslint: ^8.24.0
+    eslint: ^8.24.0 || ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -78,7 +78,7 @@ __metadata:
     tsup: "npm:^8.2.4"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    eslint: ^8.24.0
+    eslint: ^8.24.0 || ^9.0.0
   languageName: unknown
   linkType: soft
 
