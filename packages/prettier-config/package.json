@@ -40,7 +40,7 @@
 	"devDependencies": {
 		"@types/node": "^20.11.30",
 		"@types/prettier": "^3.0.0",
-		"eslint": "^9.9.0",
+		"eslint": "^9.9.1",
 		"globals": "^15.9.0",
 		"prettier": "^3.3.3",
 		"tsup": "^8.2.4",
