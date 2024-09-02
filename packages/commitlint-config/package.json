@@ -42,7 +42,7 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@commitlint/config-conventional": "^19.2.2"
+		"@commitlint/config-conventional": "^19.4.1"
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
