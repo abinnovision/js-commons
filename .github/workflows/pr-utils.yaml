@@ -56,27 +56,3 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  dependabot-dedupe:
-    name: "Deduplicate Dependabot PRs"
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: abinnovision/actions/actions/setup-node@master
-      - name: Install dependencies
-        run: yarn install --immutable
-      - id: dedupe
-        name: Check Dependencies
-        run: |
-          # Run yarn dedupe to check if there are any changes.
-          yarn dedupe
-          # Check if there are any changes.
-          echo "CHANGES=$(git status --porcelain yarn.lock | wc -l)" >> $GITHUB_OUTPUT
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        # Only commit if there are changes.
-        if: steps.dedupe.outputs.CHANGES > 0
-        with:
-          commit_message: "build: yarn dedupe"
