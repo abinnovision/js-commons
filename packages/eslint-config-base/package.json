@@ -50,7 +50,7 @@
 		"@abinnovision/prettier-config": "workspace:^",
 		"@types/eslint": "^9.6.1",
 		"eslint": "^9.9.1",
-		"globals": "^15.9.0",
+		"globals": "^15.10.0",
 		"prettier": "^3.3.3",
 		"tsup": "^8.3.0"
 	},
