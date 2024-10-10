@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.1](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.0...prettier-config-v2.1.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* always require trailingComma ([#327](https://github.com/abinnovision/js-commons/issues/327)) ([ebf8d17](https://github.com/abinnovision/js-commons/commit/ebf8d1701054f7add9604227b722e40d6a426334))
+* **prettier-config:** add override for pnpm-lock.yaml ([#326](https://github.com/abinnovision/js-commons/issues/326)) ([a7d6fcb](https://github.com/abinnovision/js-commons/commit/a7d6fcb27e62c52bdf27e6d88b3e338a78b03e65))
+
 ## [2.1.0](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.0.0...prettier-config-v2.1.0) (2024-08-05)
 
 
