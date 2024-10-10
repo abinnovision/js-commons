@@ -5,7 +5,7 @@ const config: Config = {
 	useTabs: true,
 	tabWidth: 2,
 	semi: true,
-	trailingComma: "es5",
+	trailingComma: "all",
 	bracketSpacing: true,
 	arrowParens: "always",
 	endOfLine: "lf",
