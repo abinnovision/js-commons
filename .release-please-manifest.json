@@ -2,6 +2,6 @@
 	"packages/eslint-config-base": "2.1.0",
 	"packages/eslint-config-react": "2.1.0",
 	"packages/eslint-config-typescript": "2.1.0",
-	"packages/prettier-config": "2.1.0",
+	"packages/prettier-config": "2.1.1",
 	"packages/commitlint-config": "2.2.0"
 }
