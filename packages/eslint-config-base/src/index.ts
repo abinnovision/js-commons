@@ -10,6 +10,7 @@ const config = [
 		languageOptions: {
 			ecmaVersion: "latest",
 		},
+		ignores: [".next", "dist", ".wrangler", ".vercel", ".turbo", ".yarn"],
 		plugins: {
 			/**
 			 * eslint-plugin-import is not yet compatible with ESLint v9.
