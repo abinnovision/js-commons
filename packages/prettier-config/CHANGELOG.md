@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.2](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.1...prettier-config-v2.1.2) (2024-10-10)
+
+
+### Bug Fixes
+
+* enable trim_trailing_whitespace ([#332](https://github.com/abinnovision/js-commons/issues/332)) ([d5c8a90](https://github.com/abinnovision/js-commons/commit/d5c8a90aa0cefeb657d341ac34aa2691b9bd75ed))
+* use space indent_style for md files ([#331](https://github.com/abinnovision/js-commons/issues/331)) ([ad54cd3](https://github.com/abinnovision/js-commons/commit/ad54cd320e87154c474e96295c8bacd64d2b0701))
+
 ## [2.1.1](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.0...prettier-config-v2.1.1) (2024-10-10)
 
 

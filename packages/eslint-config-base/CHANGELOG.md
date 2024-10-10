@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.1.0...eslint-config-base-v2.1.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* **eslint-config:** add ignores to exclude build directories ([#329](https://github.com/abinnovision/js-commons/issues/329)) ([b6821d1](https://github.com/abinnovision/js-commons/commit/b6821d167217de9baa33475bc8fa90cb48bf5153))
+
 ## [2.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.0.0...eslint-config-base-v2.1.0) (2024-08-05)
 
 
