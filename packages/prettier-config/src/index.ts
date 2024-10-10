@@ -9,6 +9,14 @@ const config: Config = {
 	bracketSpacing: true,
 	arrowParens: "always",
 	endOfLine: "lf",
+	overrides: [
+		{
+			files: ["pnpm-lock.yaml"],
+			options: {
+				requirePragma: true,
+			},
+		},
+	],
 };
 
 export default config;
