@@ -55,6 +55,7 @@ __metadata:
     eslint: "npm:^9.12.0"
     eslint-config-alloy: "npm:^5.1.2"
     eslint-plugin-react: "npm:^7.37.1"
+    eslint-plugin-react-hooks: "npm:^4.6.2"
     globals: "npm:^15.11.0"
     tsup: "npm:^8.3.0"
     typescript: "npm:^5.6.3"
@@ -2183,6 +2184,15 @@ __metadata:
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9
   checksum: 10/6b76bd009ac2db0615d9019699d18e2a51a86cb8c1d0855a35fb1b418be23b40239e6debdc6e8c92c59f1468ed0ea8d7b85c817117a113d5cc225be8a02ad31c
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react-hooks@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "eslint-plugin-react-hooks@npm:4.6.2"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+  checksum: 10/5a0680941f34e70cf505bcb6082df31a3e445d193ee95a88ff3483041eb944f4cefdaf7e81b0eb1feb4eeceee8c7c6ddb8a2a6e8c4c0388514a42e16ac7b7a69
   languageName: node
   linkType: hard
 
