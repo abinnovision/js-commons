@@ -12,7 +12,7 @@ jobs:
   # Configure the commit SHA to use.
   configure:
     name: Configure
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 2
     outputs:
       commit-sha: ${{ env.COMMIT_SHA }}
@@ -33,7 +33,7 @@ jobs:
   # packages.
   check_build:
     name: Check & Build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
     needs:
       - configure
@@ -43,9 +43,7 @@ jobs:
         with:
           ref: ${{ needs.configure.outputs.commit-sha }}
       - name: Setup Node
-        uses: abinnovision/actions/actions/setup-node@master
-      - name: Setup Turborepo cache
-        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+        uses: abinnovision/actions@setup-node-v1
       - name: Install dependencies
         run: yarn install --immutable
       # This is a special case for just this repository.
@@ -89,9 +87,7 @@ jobs:
         with:
           ref: ${{ needs.configure.outputs.commit-sha }}
       - name: Setup Node
-        uses: abinnovision/actions/actions/setup-node@master
-      - name: Setup Turborepo cache
-        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+        uses: abinnovision/actions@setup-node-v1
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
