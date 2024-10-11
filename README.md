@@ -46,7 +46,7 @@ For plain JavaScript projects, use the following configuration:
 Example configuration in `eslint.config.js`:
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [...require("@abinnovision/eslint-config-base")];
 ```
 
@@ -66,7 +66,7 @@ For TypeScript-only projects, use the following configurations:
 Example configuration in `eslint.config.js`:
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [
 	...require("@abinnovision/eslint-config-base"),
 	...require("@abinnovision/eslint-config-typescript"),
@@ -90,7 +90,7 @@ For TypeScript & React projects, use the following configurations:
 Example configuration in `eslint.config.js`:
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [
 	...require("@abinnovision/eslint-config-base"),
 	...require("@abinnovision/eslint-config-typescript"),
@@ -197,7 +197,7 @@ by yourself to the `eslint.config.js` file.
 For example, to add the `window` global variable, use the following:
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [
 	...require("@abinnovision/eslint-config-base"),
 	{
@@ -216,7 +216,7 @@ the [globals package](https://www.npmjs.com/package/globals) to add all
 available globals for that environment.
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [
 	...require("@abinnovision/eslint-config-base"),
 	{
@@ -236,7 +236,7 @@ configuration objects. The type of this array is defined in `@types/eslint` and
 can be imported to get type support.
 
 ```javascript
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 module.exports = [
 	// here goes the config
 ];
@@ -250,7 +250,7 @@ you can use the following syntax to use the ESLint configuration:
 ```javascript
 import configBase from "@abinnovision/eslint-config-base";
 
-/** @type {import("@types/eslint").Linter.FlatConfig[]} */
+/** @type {import("@types/eslint").Linter.Config[]} */
 export default [
 	...configBase,
 	// here goes the config
