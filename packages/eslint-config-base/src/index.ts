@@ -81,6 +81,6 @@ const config = [
 			"no-return-await": "off",
 		},
 	},
-] satisfies Linter.FlatConfig[];
+] satisfies Linter.Config[];
 
 export default config;

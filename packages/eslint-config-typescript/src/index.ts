@@ -38,6 +38,6 @@ const config = [
 			"@typescript-eslint/return-await": ["warn", "always"],
 		},
 	},
-] satisfies Linter.FlatConfig[];
+] satisfies Linter.Config[];
 
 export default config;

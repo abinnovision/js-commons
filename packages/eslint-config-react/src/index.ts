@@ -13,6 +13,6 @@ const config = [
 			...(AlloyReact.rules ?? {}),
 		},
 	},
-] satisfies Linter.FlatConfig[];
+] satisfies Linter.Config[];
 
 export default config;
