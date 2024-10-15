@@ -42,7 +42,6 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@eslint/compat": "^1.2.0",
 		"eslint-config-alloy": "^5.1.2",
 		"eslint-plugin-import": "^2.31.0"
 	},

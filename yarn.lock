@@ -31,7 +31,6 @@ __metadata:
   resolution: "@abinnovision/eslint-config-base@workspace:packages/eslint-config-base"
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
-    "@eslint/compat": "npm:^1.2.0"
     "@types/eslint": "npm:^9.6.1"
     eslint: "npm:^9.12.0"
     eslint-config-alloy: "npm:^5.1.2"
@@ -502,18 +501,6 @@ __metadata:
   version: 4.11.0
   resolution: "@eslint-community/regexpp@npm:4.11.0"
   checksum: 10/f053f371c281ba173fe6ee16dbc4fe544c84870d58035ccca08dba7f6ce1830d895ce3237a0db89ba37616524775dca82f1c502066b58e2d5712d7f87f5ba17c
-  languageName: node
-  linkType: hard
-
-"@eslint/compat@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@eslint/compat@npm:1.2.0"
-  peerDependencies:
-    eslint: ^9.10.0
-  peerDependenciesMeta:
-    eslint:
-      optional: true
-  checksum: 10/4896c417c1f197a6e9cc12592a661f0d91d73bdbb936785555c5bb81d2359a59fe90aac2422e7ce525e9dd5bb13227cbfec1263f9263591ccca200e9038057bf
   languageName: node
   linkType: hard
 

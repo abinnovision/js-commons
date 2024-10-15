@@ -1,4 +1,3 @@
-import { fixupPluginRules } from "@eslint/compat";
 import AlloyBase from "eslint-config-alloy/base.js";
 import eslintPluginImport from "eslint-plugin-import";
 
@@ -18,7 +17,7 @@ const config = [
 			 *
 			 * @see https://github.com/import-js/eslint-plugin-import/issues/2948
 			 */
-			import: fixupPluginRules(eslintPluginImport),
+			import: eslintPluginImport,
 		},
 		rules: {
 			/**
