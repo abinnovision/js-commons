@@ -2,8 +2,8 @@
 
 This repository contains commonly used configurations for the JavaScript
 ecosystem within [AB INNOVISION GmbH](https://github.com/abinnovision).
-Organized as a monorepo, it generates multiple packages defined in
-the [packages](./packages) directory.
+Organized as a monorepo, it generates multiple packages defined in the
+[packages](./packages) directory.
 
 ## Packages
 
@@ -21,15 +21,15 @@ Presently, the following packages are available:
 - [commitlint-config](./packages/commitlint-config): Shared Commitlint
   configuration for all projects.
 
-All packages are published under
-the [`@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
+All packages are published under the
+[`@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
 and [npm](https://www.npmjs.com/).
 
 ## ESLint
 
 ESLint, a widely-used open-source static code analysis tool for JavaScript, is
-employed to identify coding errors, stylistic issues, and potential bugs.
-In [AB INNOVISION GmbH](https://github.com/abinnovision), a custom shared ESLint
+employed to identify coding errors, stylistic issues, and potential bugs. In
+[AB INNOVISION GmbH](https://github.com/abinnovision), a custom shared ESLint
 configuration is used, split into multiple parts, each catering to a specific
 technology (e.g., TypeScript, React). These configurations can be used in
 conjunction with each other.
@@ -125,9 +125,9 @@ Example configuration in `package.json`:
 
 ```json5
 {
-	// ...
-	prettier: "@abinnovision/prettier-config",
-	// ...
+  // ...
+  prettier: "@abinnovision/prettier-config",
+  // ...
 }
 ```
 
@@ -142,12 +142,12 @@ the one defined in this project.
 
 ```json5
 {
-	// ...
-	scripts: {
-		// ...
-		postinstall: "sync-editorconfig",
-	},
-	// ...
+  // ...
+  scripts: {
+    // ...
+    postinstall: "sync-editorconfig",
+  },
+  // ...
 }
 ```
 
@@ -175,11 +175,11 @@ Example configuration in `package.json`:
 
 ```json5
 {
-	// ...
-	commitlint: {
-		extends: ["@abinnovision/commitlint-config"],
-	},
-	// ...
+  // ...
+  commitlint: {
+    extends: ["@abinnovision/commitlint-config"],
+  },
+  // ...
 }
 ```
 
@@ -193,8 +193,8 @@ yarn add --dev @abinnovision/commitlint-config
 
 ### ESLint with Globals
 
-If you need to use global variables in your project, you can easily add them
-by yourself to the `eslint.config.js` file.
+If you need to use global variables in your project, you can easily add them by
+yourself to the `eslint.config.js` file.
 
 For example, to add the `window` global variable, use the following:
 
@@ -203,34 +203,34 @@ import baseConfig from "@abinnovision/eslint-config-base";
 
 /** @type {import("@types/eslint").Linter.Config[]} */
 export default [
-	...baseConfig,
-	{
-		files: ["**/*.js"],
-		languageOptions: {
-			globals: {
-				window: true,
-			},
-		},
-	},
+  ...baseConfig,
+  {
+    files: ["**/*.js"],
+    languageOptions: {
+      globals: {
+        window: true,
+      },
+    },
+  },
 ];
 ```
 
-If you're within a default environment (e.g. node), it's possible to use
-the [globals package](https://www.npmjs.com/package/globals) to add all
-available globals for that environment.
+If you're within a default environment (e.g. node), it's possible to use the
+[globals package](https://www.npmjs.com/package/globals) to add all available
+globals for that environment.
 
 ```javascript
 import baseConfig from "@abinnovision/eslint-config-base";
 
 /** @type {import("@types/eslint").Linter.Config[]} */
 export default [
-	...baseConfig,
-	{
-		files: ["**/*.js"],
-		languageOptions: {
-			globals: require("globals").node,
-		},
-	},
+  ...baseConfig,
+  {
+    files: ["**/*.js"],
+    languageOptions: {
+      globals: require("globals").node,
+    },
+  },
 ];
 ```
 
@@ -244,6 +244,6 @@ can be imported to get type support.
 ```javascript
 /** @type {import("@types/eslint").Linter.Config[]} */
 export default [
-	// here goes the config
+  // here goes the config
 ];
 ```
