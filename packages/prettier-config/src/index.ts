@@ -16,6 +16,18 @@ const config: Config = {
 				requirePragma: true,
 			},
 		},
+		{
+			/**
+			 * Use spaces for Markdown files instead of tabs.
+			 *
+			 * This is because Markdown files rendered with tabs in GitHub use pretty
+			 * large indentation, which is not ideal.
+			 */
+			files: ["*.md"],
+			options: {
+				useTabs: false,
+			},
+		},
 	],
 };
 
