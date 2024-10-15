@@ -22,7 +22,7 @@ Presently, the following packages are available:
   configuration for all projects.
 
 All packages are published under the
-[`@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
+[ `@abinnovision` scope on the GitHub Packages Registry](https://github.com/orgs/abinnovision/packages)
 and [npm](https://www.npmjs.com/).
 
 ## ESLint
