@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.1](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.1.0...eslint-config-typescript-v2.1.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* migrate to Linter.Config type ([#340](https://github.com/abinnovision/js-commons/issues/340)) ([30a1c19](https://github.com/abinnovision/js-commons/commit/30a1c19c3a2f4c2b94e6086486951145b399e15d))
+* only support eslint v9 ([#345](https://github.com/abinnovision/js-commons/issues/345)) ([7425fdc](https://github.com/abinnovision/js-commons/commit/7425fdc9c2d8912988697ab07b9a8f42d96786d4))
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.0.0...eslint-config-typescript-v2.1.0) (2024-08-05)
 
 

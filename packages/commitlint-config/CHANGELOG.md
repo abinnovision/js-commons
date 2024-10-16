@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.0...commitlint-config-v2.2.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.2.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.1.0...commitlint-config-v2.2.0) (2024-08-05)
 
 

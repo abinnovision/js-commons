@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v2.1.0...eslint-config-react-v2.2.0) (2024-10-16)
+
+
+### Features
+
+* add eslint-plugin-react-hooks with recommended config ([#339](https://github.com/abinnovision/js-commons/issues/339)) ([6d0a2e0](https://github.com/abinnovision/js-commons/commit/6d0a2e0dd68c7a91d3b7a8c3b116ee31c3d7871e))
+
+
+### Bug Fixes
+
+* automatically detect the react version ([#352](https://github.com/abinnovision/js-commons/issues/352)) ([2e3ea1a](https://github.com/abinnovision/js-commons/commit/2e3ea1aa6b3797606e2303f4b10fc28a75440ab3))
+* migrate to Linter.Config type ([#340](https://github.com/abinnovision/js-commons/issues/340)) ([30a1c19](https://github.com/abinnovision/js-commons/commit/30a1c19c3a2f4c2b94e6086486951145b399e15d))
+* only support eslint v9 ([#345](https://github.com/abinnovision/js-commons/issues/345)) ([7425fdc](https://github.com/abinnovision/js-commons/commit/7425fdc9c2d8912988697ab07b9a8f42d96786d4))
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v2.0.0...eslint-config-react-v2.1.0) (2024-08-05)
 
 
