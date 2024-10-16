@@ -11,6 +11,11 @@ const config = [
 			react: eslintPluginReact,
 			"react-hooks": eslintPluginReactHooks,
 		},
+		settings: {
+			react: {
+				version: "detect",
+			},
+		},
 		rules: {
 			...(AlloyReact.rules ?? {}),
 
