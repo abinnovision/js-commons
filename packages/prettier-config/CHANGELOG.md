@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.2...prettier-config-v2.1.3) (2024-10-16)
+
+
+### Bug Fixes
+
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.1.2](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.1...prettier-config-v2.1.2) (2024-10-10)
 
 
