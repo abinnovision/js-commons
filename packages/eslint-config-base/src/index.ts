@@ -1,5 +1,6 @@
 import AlloyBase from "eslint-config-alloy/base.js";
 import eslintPluginImport from "eslint-plugin-import";
+import unusedImports from "eslint-plugin-unused-imports";
 
 import type { Linter } from "eslint";
 
@@ -9,7 +10,6 @@ const config = [
 		languageOptions: {
 			ecmaVersion: "latest",
 		},
-		ignores: [".next", "dist", ".wrangler", ".vercel", ".turbo", ".yarn"],
 		plugins: {
 			/**
 			 * eslint-plugin-import is not yet compatible with ESLint v9.
@@ -18,6 +18,7 @@ const config = [
 			 * @see https://github.com/import-js/eslint-plugin-import/issues/2948
 			 */
 			import: eslintPluginImport,
+			"unused-imports": unusedImports,
 		},
 		rules: {
 			/**
@@ -78,6 +79,21 @@ const config = [
 			 * Disable the "no-return-await" rule.
 			 */
 			"no-return-await": "off",
+
+			/**
+			 * Disable the "no-unused-vars" rule as unused-imports is used instead.
+			 */
+			"no-unused-vars": "off",
+			"unused-imports/no-unused-imports": "error",
+			"unused-imports/no-unused-vars": [
+				"warn",
+				{
+					vars: "all",
+					varsIgnorePattern: "^_",
+					args: "after-used",
+					argsIgnorePattern: "^_",
+				},
+			],
 		},
 	},
 ] satisfies Linter.Config[];

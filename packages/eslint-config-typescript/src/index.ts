@@ -36,6 +36,11 @@ const config = [
 			 * @see https://stackoverflow.com/questions/43353087/are-there-performance-concerns-with-return-await/70979225#70979225
 			 */
 			"@typescript-eslint/return-await": ["warn", "always"],
+
+			/**
+			 * Disable no-unused-vars due to unused-imports plugin
+			 */
+			"@typescript-eslint/no-unused-vars": "off",
 		},
 	},
 ] satisfies Linter.Config[];
