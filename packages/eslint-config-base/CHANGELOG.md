@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.1.2...eslint-config-base-v2.2.0) (2024-10-24)
+
+
+### Features
+
+* **eslint:** add unused-imports plugin and update rules ([#356](https://github.com/abinnovision/js-commons/issues/356)) ([303352c](https://github.com/abinnovision/js-commons/commit/303352c986709a06ec7a02aff322ce2e5dcf7342))
+
 ## [2.1.2](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.1.1...eslint-config-base-v2.1.2) (2024-10-16)
 
 
