@@ -43,14 +43,14 @@
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
 		"eslint-config-alloy": "^5.1.2",
-		"eslint-plugin-react": "^7.37.1",
+		"eslint-plugin-react": "^7.37.2",
 		"eslint-plugin-react-hooks": "^5.0.0"
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
 		"@types/eslint": "^9.6.1",
-		"@typescript-eslint/eslint-plugin": "^8.10.0",
-		"@typescript-eslint/parser": "^8.10.0",
+		"@typescript-eslint/eslint-plugin": "^8.11.0",
+		"@typescript-eslint/parser": "^8.11.0",
 		"eslint": "^9.13.0",
 		"globals": "^15.11.0",
 		"tsup": "^8.3.0",
