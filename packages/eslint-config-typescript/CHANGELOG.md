@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.2.0...eslint-config-typescript-v2.2.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* upgrade [@typescript-eslint](https://github.com/typescript-eslint) dependencies ([#387](https://github.com/abinnovision/js-commons/issues/387)) ([195cc68](https://github.com/abinnovision/js-commons/commit/195cc682a29fcc31a15b30ef6e982faad4cfae88))
+
 ## [2.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.1.1...eslint-config-typescript-v2.2.0) (2024-10-24)
 
 
