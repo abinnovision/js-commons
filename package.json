@@ -41,5 +41,5 @@
 		"sort-package-json": "^2.12.0",
 		"turbo": "^2.3.3"
 	},
-	"packageManager": "yarn@4.5.0"
+	"packageManager": "yarn@4.6.0"
 }
