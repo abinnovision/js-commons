@@ -21,7 +21,7 @@ __metadata:
     "@commitlint/types": "npm:^19.5.0"
     eslint: "npm:^9.19.0"
     prettier: "npm:^3.4.2"
-    tsup: "npm:^8.3.5"
+    tsup: "npm:^8.3.6"
     typescript: "npm:^5.7.3"
   languageName: unknown
   linkType: soft
@@ -38,7 +38,7 @@ __metadata:
     eslint-plugin-unused-imports: "npm:^4.1.4"
     globals: "npm:^15.14.0"
     prettier: "npm:^3.4.2"
-    tsup: "npm:^8.3.5"
+    tsup: "npm:^8.3.6"
   peerDependencies:
     eslint: ^9.0.0
   languageName: unknown
@@ -55,7 +55,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.4"
     eslint-plugin-react-hooks: "npm:^5.1.0"
     globals: "npm:^15.14.0"
-    tsup: "npm:^8.3.5"
+    tsup: "npm:^8.3.6"
     typescript: "npm:^5.7.3"
   peerDependencies:
     eslint: ^9.0.0
@@ -74,7 +74,7 @@ __metadata:
     eslint-config-alloy: "npm:^5.1.2"
     globals: "npm:^15.14.0"
     prettier: "npm:^3.4.2"
-    tsup: "npm:^8.3.5"
+    tsup: "npm:^8.3.6"
     typescript: "npm:^5.7.3"
   peerDependencies:
     eslint: ^9.0.0
@@ -90,7 +90,7 @@ __metadata:
     eslint: "npm:^9.19.0"
     globals: "npm:^15.14.0"
     prettier: "npm:^3.4.2"
-    tsup: "npm:^8.3.5"
+    tsup: "npm:^8.3.6"
     typescript: "npm:^5.7.3"
   peerDependencies:
     prettier: ^2.4.0 || ^3.0.0
@@ -5107,9 +5107,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:^8.3.5":
-  version: 8.3.5
-  resolution: "tsup@npm:8.3.5"
+"tsup@npm:^8.3.6":
+  version: 8.3.6
+  resolution: "tsup@npm:8.3.6"
   dependencies:
     bundle-require: "npm:^5.0.0"
     cac: "npm:^6.7.14"
@@ -5144,7 +5144,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: 10/8cf694d5fe7923c47273388f7fb203fe64fe66efb65a96829d361de3360d4db4299e7f82f4e6354716b580c9a1eadb336a25759f90fdc61fe816d5d7d9a28003
+  checksum: 10/ee70995a5d155ea7d9d1e0491f46520fe250393ed7935d8776956fc3380d3c992b06e6a01223187712eb32f52ff06dbc66c60cbe5dc91c4bd1415ad6d238b517
   languageName: node
   linkType: hard
 
