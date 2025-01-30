@@ -70,10 +70,9 @@ jobs:
         run: |
           yarn install --immutable
           yarn dedupe
-          git diff --exit-code --quiet yarn.lock
 
           # If there are changes, commit them.
-          if [[ $(git status --porcelain) ]]; then
+          if ! git diff --exit-code --quiet yarn.lock; then
             echo "has-changes=true" >> $GITHUB_OUTPUT
           else
             echo "has-changes=false" >> $GITHUB_OUTPUT
