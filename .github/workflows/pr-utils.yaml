@@ -83,7 +83,7 @@ jobs:
         if: steps.dedupe.outputs.has-changes == 'true'
         uses: abinnovision/actions/actions/setup-gcp@master
         with:
-          auth: ${{ inputs.gcp-auth }}
+          auth: ${{ vars.GCP_AUTH }}
       - id: token
         if: steps.dedupe.outputs.has-changes == 'true'
         name: Generate GitHub App token
