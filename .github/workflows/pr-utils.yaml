@@ -64,6 +64,8 @@ jobs:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: abinnovision/actions@setup-node-v1
       - name: Dedupe
         run: |
           yarn install --immutable
