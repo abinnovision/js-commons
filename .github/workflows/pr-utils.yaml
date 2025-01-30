@@ -67,6 +67,7 @@ jobs:
       - name: Setup Node
         uses: abinnovision/actions@setup-node-v1
       - name: Dedupe
+        id: dedupe
         run: |
           yarn install --immutable
           yarn dedupe
