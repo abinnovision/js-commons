@@ -22,8 +22,9 @@ jobs:
         uses: abinnovision/actions@run-commitlint-v1
   dependabot:
     name: "Dependabot automations"
+    # Only run for Dependabot PRs.
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
     permissions:
       pull-requests: write
       issues: write
@@ -56,3 +57,56 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  dependabot-dedupe:
+    name: "Dependabot / Yarn deduplication"
+    runs-on: ubuntu-latest
+    # Only run for Dependabot PRs.
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dedupe
+        run: |
+          yarn install --immutable
+          yarn dedupe
+          git diff --exit-code --quiet yarn.lock
+
+          # If there are changes, commit them.
+          if [[ $(git status --porcelain) ]]; then
+            echo "has-changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has-changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup GCP Authentication
+        if: steps.dedupe.outputs.has-changes == 'true'
+        uses: abinnovision/actions/actions/setup-gcp@master
+        with:
+          auth: ${{ inputs.gcp-auth }}
+      - id: token
+        if: steps.dedupe.outputs.has-changes == 'true'
+        name: Generate GitHub App token
+        uses: abinnovision/actions/actions/get-github-app-token@master
+        with:
+          identification: ${{ secrets.GH_APP_IDENTIFICATION_RELEASER }}
+
+      - name: Fetch Bot metadata
+        if: steps.dedupe.outputs.has-changes == 'true'
+        env:
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+        run: |
+          bot_data=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /user)
+          echo "bot-login=$(echo $bot_data | jq -r .login)" >> $GITHUB_OUTPUT
+          echo "bot-email=$(echo $bot_data | jq -r .email)" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.dedupe.outputs.has-changes == 'true'
+        run: |
+          git config --global user.name '${{ steps.bot-login.outputs.bot-login }}'
+          git config --global user.email '${{ steps.bot-email.outputs.bot-email }}'
+          git commit -am "build: deduplicate dependencies"
+      - name: Push changes
+        if: steps.dedupe.outputs.has-changes == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ steps.token.outputs.token }}
+          branch: ${{ github.head_ref }}
