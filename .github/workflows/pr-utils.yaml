@@ -72,7 +72,7 @@ jobs:
           yarn dedupe
 
           # If there are changes, commit them.
-          if ! git diff --exit-code --quiet yarn.lock; then
+          if [[ $(git status --porcelain yarn.lock | wc -l) -ne "0" ]]; then
             echo "has-changes=true" >> $GITHUB_OUTPUT
           else
             echo "has-changes=false" >> $GITHUB_OUTPUT
