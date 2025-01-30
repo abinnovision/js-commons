@@ -62,6 +62,8 @@ jobs:
     runs-on: ubuntu-latest
     # Only run for Dependabot PRs.
     if: github.event.pull_request.user.login == 'dependabot[bot]'
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
@@ -81,7 +83,7 @@ jobs:
 
       - name: Setup GCP Authentication
         if: steps.dedupe.outputs.has-changes == 'true'
-        uses: abinnovision/actions/actions/setup-gcp@master
+        uses: abinnovision/actions@setup-gcp-v1
         with:
           auth: ${{ vars.GCP_AUTH }}
       - id: token
