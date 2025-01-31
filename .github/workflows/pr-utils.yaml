@@ -66,12 +66,10 @@ jobs:
       id-token: write
     steps:
       - name: Setup GCP Authentication
-        if: steps.dedupe.outputs.has-changes == 'true'
         uses: abinnovision/actions@setup-gcp-v1
         with:
           auth: ${{ vars.GCP_AUTH }}
       - id: token
-        if: steps.dedupe.outputs.has-changes == 'true'
         name: Generate GitHub App token
         uses: abinnovision/actions@get-github-app-token-dev
         with:
