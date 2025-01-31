@@ -99,4 +99,4 @@ jobs:
           git config --global user.name '${{ steps.token.outputs.app-commiter-name }}'
           git config --global user.email '${{ steps.token.outputs.app-commiter-email }}'
           git commit --no-verify -am "build: deduplicate dependencies"
-          git push --force
+          git push origin HEAD:${{ github.head_ref }}
