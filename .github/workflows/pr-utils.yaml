@@ -65,7 +65,21 @@ jobs:
     permissions:
       id-token: write
     steps:
+      - name: Setup GCP Authentication
+        if: steps.dedupe.outputs.has-changes == 'true'
+        uses: abinnovision/actions@setup-gcp-v1
+        with:
+          auth: ${{ vars.GCP_AUTH }}
+      - id: token
+        if: steps.dedupe.outputs.has-changes == 'true'
+        name: Generate GitHub App token
+        uses: abinnovision/actions@get-github-app-token-dev
+        with:
+          identification: ${{ secrets.GH_APP_IDENTIFICATION_RELEASER }}
+
       - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.token.outputs.token }}
       - name: Setup Node
         uses: abinnovision/actions@setup-node-v1
       - name: Dedupe
@@ -80,28 +94,11 @@ jobs:
           else
             echo "has-changes=false" >> $GITHUB_OUTPUT
           fi
-      - name: Setup GCP Authentication
-        if: steps.dedupe.outputs.has-changes == 'true'
-        uses: abinnovision/actions@setup-gcp-v1
-        with:
-          auth: ${{ vars.GCP_AUTH }}
-      - id: token
-        if: steps.dedupe.outputs.has-changes == 'true'
-        name: Generate GitHub App token
-        uses: abinnovision/actions@get-github-app-token-dev
-        with:
-          identification: ${{ secrets.GH_APP_IDENTIFICATION_RELEASER }}
 
       - name: Commit changes
         if: steps.dedupe.outputs.has-changes == 'true'
         run: |
           git config --global user.name '${{ steps.token.outputs.app-commiter-name }}'
           git config --global user.email '${{ steps.token.outputs.app-commiter-email }}'
-          git commit --no-verify -am "build: deduplicate dependencies"
-      - name: Push changes
-        if: steps.dedupe.outputs.has-changes == 'true'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ steps.token.outputs.token }}
-          branch: ${{ github.head_ref }}
-          force: true
+          git commit --no-verify -m "build: deduplicate dependencies"
+          git push --force
