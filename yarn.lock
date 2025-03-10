@@ -85,7 +85,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@abinnovision/prettier-config@workspace:packages/prettier-config"
   dependencies:
-    "@types/node": "npm:^22.12.0"
+    "@types/node": "npm:^22.13.10"
     "@types/prettier": "npm:^3.0.0"
     eslint: "npm:^9.22.0"
     globals: "npm:^16.0.0"
@@ -911,12 +911,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.12.0":
+"@types/node@npm:*":
   version: 22.12.0
   resolution: "@types/node@npm:22.12.0"
   dependencies:
     undici-types: "npm:~6.20.0"
   checksum: 10/aac2b6f6a845ec3540c3d979b3150efe3162165bfda953af10b579df2d1cc4f5c48506922bf6bf661a2e5a7ebb571c5729bf1f9f12488a810bb1a5fa9522ef9d
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.13.10":
+  version: 22.13.10
+  resolution: "@types/node@npm:22.13.10"
+  dependencies:
+    undici-types: "npm:~6.20.0"
+  checksum: 10/57dc6a5e0110ca9edea8d7047082e649fa7fa813f79e4a901653b9174141c622f4336435648baced5b38d9f39843f404fa2d8d7a10981610da26066bc8caab48
   languageName: node
   linkType: hard
 
