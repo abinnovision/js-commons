@@ -20,7 +20,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@commitlint/types": "npm:^19.8.1"
     eslint: "npm:^9.23.0"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.0"
     tsup: "npm:^8.3.6"
     typescript: "npm:^5.8.3"
   languageName: unknown
@@ -37,7 +37,7 @@ __metadata:
     eslint-plugin-import: "npm:^2.31.0"
     eslint-plugin-unused-imports: "npm:^4.1.4"
     globals: "npm:^16.2.0"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.0"
     tsup: "npm:^8.3.6"
   peerDependencies:
     eslint: ^9.0.0
@@ -73,7 +73,7 @@ __metadata:
     eslint: "npm:^9.23.0"
     eslint-config-alloy: "npm:^5.1.2"
     globals: "npm:^16.2.0"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.0"
     tsup: "npm:^8.3.6"
     typescript: "npm:^5.8.3"
   peerDependencies:
@@ -89,7 +89,7 @@ __metadata:
     "@types/prettier": "npm:^3.0.0"
     eslint: "npm:^9.23.0"
     globals: "npm:^16.2.0"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.0"
     tsup: "npm:^8.3.6"
     typescript: "npm:^5.8.3"
   peerDependencies:
@@ -619,7 +619,7 @@ __metadata:
     concurrently: "npm:^9.2.0"
     husky: "npm:^9.1.7"
     lint-staged: "npm:^16.0.0"
-    prettier: "npm:^3.4.2"
+    prettier: "npm:^3.6.0"
     rimraf: "npm:^6.0.1"
     sort-package-json: "npm:^2.15.1"
     turbo: "npm:^2.5.4"
@@ -4141,12 +4141,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:*, prettier@npm:^3.4.2":
+"prettier@npm:*":
   version: 3.4.2
   resolution: "prettier@npm:3.4.2"
   bin:
     prettier: bin/prettier.cjs
   checksum: 10/a3e806fb0b635818964d472d35d27e21a4e17150c679047f5501e1f23bd4aa806adf660f0c0d35214a210d5d440da6896c2e86156da55f221a57938278dc326e
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "prettier@npm:3.6.0"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10/5c0db5a8e32d2ac9824d8bc652990dfd534bc7a7c6f26d99d50c9146a2d9befb3cd1cc86c4aee71caf6b264d421a4b4b5961e31a62dda3790b8fec2521a76eef
   languageName: node
   linkType: hard
 
