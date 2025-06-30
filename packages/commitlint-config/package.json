@@ -48,7 +48,7 @@
 		"@abinnovision/prettier-config": "workspace:^",
 		"@commitlint/types": "^19.8.1",
 		"eslint": "^9.23.0",
-		"prettier": "^3.4.2",
+		"prettier": "^3.6.2",
 		"tsup": "^8.3.6",
 		"typescript": "^5.8.3"
 	}
