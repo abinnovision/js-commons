@@ -52,7 +52,7 @@
 		"eslint": "^9.23.0",
 		"globals": "^16.3.0",
 		"tsup": "^8.3.6",
-		"typescript": "^5.8.3"
+		"typescript": "^5.9.2"
 	},
 	"peerDependencies": {
 		"eslint": "^9.0.0"
