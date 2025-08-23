@@ -81,6 +81,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@abinnovision/eslint-config-utils@workspace:packages/eslint-config-utils":
+  version: 0.0.0-use.local
+  resolution: "@abinnovision/eslint-config-utils@workspace:packages/eslint-config-utils"
+  dependencies:
+    "@abinnovision/prettier-config": "workspace:^"
+    "@types/eslint": "npm:^9.6.1"
+    eslint: "npm:^9.19.0"
+    globals: "npm:^15.14.0"
+    prettier: "npm:^3.4.2"
+    tsup: "npm:^8.3.6"
+  peerDependencies:
+    eslint: ^9.0.0
+  languageName: unknown
+  linkType: soft
+
 "@abinnovision/prettier-config@workspace:^, @abinnovision/prettier-config@workspace:packages/prettier-config":
   version: 0.0.0-use.local
   resolution: "@abinnovision/prettier-config@workspace:packages/prettier-config"
