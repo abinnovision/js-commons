@@ -3,10 +3,10 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
   pull_request_target:
     branches:
-      - master
+      - main
 
 jobs:
   # Configure the commit SHA to use.
@@ -66,8 +66,8 @@ jobs:
       - check_build
     uses: abinnovision/workflows/.github/workflows/release-please.yaml@master
     secrets: inherit
-    # Only run on push to "master" branch.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    # Only run on push to "main" branch.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
   # If needed, will publish the release to GitHub Packages and NPM.
   publish:
