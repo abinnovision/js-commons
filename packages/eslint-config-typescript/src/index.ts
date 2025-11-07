@@ -1,11 +1,9 @@
 import TypescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
-// @ts-ignore
 import TypescriptEslintParser from "@typescript-eslint/parser";
+import { defineConfig } from "eslint/config";
 import AlloyTypescript from "eslint-config-alloy/typescript.js";
 
-import type { Linter } from "eslint";
-
-const config = [
+const config = defineConfig([
 	{
 		files: ["**/*.{ts,tsx}"],
 		plugins: {
@@ -43,6 +41,6 @@ const config = [
 			"@typescript-eslint/no-unused-vars": "off",
 		},
 	},
-] satisfies Linter.Config[];
+]);
 
 export default config;

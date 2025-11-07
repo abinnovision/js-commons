@@ -48,8 +48,7 @@
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
-		"@types/eslint": "^9.6.1",
-		"eslint": "^9.23.0",
+		"eslint": "^9.39.1",
 		"globals": "^16.5.0",
 		"tsup": "^8.3.6",
 		"typescript": "^5.9.3"
