@@ -1,10 +1,9 @@
+import { defineConfig } from "eslint/config";
 import AlloyBase from "eslint-config-alloy/base.js";
 import eslintPluginImport from "eslint-plugin-import";
 import unusedImports from "eslint-plugin-unused-imports";
 
-import type { Linter } from "eslint";
-
-const config = [
+const config = defineConfig([
 	{
 		files: ["**/*.{ts,tsx,js,jsx}"],
 		languageOptions: {
@@ -96,6 +95,6 @@ const config = [
 			],
 		},
 	},
-] satisfies Linter.Config[];
+]);
 
 export default config;
