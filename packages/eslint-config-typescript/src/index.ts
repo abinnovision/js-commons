@@ -7,6 +7,7 @@ const config = defineConfig([
 	{
 		files: ["**/*.{ts,tsx}"],
 		plugins: {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 			"@typescript-eslint": TypescriptEslintPlugin as any,
 		},
 		languageOptions: {
