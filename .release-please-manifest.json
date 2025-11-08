@@ -1,7 +1,7 @@
 {
-	"packages/eslint-config-base": "3.0.0",
-	"packages/eslint-config-react": "3.0.0",
-	"packages/eslint-config-typescript": "2.2.2",
-	"packages/prettier-config": "2.1.4",
-	"packages/commitlint-config": "2.2.2"
+	"packages/eslint-config-base": "3.0.1",
+	"packages/eslint-config-react": "3.0.1",
+	"packages/eslint-config-typescript": "2.2.3",
+	"packages/prettier-config": "2.1.5",
+	"packages/commitlint-config": "2.2.3"
 }
