@@ -1,3 +1,4 @@
+// @boundaries-ignore due to cyclic dependency
 import { base, configFiles } from "@abinnovision/eslint-config-base";
 import { defineConfig } from "eslint/config";
 

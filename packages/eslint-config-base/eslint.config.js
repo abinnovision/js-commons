@@ -1,5 +1,6 @@
-import { base, configFiles } from "@abinnovision/eslint-config-base";
 import { defineConfig } from "eslint/config";
+
+import { base, configFiles } from "./dist/index.js";
 
 export default defineConfig([
 	{ extends: [base] },
