@@ -1,6 +1,7 @@
 {
 	"name": "@abinnovision/eslint-config-typescript",
 	"version": "2.2.1",
+	"deprecated": "This package has been merged into @abinnovision/eslint-config-base. Please use that package instead.",
 	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
