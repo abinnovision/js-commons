@@ -1,6 +1,12 @@
 {
 	"name": "@abinnovision/eslint-config-react",
 	"version": "2.2.0",
+	"private": false,
+	"publishConfig": {
+		"npm": true,
+		"ghpr": true,
+		"npmAccess": "public"
+	},
 	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"

@@ -1,6 +1,12 @@
 {
 	"name": "@abinnovision/commitlint-config",
 	"version": "2.2.1",
+	"private": false,
+	"publishConfig": {
+		"npm": true,
+		"ghpr": true,
+		"npmAccess": "public"
+	},
 	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
