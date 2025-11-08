@@ -1,14 +1,53 @@
 # @abinnovision/eslint-config-react
 
-ESLint config specifically for React related projects. This config **must be
-used in conjunction with the
-[@abinnovision/eslint-config-base](https://github.com/abinnovision/js-commons/tree/main/packages/eslint-config-base)
-ESLint config**. This config is based on the
-[AlloyTeam ESLint Config](https://github.com/AlloyTeam/eslint-config-alloy) with
-some additional goodies on top.
+ESLint configuration for React applications. Built on
+[@eslint-react/eslint-plugin](https://eslint-react.xyz) and
+[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks).
 
 ## Installation
 
 ```shell
-yarn add --dev @abinnovision/eslint-config-react
+yarn add --dev @abinnovision/eslint-config-react @abinnovision/eslint-config-base eslint
 ```
+
+## Usage
+
+```javascript
+// eslint.config.js
+import { base } from "@abinnovision/eslint-config-base";
+import { react } from "@abinnovision/eslint-config-react";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([{ extends: [base] }, { extends: [react] }]);
+```
+
+## Flavours
+
+Specialized configurations for specific React use cases.
+
+### Tailwind CSS
+
+For React applications using Tailwind CSS. Enforces class ordering,
+detects conflicts, and validates Tailwind usage.
+
+```javascript
+import { base } from "@abinnovision/eslint-config-base";
+import { react, tailwind } from "@abinnovision/eslint-config-react";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+  { extends: [base] },
+  { extends: [react] },
+  { extends: [tailwind] },
+]);
+```
+
+## Related Packages
+
+- [@abinnovision/eslint-config-base](../eslint-config-base) - Base
+  configuration
+- [@abinnovision/prettier-config](../prettier-config) - Code formatting
+
+## License
+
+Apache-2.0
