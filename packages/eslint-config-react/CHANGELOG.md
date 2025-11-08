@@ -1,5 +1,34 @@
 # Changelog
 
+## [4.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.1...eslint-config-react-v4.0.0) (2025-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* refactor eslint config for React and add Tailwind CSS flavour
+* will drop support for legacy eslint configs
+
+### Features
+
+* add eslint-plugin-react-hooks with recommended config ([#339](https://github.com/abinnovision/js-commons/issues/339)) ([6d0a2e0](https://github.com/abinnovision/js-commons/commit/6d0a2e0dd68c7a91d3b7a8c3b116ee31c3d7871e))
+* first implementation ([470e5d5](https://github.com/abinnovision/js-commons/commit/470e5d591bd711b5d793037c946bf56883d5acf3))
+* migrate to eslint flat config ([#93](https://github.com/abinnovision/js-commons/issues/93)) ([7568ba1](https://github.com/abinnovision/js-commons/commit/7568ba1782f912357e18619ab3e4e56a0c738a1c))
+* migrate to esm ([#278](https://github.com/abinnovision/js-commons/issues/278)) ([fed850d](https://github.com/abinnovision/js-commons/commit/fed850d979f7ba83fae75adadcfd0024f2acd242))
+* refactor eslint config for React and add Tailwind CSS flavour ([94aee60](https://github.com/abinnovision/js-commons/commit/94aee60116b769e147fd18422c0858bcbe7f02f3))
+* update eslint-config-alloy to v5.0.0 ([6acd7da](https://github.com/abinnovision/js-commons/commit/6acd7dacca62218dc3b72611dae6b0154ba16388))
+
+
+### Bug Fixes
+
+* add correct license to all packages ([af7343d](https://github.com/abinnovision/js-commons/commit/af7343dbdb93329a0321a369f81e9b37da9068fa))
+* align peer dependency versions ([#88](https://github.com/abinnovision/js-commons/issues/88)) ([62e752d](https://github.com/abinnovision/js-commons/commit/62e752d625fd3f454a50c58119f52fa4bbba297d))
+* automatically detect the react version ([#352](https://github.com/abinnovision/js-commons/issues/352)) ([2e3ea1a](https://github.com/abinnovision/js-commons/commit/2e3ea1aa6b3797606e2303f4b10fc28a75440ab3))
+* emit declarations ([616f817](https://github.com/abinnovision/js-commons/commit/616f817ca7701e160325e1e81d633df345244cc3))
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+* migrate to Linter.Config type ([#340](https://github.com/abinnovision/js-commons/issues/340)) ([30a1c19](https://github.com/abinnovision/js-commons/commit/30a1c19c3a2f4c2b94e6086486951145b399e15d))
+* only support eslint v9 ([#345](https://github.com/abinnovision/js-commons/issues/345)) ([7425fdc](https://github.com/abinnovision/js-commons/commit/7425fdc9c2d8912988697ab07b9a8f42d96786d4))
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [3.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v2.2.0...eslint-config-react-v3.0.0) (2025-11-08)
 
 

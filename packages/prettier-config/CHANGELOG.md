@@ -1,5 +1,30 @@
 # Changelog
 
+## [3.0.0](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.5...prettier-config-v3.0.0) (2025-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* will drop support for legacy eslint configs
+
+### Features
+
+* add shared prettier config ([fc08209](https://github.com/abinnovision/js-commons/commit/fc082096c0d1553d0bb64cf67d4b1ef3f39e91f3))
+* migrate to eslint flat config ([#93](https://github.com/abinnovision/js-commons/issues/93)) ([7568ba1](https://github.com/abinnovision/js-commons/commit/7568ba1782f912357e18619ab3e4e56a0c738a1c))
+* migrate to esm ([#278](https://github.com/abinnovision/js-commons/issues/278)) ([fed850d](https://github.com/abinnovision/js-commons/commit/fed850d979f7ba83fae75adadcfd0024f2acd242))
+
+
+### Bug Fixes
+
+* add correct license to all packages ([af7343d](https://github.com/abinnovision/js-commons/commit/af7343dbdb93329a0321a369f81e9b37da9068fa))
+* always require trailingComma ([#327](https://github.com/abinnovision/js-commons/issues/327)) ([ebf8d17](https://github.com/abinnovision/js-commons/commit/ebf8d1701054f7add9604227b722e40d6a426334))
+* emit declarations ([616f817](https://github.com/abinnovision/js-commons/commit/616f817ca7701e160325e1e81d633df345244cc3))
+* enable trim_trailing_whitespace ([#332](https://github.com/abinnovision/js-commons/issues/332)) ([d5c8a90](https://github.com/abinnovision/js-commons/commit/d5c8a90aa0cefeb657d341ac34aa2691b9bd75ed))
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+* **prettier-config:** add override for pnpm-lock.yaml ([#326](https://github.com/abinnovision/js-commons/issues/326)) ([a7d6fcb](https://github.com/abinnovision/js-commons/commit/a7d6fcb27e62c52bdf27e6d88b3e338a78b03e65))
+* use space indent_style for md files ([#331](https://github.com/abinnovision/js-commons/issues/331)) ([ad54cd3](https://github.com/abinnovision/js-commons/commit/ad54cd320e87154c474e96295c8bacd64d2b0701))
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.1.4](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.3...prettier-config-v2.1.4) (2025-11-08)
 
 

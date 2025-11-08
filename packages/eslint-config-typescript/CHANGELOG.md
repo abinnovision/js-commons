@@ -1,5 +1,34 @@
 # Changelog
 
+## [3.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.2.3...eslint-config-typescript-v3.0.0) (2025-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* will drop support for legacy eslint configs
+
+### Features
+
+* enable new ESLint rules ([#104](https://github.com/abinnovision/js-commons/issues/104)) ([ffac1dc](https://github.com/abinnovision/js-commons/commit/ffac1dc4bc2c6794c2f7d1bd1ec72542e20cd06d))
+* **eslint:** add unused-imports plugin and update rules ([#356](https://github.com/abinnovision/js-commons/issues/356)) ([303352c](https://github.com/abinnovision/js-commons/commit/303352c986709a06ec7a02aff322ce2e5dcf7342))
+* first implementation ([470e5d5](https://github.com/abinnovision/js-commons/commit/470e5d591bd711b5d793037c946bf56883d5acf3))
+* migrate to eslint flat config ([#93](https://github.com/abinnovision/js-commons/issues/93)) ([7568ba1](https://github.com/abinnovision/js-commons/commit/7568ba1782f912357e18619ab3e4e56a0c738a1c))
+* migrate to esm ([#278](https://github.com/abinnovision/js-commons/issues/278)) ([fed850d](https://github.com/abinnovision/js-commons/commit/fed850d979f7ba83fae75adadcfd0024f2acd242))
+* update eslint-config-alloy to v5.0.0 ([6acd7da](https://github.com/abinnovision/js-commons/commit/6acd7dacca62218dc3b72611dae6b0154ba16388))
+
+
+### Bug Fixes
+
+* add correct license to all packages ([af7343d](https://github.com/abinnovision/js-commons/commit/af7343dbdb93329a0321a369f81e9b37da9068fa))
+* align peer dependency versions ([#88](https://github.com/abinnovision/js-commons/issues/88)) ([62e752d](https://github.com/abinnovision/js-commons/commit/62e752d625fd3f454a50c58119f52fa4bbba297d))
+* emit declarations ([616f817](https://github.com/abinnovision/js-commons/commit/616f817ca7701e160325e1e81d633df345244cc3))
+* mark eslint-config-typescript as deprecated and update README ([8618bf9](https://github.com/abinnovision/js-commons/commit/8618bf9fd5395f9bc971e6db3100fa242d0936b6))
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+* migrate to Linter.Config type ([#340](https://github.com/abinnovision/js-commons/issues/340)) ([30a1c19](https://github.com/abinnovision/js-commons/commit/30a1c19c3a2f4c2b94e6086486951145b399e15d))
+* only support eslint v9 ([#345](https://github.com/abinnovision/js-commons/issues/345)) ([7425fdc](https://github.com/abinnovision/js-commons/commit/7425fdc9c2d8912988697ab07b9a8f42d96786d4))
+* upgrade [@typescript-eslint](https://github.com/typescript-eslint) dependencies ([#387](https://github.com/abinnovision/js-commons/issues/387)) ([195cc68](https://github.com/abinnovision/js-commons/commit/195cc682a29fcc31a15b30ef6e982faad4cfae88))
+* use spaces for markdown files ([#349](https://github.com/abinnovision/js-commons/issues/349)) ([eeb8b33](https://github.com/abinnovision/js-commons/commit/eeb8b335916602b55ca02cfdea352bc296fa7ffb))
+
 ## [2.2.2](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.2.1...eslint-config-typescript-v2.2.2) (2025-11-08)
 
 
