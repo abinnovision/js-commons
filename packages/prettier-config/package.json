@@ -1,6 +1,12 @@
 {
 	"name": "@abinnovision/prettier-config",
 	"version": "2.1.3",
+	"private": false,
+	"publishConfig": {
+		"npm": true,
+		"ghpr": true,
+		"npmAccess": "public"
+	},
 	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
