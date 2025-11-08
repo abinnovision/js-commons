@@ -18,6 +18,8 @@ jobs:
       enable-packages-registry-npm: true
       enable-packages-registry-ghpr: true
 
+      run-build-before-check: true
+
       # There are no tests currently
       test-types: ""
     secrets:
