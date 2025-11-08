@@ -7,7 +7,9 @@ const config = defineConfig([
 	{
 		files: ["**/*.{js,jsx,ts,tsx}"],
 		plugins: {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 			react: eslintPluginReact,
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 			"react-hooks": eslintPluginReactHooks,
 		},
 		settings: {
