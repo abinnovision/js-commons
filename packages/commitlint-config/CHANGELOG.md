@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.2...commitlint-config-v2.2.3) (2025-11-08)
+
+
+### Bug Fixes
+
+* trigger synthetic patch release for all packages ([0a42ee3](https://github.com/abinnovision/js-commons/commit/0a42ee36601f88ff232a41a8682266543849b3c6))
+
 ## [2.2.2](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.1...commitlint-config-v2.2.2) (2025-11-08)
 
 

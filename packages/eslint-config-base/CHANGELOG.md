@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.0...eslint-config-base-v3.0.1) (2025-11-08)
+
+
+### Bug Fixes
+
+* trigger synthetic patch release for all packages ([0a42ee3](https://github.com/abinnovision/js-commons/commit/0a42ee36601f88ff232a41a8682266543849b3c6))
+
 ## [3.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.2.0...eslint-config-base-v3.0.0) (2025-11-08)
 
 
