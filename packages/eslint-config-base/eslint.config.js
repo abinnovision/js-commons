@@ -1,10 +1,8 @@
-import baseConfig from "@abinnovision/eslint-config-base";
-import typescriptConfig from "@abinnovision/eslint-config-typescript";
+import { base } from "@abinnovision/eslint-config-base";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 
 export default defineConfig([
-	...baseConfig,
-	...typescriptConfig,
+	...base,
 	{ files: ["**/*.js"], languageOptions: { globals: globals.node } },
 ]);
