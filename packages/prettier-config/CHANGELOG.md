@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.5](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.4...prettier-config-v2.1.5) (2025-11-08)
+
+
+### Bug Fixes
+
+* trigger synthetic patch release for all packages ([0a42ee3](https://github.com/abinnovision/js-commons/commit/0a42ee36601f88ff232a41a8682266543849b3c6))
+
 ## [2.1.4](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.3...prettier-config-v2.1.4) (2025-11-08)
 
 
