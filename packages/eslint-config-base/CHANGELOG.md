@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.2.0...eslint-config-base-v3.0.0) (2025-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* refactor eslint config with new base configs and add flavours
+
+### Features
+
+* refactor eslint config with new base configs and add flavours ([581cfce](https://github.com/abinnovision/js-commons/commit/581cfceac98653d5b6f88a16f7807541b49320c8))
+
+
+### Bug Fixes
+
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+
 ## [2.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v2.1.2...eslint-config-base-v2.2.0) (2024-10-24)
 
 

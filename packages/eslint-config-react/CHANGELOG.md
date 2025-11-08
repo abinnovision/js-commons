@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v2.2.0...eslint-config-react-v3.0.0) (2025-11-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* refactor eslint config for React and add Tailwind CSS flavour
+
+### Features
+
+* refactor eslint config for React and add Tailwind CSS flavour ([94aee60](https://github.com/abinnovision/js-commons/commit/94aee60116b769e147fd18422c0858bcbe7f02f3))
+
+
+### Bug Fixes
+
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+
 ## [2.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v2.1.0...eslint-config-react-v2.2.0) (2024-10-16)
 
 

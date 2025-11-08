@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.4](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.3...prettier-config-v2.1.4) (2025-11-08)
+
+
+### Bug Fixes
+
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+
 ## [2.1.3](https://github.com/abinnovision/js-commons/compare/prettier-config-v2.1.2...prettier-config-v2.1.3) (2024-10-16)
 
 
