@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.1...commitlint-config-v2.2.2) (2025-11-08)
+
+
+### Bug Fixes
+
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+
 ## [2.2.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.0...commitlint-config-v2.2.1) (2024-10-16)
 
 
