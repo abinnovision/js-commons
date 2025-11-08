@@ -54,6 +54,7 @@
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
+		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
 		"eslint": "^9.39.1",
 		"prettier": "^3.4.2",

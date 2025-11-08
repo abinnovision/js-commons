@@ -51,6 +51,7 @@
 		"@commitlint/config-conventional": "^20.0.0"
 	},
 	"devDependencies": {
+		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
 		"@commitlint/types": "^20.0.0",
 		"eslint": "^9.39.1",
