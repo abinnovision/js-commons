@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.2](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.2.1...eslint-config-typescript-v2.2.2) (2025-11-08)
+
+
+### Bug Fixes
+
+* mark eslint-config-typescript as deprecated and update README ([8618bf9](https://github.com/abinnovision/js-commons/commit/8618bf9fd5395f9bc971e6db3100fa242d0936b6))
+* migrate eslint configs to use defineConfig ([#541](https://github.com/abinnovision/js-commons/issues/541)) ([eb24dca](https://github.com/abinnovision/js-commons/commit/eb24dca423b594711b727da84f4c4026f781c9e4))
+
 ## [2.2.1](https://github.com/abinnovision/js-commons/compare/eslint-config-typescript-v2.2.0...eslint-config-typescript-v2.2.1) (2024-12-11)
 
 
