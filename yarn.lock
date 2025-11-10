@@ -33,7 +33,7 @@ __metadata:
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
     "@eslint/js": "npm:^9.39.1"
-    "@vitest/eslint-plugin": "npm:^1.4.0"
+    "@vitest/eslint-plugin": "npm:^1.4.2"
     eslint: "npm:^9.39.1"
     eslint-plugin-import: "npm:^2.32.0"
     eslint-plugin-unused-imports: "npm:^4.3.0"
@@ -1312,9 +1312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:^1.4.0":
-  version: 1.4.1
-  resolution: "@vitest/eslint-plugin@npm:1.4.1"
+"@vitest/eslint-plugin@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "@vitest/eslint-plugin@npm:1.4.2"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.46.1"
     "@typescript-eslint/utils": "npm:^8.46.1"
@@ -1327,7 +1327,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/43577dfd55e7cfd94ce4769fdcff62033ad212e210d1b986fa0cd9fc562d7602f6403dca8a69e1c82a12ed2301ef5bb51abbe8cb7e4ddc3aee6620c894e081a4
+  checksum: 10/d2ac5953085511668c104e31e9959bce7dee59269399fa51908670f4cf117897b7bcfb7b907ad66d5d2188a0819a11a3f1a4f55533ed5640619ca9eb26171a17
   languageName: node
   linkType: hard
 
