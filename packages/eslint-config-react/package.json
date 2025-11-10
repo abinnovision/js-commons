@@ -48,7 +48,7 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@eslint-react/eslint-plugin": "^2.0.0",
+		"@eslint-react/eslint-plugin": "^2.3.4",
 		"eslint-plugin-better-tailwindcss": "^3.0.0",
 		"eslint-plugin-react-hooks": "^7.0.0"
 	},
