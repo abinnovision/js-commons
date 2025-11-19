@@ -18,7 +18,11 @@ export const config = defineConfig([
 			 *
 			 * @see https://github.com/schoero/eslint-plugin-better-tailwindcss
 			 */
-			"better-tailwindcss/enforce-consistent-line-wrapping": "warn",
+			"better-tailwindcss/enforce-consistent-line-wrapping": [
+				"warn",
+				// Prefer single line when possible. We use tabs for indentation.
+				{ preferSingleLine: true, indent: "tab" },
+			],
 
 			/**
 			 * Enforce consistent class order.
