@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.1...eslint-config-react-v3.0.2) (2025-11-19)
+
+
+### Bug Fixes
+
+* update Tailwind CSS rule to prefer single line wrapping with tab indentation ([#563](https://github.com/abinnovision/js-commons/issues/563)) ([6a40325](https://github.com/abinnovision/js-commons/commit/6a40325eb9dda8532b900a68c4e11f9b91afea80))
+
 ## [3.0.1](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.0...eslint-config-react-v3.0.1) (2025-11-08)
 
 
