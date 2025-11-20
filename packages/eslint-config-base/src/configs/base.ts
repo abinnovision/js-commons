@@ -66,6 +66,13 @@ export const config = defineConfig([
 			"default-case-last": "error",
 
 			/**
+			 * Require following curly brace conventions.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/curly
+			 */
+			curly: ["error", "all"],
+
+			/**
 			 * Require === and !==.
 			 *
 			 * @see https://eslint.org/docs/latest/rules/eqeqeq
