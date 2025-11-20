@@ -1,6 +1,7 @@
 {
 	"name": "@abinnovision/eslint-config-typescript",
 	"version": "2.2.3",
+	"private": false,
 	"deprecated": "This package has been merged into @abinnovision/eslint-config-base. Please use that package instead.",
 	"publishConfig": {
 		"npm": true,

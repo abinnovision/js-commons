@@ -1,6 +1,7 @@
 {
 	"name": "@abinnovision/eslint-config-base",
 	"version": "3.0.1",
+	"private": false,
 	"publishConfig": {
 		"npm": true,
 		"ghpr": true,
