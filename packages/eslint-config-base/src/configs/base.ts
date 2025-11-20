@@ -568,6 +568,13 @@ export const config = defineConfig([
 			"@typescript-eslint/prefer-function-type": "error",
 
 			/**
+			 * Require using nullish coalescing operator instead of logical OR.
+			 *
+			 * @see https://typescript-eslint.io/rules/prefer-nullish-coalescing
+			 */
+			"@typescript-eslint/prefer-nullish-coalescing": "error",
+
+			/**
 			 * Custom Overrides for TypeScript Rules
 			 */
 
