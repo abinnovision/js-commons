@@ -1,7 +1,6 @@
 {
 	"name": "@abinnovision/eslint-config-react",
 	"version": "3.0.2",
-	"private": false,
 	"publishConfig": {
 		"npm": true,
 		"ghpr": true,
