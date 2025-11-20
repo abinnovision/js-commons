@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.1...eslint-config-base-v3.0.2) (2025-11-20)
+
+
+### Bug Fixes
+
+* add curly braces rule to base config ([#565](https://github.com/abinnovision/js-commons/issues/565)) ([e22d6eb](https://github.com/abinnovision/js-commons/commit/e22d6eb17ed16f5c82f5a502e6ea1c6170731d02))
+* add curly rule with all option ([#567](https://github.com/abinnovision/js-commons/issues/567)) ([e1802e1](https://github.com/abinnovision/js-commons/commit/e1802e139d6a0400a02ba3c7e0fe06df2003b94f))
+
 ## [3.0.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.0...eslint-config-base-v3.0.1) (2025-11-08)
 
 
