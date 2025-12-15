@@ -49,13 +49,13 @@
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
 		"@eslint-react/eslint-plugin": "^2.3.4",
-		"eslint-plugin-better-tailwindcss": "^3.0.0",
+		"eslint-plugin-better-tailwindcss": "^3.8.0",
 		"eslint-plugin-react-hooks": "^7.0.0"
 	},
 	"devDependencies": {
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"prettier": "^3.6.2",
 		"tsup": "^8.3.6",
 		"typescript": "^5.9.3"

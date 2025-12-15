@@ -54,7 +54,7 @@
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
 		"@commitlint/types": "^20.0.0",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"prettier": "^3.4.2",
 		"tsup": "^8.3.6",
 		"typescript": "^5.9.3"
