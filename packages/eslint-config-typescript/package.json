@@ -49,14 +49,14 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^8.28.0",
-		"@typescript-eslint/parser": "^8.28.0",
+		"@typescript-eslint/eslint-plugin": "^8.49.0",
+		"@typescript-eslint/parser": "^8.49.0",
 		"eslint-config-alloy": "^5.1.2"
 	},
 	"devDependencies": {
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.2",
 		"prettier": "^3.4.2",
 		"tsup": "^8.3.6",
 		"typescript": "^5.9.3"
