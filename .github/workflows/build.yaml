@@ -18,6 +18,9 @@ jobs:
       enable-packages-registry-npm: true
       enable-packages-registry-ghpr: true
 
+      # Prerelease channel
+      prerelease-channel: "beta"
+
       run-build-before-check: true
 
       # There are no tests currently
