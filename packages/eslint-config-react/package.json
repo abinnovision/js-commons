@@ -47,9 +47,9 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@eslint-react/eslint-plugin": "^2.3.4",
-		"eslint-plugin-better-tailwindcss": "^3.0.0",
-		"eslint-plugin-react-hooks": "^7.0.0"
+		"@eslint-react/eslint-plugin": "^2.13.0",
+		"eslint-plugin-better-tailwindcss": "^4.3.0",
+		"eslint-plugin-react-hooks": "^7.0.1"
 	},
 	"devDependencies": {
 		"@abinnovision/eslint-config-base": "workspace:^",
@@ -60,6 +60,6 @@
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
-		"eslint": "^9.0.0"
+		"eslint": "^9.0.0 || ^10.0.0"
 	}
 }
