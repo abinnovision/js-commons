@@ -9,9 +9,9 @@ on:
       - main
 
 jobs:
-  node-monorepo-stack:
+  polyglot-monorepo-stack:
     name: CI/CD
-    uses: abinnovision/actions/.github/workflows/workflow.yaml@node-monorepo-stack-dev
+    uses: abinnovision/actions/.github/workflows/workflow.yaml@polyglot-monorepo-stack-v1
     with:
       # Publishing configuration
       enable-package-publishing: true
@@ -22,6 +22,4 @@ jobs:
 
       # There are no tests currently
       test-types: ""
-    secrets:
-      GH_APP_IDENTIFICATION_RELEASER: ${{ secrets.GH_APP_IDENTIFICATION_RELEASER }}
-      REGISTRY_NPM_TOKEN: ${{ secrets.REGISTRY_NPM_TOKEN }}
+    secrets: inherit
