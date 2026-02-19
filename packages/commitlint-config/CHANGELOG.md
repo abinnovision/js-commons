@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.4](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.3...commitlint-config-v2.2.4) (2026-02-19)
+
+
+### Bug Fixes
+
+* update @commitlint/config-conventional dependency ([#574](https://github.com/abinnovision/js-commons/issues/574)) ([97380ea](https://github.com/abinnovision/js-commons/commit/97380ea9af6d8c837a75dbcd822a610dcede2b72))
+
 ## [2.2.3](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.2...commitlint-config-v2.2.3) (2025-11-08)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.2...eslint-config-react-v3.0.3) (2026-02-19)
+
+
+### Bug Fixes
+
+* support eslint v10 ([#572](https://github.com/abinnovision/js-commons/issues/572)) ([ec96dd8](https://github.com/abinnovision/js-commons/commit/ec96dd8f540af14b57dda20afd5adf34df721486))
+
 ## [3.0.2](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.1...eslint-config-react-v3.0.2) (2025-11-19)
 
 
