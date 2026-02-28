@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/commitlint-config",
-	"version": "2.2.3",
+	"version": "2.2.4",
 	"publishConfig": {
 		"npm": true,
 		"ghpr": true,
