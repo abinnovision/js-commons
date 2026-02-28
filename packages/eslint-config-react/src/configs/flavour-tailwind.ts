@@ -57,7 +57,7 @@ export const config = defineConfig([
 			 *
 			 * @see https://github.com/schoero/eslint-plugin-better-tailwindcss
 			 */
-			"better-tailwindcss/no-unregistered-classes": [
+			"better-tailwindcss/no-unknown-classes": [
 				"warn",
 				{ detectComponentClasses: true },
 			],
