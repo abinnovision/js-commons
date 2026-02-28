@@ -60,6 +60,6 @@
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
-		"eslint": "^9.0.0 || ^10.0.0"
+		"eslint": "^9.0.0"
 	}
 }

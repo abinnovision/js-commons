@@ -32,7 +32,7 @@ __metadata:
   resolution: "@abinnovision/eslint-config-base@workspace:packages/eslint-config-base"
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
-    "@eslint/js": "npm:^10.0.0"
+    "@eslint/js": "npm:^9.0.0"
     "@vitest/eslint-plugin": "npm:^1.6.9"
     eslint: "npm:^9.39.1"
     eslint-plugin-import: "npm:^2.32.0"
@@ -43,7 +43,7 @@ __metadata:
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.56.0"
   peerDependencies:
-    eslint: ^9.0.0 || ^10.0.0
+    eslint: ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -61,7 +61,7 @@ __metadata:
     tsup: "npm:^8.3.6"
     typescript: "npm:^5.9.3"
   peerDependencies:
-    eslint: ^9.0.0 || ^10.0.0
+    eslint: ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -814,15 +814,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:^10.0.0":
-  version: 10.0.1
-  resolution: "@eslint/js@npm:10.0.1"
-  peerDependencies:
-    eslint: ^10.0.0
-  peerDependenciesMeta:
-    eslint:
-      optional: true
-  checksum: 10/27ff77b8f0aab350b2f7a69d974eabb816bb9f4cab986b1538782269d6bfdc29e351803fa7a62c22c0b786341324f1a28b86bc83956ddfa189aa6bead1a87758
+"@eslint/js@npm:^9.0.0":
+  version: 9.39.3
+  resolution: "@eslint/js@npm:9.39.3"
+  checksum: 10/91a1a1822cfeb2eb8a89aae86be5dfabad0b66b0915946516690a8485ddd80b91f43eee346789313fea1acbb7390a4958119ca7dc9a684a5c4014f12fcb3aaf3
   languageName: node
   linkType: hard
 
