@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.3...eslint-config-base-v3.1.0) (2026-02-28)
+
+
+### Features
+
+* downgrade to eslint v9 and add documentation about it ([#575](https://github.com/abinnovision/js-commons/issues/575)) ([5810b53](https://github.com/abinnovision/js-commons/commit/5810b538b386fb56848a3d1755a8eda7123e88fd))
+
 ## [3.0.3](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.2...eslint-config-base-v3.0.3) (2026-02-19)
 
 
