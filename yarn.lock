@@ -20,6 +20,7 @@ __metadata:
     "@abinnovision/prettier-config": "workspace:^"
     "@commitlint/config-conventional": "npm:^20.4.1"
     "@commitlint/types": "npm:^20.0.0"
+    "@internal/tsconfig": "workspace:^"
     eslint: "npm:^9.39.1"
     prettier: "npm:^3.4.2"
     tsup: "npm:^8.3.6"
@@ -33,6 +34,7 @@ __metadata:
   dependencies:
     "@abinnovision/prettier-config": "workspace:^"
     "@eslint/js": "npm:^9.0.0"
+    "@internal/tsconfig": "workspace:^"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     "@vitest/eslint-plugin": "npm:^1.6.9"
     eslint: "npm:^9.39.1"
@@ -55,6 +57,7 @@ __metadata:
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"
     "@eslint-react/eslint-plugin": "npm:^2.13.0"
+    "@internal/tsconfig": "workspace:^"
     eslint: "npm:^9.39.1"
     eslint-plugin-better-tailwindcss: "npm:^4.3.0"
     eslint-plugin-react-hooks: "npm:^7.0.1"
@@ -72,6 +75,7 @@ __metadata:
   dependencies:
     "@abinnovision/eslint-config-base": "workspace:^"
     "@abinnovision/prettier-config": "workspace:^"
+    "@internal/tsconfig": "workspace:^"
     "@typescript-eslint/eslint-plugin": "npm:^8.28.0"
     "@typescript-eslint/parser": "npm:^8.28.0"
     eslint: "npm:^9.39.1"
@@ -88,6 +92,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@abinnovision/prettier-config@workspace:packages/prettier-config"
   dependencies:
+    "@internal/tsconfig": "workspace:^"
     "@types/node": "npm:^22.12.0"
     "@types/prettier": "npm:^3.0.0"
     eslint: "npm:^9.39.1"
@@ -891,6 +896,14 @@ __metadata:
     rimraf: "npm:^6.0.1"
     sort-package-json: "npm:^2.15.1"
     turbo: "npm:^2.6.1"
+  languageName: unknown
+  linkType: soft
+
+"@internal/tsconfig@workspace:^, @internal/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@internal/tsconfig@workspace:packages/tsconfig"
+  dependencies:
+    typescript: "npm:^5.9.3"
   languageName: unknown
   linkType: soft
 

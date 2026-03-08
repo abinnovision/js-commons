@@ -57,6 +57,7 @@
 	},
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
+		"@internal/tsconfig": "workspace:^",
 		"eslint": "^9.39.1",
 		"prettier": "^3.4.2",
 		"tsup": "^8.3.6",
