@@ -8,22 +8,42 @@ ESLint configuration for JavaScript and TypeScript projects.
 yarn add --dev @abinnovision/eslint-config-base eslint
 ```
 
+## ESLint Config Format
+
+This package requires
+ESLint's [flat config](https://eslint.org/docs/latest/use/configure/configuration-files)
+format (not legacy `.eslintrc`).
+
+| Config file        | Requirements                                                          |
+| ------------------ | --------------------------------------------------------------------- |
+| `eslint.config.ts` | ESLint **9.18+** and [`jiti`](https://github.com/unjs/jiti) **v2.0+** |
+| `eslint.config.js` | ESLint **9.0+**                                                       |
+
+TypeScript config files are preferred. Install `jiti` as a dev dependency:
+
+```shell
+yarn add --dev jiti
+```
+
+If ESLint 9.18+ or `jiti` cannot be provided, use `eslint.config.js` (or
+`.mjs`) instead. The imports and configuration are identical.
+
 ## Usage
 
-```javascript
-// eslint.config.js
+```typescript
 import { base } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base] }];
+export default defineConfig([{ extends: [base] }]);
 ```
 
 If your `tsconfig.json` is not in the project root:
 
-```javascript
-// eslint.config.js
+```typescript
 import { base } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
   {
     extends: [base],
     languageOptions: {
@@ -32,51 +52,59 @@ export default [
       },
     },
   },
-];
+]);
 ```
 
 ## Flavours
 
+Flavours are optional rule sets that complement `base`. They must always be used
+alongside it.
+
 ### NestJS
 
-```javascript
-import { nestjs } from "@abinnovision/eslint-config-base";
+```typescript
+import { base, nestjs } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [nestjs] }];
+export default defineConfig([{ extends: [base, nestjs] }]);
 ```
 
 ### Vitest
 
-```javascript
+```typescript
 import { base, vitest } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base, vitest] }];
+export default defineConfig([{ extends: [base, vitest] }]);
 ```
 
 ### Stylistic
 
 Enforces consistent code style (formatting, spacing, naming conventions).
 
-```javascript
+```typescript
 import { base, stylistic } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base, stylistic] }];
+export default defineConfig([{ extends: [base, stylistic] }]);
 ```
 
 ### Config Files
 
-For build tool and project configuration files. Does not specify file patterns.
+Relaxes rules for build tool and project configuration files (e.g.
+`vite.config.ts`,
+`webpack.config.js`): enables Node.js globals, allows `console` usage, and
+removes
+function length limits. You provide the file patterns:
 
-```javascript
+```typescript
 import { base, configFiles } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
   { extends: [base] },
-  {
-    files: ["**/*.config.{ts,js}"],
-    extends: [configFiles],
-  },
-];
+  { files: ["**/*.config.{ts,js}"], extends: [configFiles] },
+]);
 ```
 
 ## License

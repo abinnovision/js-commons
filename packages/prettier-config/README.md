@@ -5,7 +5,17 @@ Shared Prettier config with an opinionated `.editorconfig`.
 ## Installation
 
 ```shell
-yarn add --dev @abinnovision/prettier-config
+yarn add --dev @abinnovision/prettier-config prettier
+```
+
+## Usage
+
+Reference the config in your `package.json`:
+
+```json
+{
+  "prettier": "@abinnovision/prettier-config"
+}
 ```
 
 ## EditorConfig
@@ -25,3 +35,7 @@ Optionally add it to your `postinstall` hook to keep it in sync automatically:
   },
 }
 ```
+
+## License
+
+Apache-2.0
