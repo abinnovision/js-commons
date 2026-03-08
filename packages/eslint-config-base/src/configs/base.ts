@@ -101,13 +101,6 @@ export const config = defineConfig([
 			"no-extra-bind": "error",
 
 			/**
-			 * Disallow leading or trailing decimal points in numeric literals.
-			 *
-			 * @see https://eslint.org/docs/latest/rules/no-floating-decimal
-			 */
-			"no-floating-decimal": "error",
-
-			/**
 			 * Disallow assignment operators in return statements.
 			 *
 			 * @see https://eslint.org/docs/latest/rules/no-return-assign
@@ -129,11 +122,11 @@ export const config = defineConfig([
 			"no-new-func": "error",
 
 			/**
-			 * Disallow new operators with Symbol object.
+			 * Disallow new operators with native non-constructor functions (e.g. Symbol, BigInt).
 			 *
-			 * @see https://eslint.org/docs/latest/rules/no-new-symbol
+			 * @see https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
 			 */
-			"no-new-symbol": "error",
+			"no-new-native-nonconstructor": "error",
 
 			/**
 			 * Disallow new operators with String, Number, and Boolean objects.
@@ -306,13 +299,6 @@ export const config = defineConfig([
 			 * @see https://eslint.org/docs/latest/rules/no-inner-declarations
 			 */
 			"no-inner-declarations": "error",
-
-			/**
-			 * Disallow mixed binary operators without parentheses.
-			 *
-			 * @see https://eslint.org/docs/latest/rules/no-mixed-operators
-			 */
-			"no-mixed-operators": "error",
 
 			/**
 			 * Disallow the use of console.
