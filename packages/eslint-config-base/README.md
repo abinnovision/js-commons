@@ -8,10 +8,29 @@ ESLint configuration for JavaScript and TypeScript projects.
 yarn add --dev @abinnovision/eslint-config-base eslint
 ```
 
+## ESLint Config Format
+
+This package requires
+ESLint's [flat config](https://eslint.org/docs/latest/use/configure/configuration-files)
+format (not legacy `.eslintrc`).
+
+| Config file        | Requirements                                                          |
+| ------------------ | --------------------------------------------------------------------- |
+| `eslint.config.ts` | ESLint **9.18+** and [`jiti`](https://github.com/unjs/jiti) **v2.0+** |
+| `eslint.config.js` | ESLint **9.0+**                                                       |
+
+TypeScript config files are preferred. Install `jiti` as a dev dependency:
+
+```shell
+yarn add --dev jiti
+```
+
+If ESLint 9.18+ or `jiti` cannot be provided, use `eslint.config.js` (or
+`.mjs`) instead. The imports and configuration are identical.
+
 ## Usage
 
 ```typescript
-// eslint.config.ts
 import { base } from "@abinnovision/eslint-config-base";
 import { defineConfig } from "eslint/config";
 
@@ -21,7 +40,6 @@ export default defineConfig([{ extends: [base] }]);
 If your `tsconfig.json` is not in the project root:
 
 ```typescript
-// eslint.config.ts
 import { base } from "@abinnovision/eslint-config-base";
 import { defineConfig } from "eslint/config";
 
@@ -39,7 +57,8 @@ export default defineConfig([
 
 ## Flavours
 
-Flavours are optional rule sets that complement `base`. They must always be used alongside it.
+Flavours are optional rule sets that complement `base`. They must always be used
+alongside it.
 
 ### NestJS
 
@@ -72,7 +91,11 @@ export default defineConfig([{ extends: [base, stylistic] }]);
 
 ### Config Files
 
-For build tool and project configuration files. Does not specify file patterns.
+Relaxes rules for build tool and project configuration files (e.g.
+`vite.config.ts`,
+`webpack.config.js`): enables Node.js globals, allows `console` usage, and
+removes
+function length limits. You provide the file patterns:
 
 ```typescript
 import { base, configFiles } from "@abinnovision/eslint-config-base";
@@ -80,10 +103,7 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   { extends: [base] },
-  {
-    files: ["**/*.config.{ts,js}"],
-    extends: [configFiles],
-  },
+  { files: ["**/*.config.{ts,js}"], extends: [configFiles] },
 ]);
 ```
 
