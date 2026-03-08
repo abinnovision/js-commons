@@ -9,6 +9,10 @@ Shared JS/TS configurations for abi group GmbH projects.
 - **[@abinnovision/prettier-config](./packages/prettier-config)** — Shared Prettier config with EditorConfig support.
 - **[@abinnovision/commitlint-config](./packages/commitlint-config)** — Conventional commit message enforcement.
 
+## Guides
+
+- **[Scripts & Tooling](./guides/scripts-and-tooling.md)** — Husky, lint-staged, commitlint hooks, and recommended scripts.
+
 ## Development
 
 Yarn 4 monorepo with Turbo. Requires Node.js 24+ and Yarn 4.11.0 (via Corepack).
