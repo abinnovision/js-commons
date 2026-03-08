@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.1.0...eslint-config-base-v3.2.0) (2026-03-08)
+
+
+### Features
+
+* add ESLint stylistic flavour ([#582](https://github.com/abinnovision/js-commons/issues/582)) ([057584a](https://github.com/abinnovision/js-commons/commit/057584af4c0fe63a9dd2371949bb13a85f852ee5))
+* add new ESLint rules to enhance code quality ([#581](https://github.com/abinnovision/js-commons/issues/581)) ([dffb27e](https://github.com/abinnovision/js-commons/commit/dffb27edb19d8c09da6ae124a1b2e704da59e850))
+* replace deprecated rules and remove stylistic rules ([#579](https://github.com/abinnovision/js-commons/issues/579)) ([a8043e9](https://github.com/abinnovision/js-commons/commit/a8043e96e8019b0d3137110bbf7b50e7f2a834f9))
+
+
+### Bug Fixes
+
+* enhance comments rule to include additional code structures ([#587](https://github.com/abinnovision/js-commons/issues/587)) ([2d2f5a0](https://github.com/abinnovision/js-commons/commit/2d2f5a0549cdc78183fa4032b7209a6689b30323))
+
 ## [3.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.0.3...eslint-config-base-v3.1.0) (2026-02-28)
 
 
