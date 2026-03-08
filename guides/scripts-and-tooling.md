@@ -60,48 +60,61 @@ yarn add --dev lint-staged
 
 ### Single-package project
 
-Add a `lint-staged` configuration to your `package.json`. Replace `<source>`
-and `<all>` with globs from the [common globs](#common-globs) section:
+Add a `lint-staged` configuration to your `package.json`:
 
 ```json
 {
   "lint-staged": {
-    "<all>": ["prettier --write"],
-    "<source>": ["eslint --fix"]
+    "{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}": [
+      "prettier --write"
+    ],
+    "{{src,test}/**/*,*}.{t,j}s{,x}": ["eslint --fix"]
   }
 }
 ```
 
+> If your package has no `test` directory, drop `test` from the globs — e.g.
+> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
+> variants.
+
 ### Monorepo
 
 In a monorepo, split lint-staged config between the root and individual
-packages.
+packages. Install `sort-package-json` to keep `package.json` keys consistently
+sorted:
+
+```shell
+yarn add --dev sort-package-json
+```
 
 **Root `package.json`** handles global files (markdown, JSON, package.json
-sorting). Replace `<root-global>` with a glob from the
-[common globs](#common-globs) section:
+sorting):
 
 ```json
 {
   "lint-staged": {
-    "<root-global>": ["prettier --write"],
+    "{*,.github/**/*}.{json{,5},md,y{,a}ml}": ["prettier --write"],
     "**/package.json": ["sort-package-json"]
   }
 }
 ```
 
-**Each package's `package.json`** handles its own source files. Replace
-`<source>` and `<all>` with globs from the [common globs](#common-globs)
-section:
+**Each package's `package.json`** handles its own source files:
 
 ```json
 {
   "lint-staged": {
-    "<all>": ["prettier --write"],
-    "<source>": ["eslint --fix"]
+    "{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}": [
+      "prettier --write"
+    ],
+    "{{src,test}/**/*,*}.{t,j}s{,x}": ["eslint --fix"]
   }
 }
 ```
+
+> If your package has no `test` directory, drop `test` from the globs — e.g.
+> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
+> variants.
 
 lint-staged automatically resolves the nearest config for each staged file, so
 both root and package configs run without additional setup.
@@ -117,19 +130,22 @@ for installation and configuration.
 
 ### Package scripts
 
-Each package defines its own lint and format scripts. Replace `<source>` and
-`<all>` with globs from the [common globs](#common-globs) section:
+Each package defines its own lint and format scripts:
 
 ```json
 {
   "scripts": {
-    "lint:check": "eslint '<source>'",
-    "lint:fix": "eslint '<source>' --fix",
-    "format:check": "prettier --check '<all>'",
-    "format:fix": "prettier --write '<all>'"
+    "lint:check": "eslint '{{src,test}/**/*,*}.{t,j}s{,x}'",
+    "lint:fix": "eslint '{{src,test}/**/*,*}.{t,j}s{,x}' --fix",
+    "format:check": "prettier --check '{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}'",
+    "format:fix": "prettier --write '{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}'"
   }
 }
 ```
+
+> If your package has no `test` directory, drop `test` from the globs — e.g.
+> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
+> variants.
 
 ### Monorepo root scripts
 
@@ -137,14 +153,11 @@ The root `package.json` orchestrates checks across all packages. Root-level
 prettier handles global files (markdown, JSON, YAML) that don't belong to any
 package. Turbo runs the package-level scripts in parallel:
 
-Replace `<root-global>` with a glob from the
-[common globs](#common-globs) section:
-
 ```json
 {
   "scripts": {
-    "check": "prettier --check '<root-global>' & turbo check",
-    "fix": "prettier --write '<root-global>' & turbo fix"
+    "check": "prettier --check '{*,.github/**/*}.{json{,5},md,y{,a}ml}' & turbo check",
+    "fix": "prettier --write '{*,.github/**/*}.{json{,5},md,y{,a}ml}' & turbo fix"
   }
 }
 ```
@@ -184,36 +197,36 @@ root correctly delegate to each package:
 
 ## Common Globs
 
-Reference globs used in lint-staged configs and package scripts. These are
-starting points — adjust the directory list (`src`, `test`, `scripts`) and file
-extensions to match the files in your repository.
+Reference globs used in lint-staged configs and package scripts. Adjust the
+directory list (`src`, `test`, `scripts`) and file extensions to match your
+repository.
 
 ### Source files (ESLint)
 
 TypeScript and JavaScript files:
 
-| Context                       | Glob                               |
-| ----------------------------- | ---------------------------------- |
-| Package with `src` + `test`   | `{{src,test}/**/*,*}.{t,j}s{,x}`  |
-| Package with `src` only       | `{src/**/*,*}.{t,j}s{,x}`         |
+| Context                     | Glob                             |
+| --------------------------- | -------------------------------- |
+| Package with `src` + `test` | `{{src,test}/**/*,*}.{t,j}s{,x}` |
+| Package with `src` only     | `{src/**/*,*}.{t,j}s{,x}`        |
 
 ### All files (Prettier)
 
 Source files plus markdown, JSON, and YAML:
 
-| Context                       | Glob                                              |
-| ----------------------------- | ------------------------------------------------- |
-| Package with `src` + `test`   | `{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}` |
-| Package with `src` only       | `{src/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}`  |
-| Root global files             | `{*,.github/**/*}.{json{,5},md,y{,a}ml}`          |
+| Context                     | Glob                                                   |
+| --------------------------- | ------------------------------------------------------ |
+| Package with `src` + `test` | `{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}` |
+| Package with `src` only     | `{src/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}`        |
+| Root global files           | `{*,.github/**/*}.{json{,5},md,y{,a}ml}`               |
 
 ### ESLint config files
 
 Config files at the package root (used with the `configFiles` flavour):
 
-| Context         | Glob                    |
-| --------------- | ----------------------- |
-| ESLint config   | `*.{c,m,}{t,j}s`       |
+| Context       | Glob             |
+| ------------- | ---------------- |
+| ESLint config | `*.{c,m,}{t,j}s` |
 
 ## See Also
 
