@@ -43,6 +43,7 @@
 	},
 	"prettier": "./dist/index.js",
 	"devDependencies": {
+		"@internal/tsconfig": "workspace:^",
 		"@types/node": "^22.12.0",
 		"@types/prettier": "^3.0.0",
 		"eslint": "^9.39.1",

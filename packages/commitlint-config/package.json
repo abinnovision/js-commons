@@ -53,6 +53,7 @@
 		"@abinnovision/eslint-config-base": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
 		"@commitlint/types": "^20.0.0",
+		"@internal/tsconfig": "workspace:^",
 		"eslint": "^9.39.1",
 		"prettier": "^3.4.2",
 		"tsup": "^8.3.6",
