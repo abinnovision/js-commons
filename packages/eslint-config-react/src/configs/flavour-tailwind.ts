@@ -20,6 +20,7 @@ export const config = defineConfig([
 			 */
 			"better-tailwindcss/enforce-consistent-line-wrapping": [
 				"warn",
+
 				// Prefer single line when possible. We use tabs for indentation.
 				{ preferSingleLine: true, indent: "tab" },
 			],
