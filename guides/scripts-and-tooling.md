@@ -10,19 +10,20 @@ How to wire Husky, lint-staged, and commitlint together with the
 
 ## Husky
 
-Install Husky and initialise git hooks:
+Install Husky and initialize git hooks:
 
 ```shell
 yarn add --dev husky
 yarn husky init
 ```
 
-This creates a `.husky/` directory with a sample hooks.
+This creates a `.husky/` directory with sample hooks.
 
 ### commit-msg hook
 
 Create `.husky/commit-msg` to enforce
-[Conventional Commits](https://www.conventionalcommits.org/) via commitlint:
+[Conventional Commits](https://www.conventionalcommits.org/)
+via [commitlint config](../packages/commitlint-config/README.md):
 
 ```shell
 #!/bin/sh
@@ -33,7 +34,8 @@ Create `.husky/commit-msg` to enforce
 
 ### pre-commit hook
 
-Replace the default `pre-commit` hook with lint-staged:
+Replace the default `pre-commit` hook with lint-staged and optional monorepo
+checks:
 
 ```shell
 #!/bin/sh
@@ -50,14 +52,15 @@ yarn dedupe --check
 
 ## lint-staged
 
-Install lint-staged:
+Install lint-staged in the root of your project:
 
 ```shell
 yarn add --dev lint-staged
 ```
 
-Add a `lint-staged` configuration to your `package.json`. The exact patterns
-depend on your project; here is a typical setup for a TypeScript project:
+### Single-package project
+
+Add a `lint-staged` configuration to your `package.json`:
 
 ```json
 {
@@ -73,13 +76,10 @@ depend on your project; here is a typical setup for a TypeScript project:
 }
 ```
 
-This runs Prettier and ESLint (with auto-fix) on every staged file before
-committing.
+### Monorepo
 
-### Monorepo usage
-
-In a monorepo, a common pattern is to split lint-staged config between the root
-and individual packages:
+In a monorepo, split lint-staged config between the root and individual
+packages.
 
 **Root `package.json`** handles global files (markdown, JSON, package.json
 sorting):
@@ -102,12 +102,11 @@ sorting):
 ```json
 {
   "lint-staged": {
-    "{{src,scripts}/**/*,*}.{ts,tsx,js,jsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "{{src,scripts}/**/*,*}.{json,json5,md,yaml,yml}": [
+    "{{src,test}/**/*,*}.{ts,tsx,js,jsx,json,json5,md,yaml,yml}": [
       "prettier --write"
+    ],
+    "{{src,test}/**/*,*}.{ts,tsx,js,jsx}": [
+      "eslint --fix"
     ]
   }
 }
@@ -127,7 +126,7 @@ for installation and configuration.
 
 ### Package scripts
 
-Each package should define its own lint and format scripts:
+Each package defines its own lint and format scripts:
 
 ```json
 {
@@ -142,26 +141,57 @@ Each package should define its own lint and format scripts:
 
 ### Monorepo root scripts
 
-The root `package.json` aggregates checks across all packages. Only `check` and
-`fix` are needed at the root:
+The root `package.json` orchestrates checks across all packages. Root-level
+`format:check`/`format:fix` handle global files (markdown, JSON, YAML) that
+don't belong to any package. Turbo runs the package-level scripts in parallel:
 
 ```json
 {
   "scripts": {
-    "check": "turbo lint:check format:check",
-    "fix": "turbo lint:fix format:fix"
+    "check": "prettier --check '{*,.github/**/*}.{json,json5,md,yaml,yml}' & turbo check",
+    "fix": "prettier --write '{*,.github/**/*}.{json,json5,md,yaml,yml}' & turbo fix"
   }
 }
 ```
 
-| Script         | Scope   | Purpose                         |
-| -------------- | ------- | ------------------------------- |
-| `lint:check`   | Package | Check for ESLint errors         |
-| `lint:fix`     | Package | Auto-fix ESLint errors          |
-| `format:check` | Package | Check Prettier formatting       |
-| `format:fix`   | Package | Auto-fix Prettier formatting    |
-| `check`        | Root    | Run all checks across packages  |
-| `fix`          | Root    | Auto-fix all issues across packages |
+### Turbo task configuration
+
+Define the task dependencies in `turbo.json` so that `check` and `fix` at the
+root correctly delegate to each package:
+
+```json
+{
+  "tasks": {
+    "check": {
+      "dependsOn": [
+        "format:check",
+        "lint:check"
+      ]
+    },
+    "fix": {
+      "dependsOn": [
+        "format:fix",
+        "lint:fix"
+      ]
+    },
+    "format:check": {},
+    "format:fix": {},
+    "lint:check": {},
+    "lint:fix": {}
+  }
+}
+```
+
+### Script overview
+
+| Script         | Scope   | Purpose                                         |
+|----------------|---------|-------------------------------------------------|
+| `lint:check`   | Package | Check for ESLint errors                         |
+| `lint:fix`     | Package | Auto-fix ESLint errors                          |
+| `format:check` | Package | Check Prettier formatting                       |
+| `format:fix`   | Package | Auto-fix Prettier formatting                    |
+| `check`        | Root    | Run all checks across packages (root only)      |
+| `fix`          | Root    | Auto-fix all issues across packages (root only) |
 
 ## See Also
 
@@ -169,4 +199,3 @@ The root `package.json` aggregates checks across all packages. Only `check` and
 - [@abinnovision/eslint-config-react](../packages/eslint-config-react/README.md)
 - [@abinnovision/prettier-config](../packages/prettier-config/README.md)
 - [@abinnovision/commitlint-config](../packages/commitlint-config/README.md)
-- [Fullstack Integration Guide](./fullstack-integration.md)
