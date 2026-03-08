@@ -227,6 +227,62 @@ export const config = defineConfig([
 			"prefer-spread": "error",
 
 			/**
+			 * Disallow returning a value from a Promise executor.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-promise-executor-return
+			 */
+			"no-promise-executor-return": "error",
+
+			/**
+			 * Disallow template literal placeholder syntax in regular strings.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-template-curly-in-string
+			 */
+			"no-template-curly-in-string": "error",
+
+			/**
+			 * Disallow unmodified conditions of loops.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-unmodified-loop-condition
+			 */
+			"no-unmodified-loop-condition": "error",
+
+			/**
+			 * Disallow unnecessary nested blocks.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-lone-blocks
+			 */
+			"no-lone-blocks": "error",
+
+			/**
+			 * Disallow renaming import, export, and destructured assignments to the same name.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-useless-rename
+			 */
+			"no-useless-rename": "error",
+
+			/**
+			 * Disallow unnecessary computed property keys in objects and classes.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-useless-computed-key
+			 */
+			"no-useless-computed-key": "error",
+
+			/**
+			 * Disallow await inside of loops.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-await-in-loop
+			 */
+			"no-await-in-loop": "warn",
+
+			/**
+			 * Disallow reassigning function parameters.
+			 *
+			 * @see https://eslint.org/docs/latest/rules/no-param-reassign
+			 */
+			"no-param-reassign": "error",
+
+			/**
 			 * Custom JS Rules: Code Quality & Complexity
 			 */
 
