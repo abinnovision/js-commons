@@ -1,8 +1,8 @@
 import { defineConfig } from "eslint/config";
 
-import { base, configFiles } from "./dist/index.js";
+import { base, configFiles, stylistic } from "./dist/index.js";
 
 export default defineConfig([
-	{ extends: [base] },
+	{ extends: [base, stylistic] },
 	{ files: ["*.js"], extends: [configFiles] },
 ]);

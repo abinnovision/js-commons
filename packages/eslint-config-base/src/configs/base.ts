@@ -405,8 +405,10 @@ export const config = defineConfig([
 					groups: [
 						// Externals
 						["builtin", "external"],
+
 						// Internals
 						["internal", "unknown", "parent", "sibling", "index"],
+
 						// Types
 						["object", "type"],
 					],
