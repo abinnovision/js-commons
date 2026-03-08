@@ -325,3 +325,4 @@ $RECYCLE.BIN/
 dist/
 
 .turbo/
+.omc/
