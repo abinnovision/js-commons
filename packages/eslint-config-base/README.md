@@ -10,20 +10,22 @@ yarn add --dev @abinnovision/eslint-config-base eslint
 
 ## Usage
 
-```javascript
-// eslint.config.js
+```typescript
+// eslint.config.ts
 import { base } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base] }];
+export default defineConfig([{ extends: [base] }]);
 ```
 
 If your `tsconfig.json` is not in the project root:
 
-```javascript
-// eslint.config.js
+```typescript
+// eslint.config.ts
 import { base } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
   {
     extends: [base],
     languageOptions: {
@@ -32,51 +34,57 @@ export default [
       },
     },
   },
-];
+]);
 ```
 
 ## Flavours
 
+Flavours are optional rule sets that complement `base`. They must always be used alongside it.
+
 ### NestJS
 
-```javascript
-import { nestjs } from "@abinnovision/eslint-config-base";
+```typescript
+import { base, nestjs } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [nestjs] }];
+export default defineConfig([{ extends: [base, nestjs] }]);
 ```
 
 ### Vitest
 
-```javascript
+```typescript
 import { base, vitest } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base, vitest] }];
+export default defineConfig([{ extends: [base, vitest] }]);
 ```
 
 ### Stylistic
 
 Enforces consistent code style (formatting, spacing, naming conventions).
 
-```javascript
+```typescript
 import { base, stylistic } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [{ extends: [base, stylistic] }];
+export default defineConfig([{ extends: [base, stylistic] }]);
 ```
 
 ### Config Files
 
 For build tool and project configuration files. Does not specify file patterns.
 
-```javascript
+```typescript
 import { base, configFiles } from "@abinnovision/eslint-config-base";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
   { extends: [base] },
   {
     files: ["**/*.config.{ts,js}"],
     extends: [configFiles],
   },
-];
+]);
 ```
 
 ## License

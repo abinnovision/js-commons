@@ -1,6 +1,7 @@
 # @abinnovision/eslint-config-react
 
-ESLint configuration for React applications. Requires **ESLint v9** (v10 not yet supported).
+ESLint configuration for React applications. Builds
+upon [@abinnovision/eslint-config-base](../eslint-config-base).
 
 ## Installation
 
@@ -10,8 +11,8 @@ yarn add --dev @abinnovision/eslint-config-react @abinnovision/eslint-config-bas
 
 ## Usage
 
-```javascript
-// eslint.config.js
+```typescript
+// eslint.config.ts
 import { base } from "@abinnovision/eslint-config-base";
 import { react } from "@abinnovision/eslint-config-react";
 import { defineConfig } from "eslint/config";
@@ -21,9 +22,11 @@ export default defineConfig([{ extends: [base, react] }]);
 
 ## Flavours
 
+Flavours are optional rule sets that complement `react`. They must always be used alongside it.
+
 ### Tailwind CSS
 
-```javascript
+```typescript
 import { base } from "@abinnovision/eslint-config-base";
 import { react, tailwind } from "@abinnovision/eslint-config-react";
 import { defineConfig } from "eslint/config";
