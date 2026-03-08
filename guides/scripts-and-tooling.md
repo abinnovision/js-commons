@@ -60,18 +60,14 @@ yarn add --dev lint-staged
 
 ### Single-package project
 
-Add a `lint-staged` configuration to your `package.json`:
+Add a `lint-staged` configuration to your `package.json`. Replace `<source>`
+and `<all>` with globs from the [common globs](#common-globs) section:
 
 ```json
 {
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{md,json,json5,yaml,yml}": [
-      "prettier --write"
-    ]
+    "<all>": ["prettier --write"],
+    "<source>": ["eslint --fix"]
   }
 }
 ```
@@ -82,32 +78,27 @@ In a monorepo, split lint-staged config between the root and individual
 packages.
 
 **Root `package.json`** handles global files (markdown, JSON, package.json
-sorting):
+sorting). Replace `<root-global>` with a glob from the
+[common globs](#common-globs) section:
 
 ```json
 {
   "lint-staged": {
-    "{*,.github/**/*}.{json,json5,md,yaml,yml}": [
-      "prettier --write"
-    ],
-    "**/package.json": [
-      "sort-package-json"
-    ]
+    "<root-global>": ["prettier --write"],
+    "**/package.json": ["sort-package-json"]
   }
 }
 ```
 
-**Each package's `package.json`** handles its own source files:
+**Each package's `package.json`** handles its own source files. Replace
+`<source>` and `<all>` with globs from the [common globs](#common-globs)
+section:
 
 ```json
 {
   "lint-staged": {
-    "{{src,test}/**/*,*}.{ts,tsx,js,jsx,json,json5,md,yaml,yml}": [
-      "prettier --write"
-    ],
-    "{{src,test}/**/*,*}.{ts,tsx,js,jsx}": [
-      "eslint --fix"
-    ]
+    "<all>": ["prettier --write"],
+    "<source>": ["eslint --fix"]
   }
 }
 ```
@@ -126,15 +117,16 @@ for installation and configuration.
 
 ### Package scripts
 
-Each package defines its own lint and format scripts:
+Each package defines its own lint and format scripts. Replace `<source>` and
+`<all>` with globs from the [common globs](#common-globs) section:
 
 ```json
 {
   "scripts": {
-    "lint:check": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "lint:check": "eslint '<source>'",
+    "lint:fix": "eslint '<source>' --fix",
+    "format:check": "prettier --check '<all>'",
+    "format:fix": "prettier --write '<all>'"
   }
 }
 ```
@@ -142,14 +134,17 @@ Each package defines its own lint and format scripts:
 ### Monorepo root scripts
 
 The root `package.json` orchestrates checks across all packages. Root-level
-`format:check`/`format:fix` handle global files (markdown, JSON, YAML) that
-don't belong to any package. Turbo runs the package-level scripts in parallel:
+prettier handles global files (markdown, JSON, YAML) that don't belong to any
+package. Turbo runs the package-level scripts in parallel:
+
+Replace `<root-global>` with a glob from the
+[common globs](#common-globs) section:
 
 ```json
 {
   "scripts": {
-    "check": "prettier --check '{*,.github/**/*}.{json,json5,md,yaml,yml}' & turbo check",
-    "fix": "prettier --write '{*,.github/**/*}.{json,json5,md,yaml,yml}' & turbo fix"
+    "check": "prettier --check '<root-global>' & turbo check",
+    "fix": "prettier --write '<root-global>' & turbo fix"
   }
 }
 ```
@@ -163,16 +158,10 @@ root correctly delegate to each package:
 {
   "tasks": {
     "check": {
-      "dependsOn": [
-        "format:check",
-        "lint:check"
-      ]
+      "dependsOn": ["format:check", "lint:check"]
     },
     "fix": {
-      "dependsOn": [
-        "format:fix",
-        "lint:fix"
-      ]
+      "dependsOn": ["format:fix", "lint:fix"]
     },
     "format:check": {},
     "format:fix": {},
@@ -185,13 +174,46 @@ root correctly delegate to each package:
 ### Script overview
 
 | Script         | Scope   | Purpose                                         |
-|----------------|---------|-------------------------------------------------|
+| -------------- | ------- | ----------------------------------------------- |
 | `lint:check`   | Package | Check for ESLint errors                         |
 | `lint:fix`     | Package | Auto-fix ESLint errors                          |
 | `format:check` | Package | Check Prettier formatting                       |
 | `format:fix`   | Package | Auto-fix Prettier formatting                    |
 | `check`        | Root    | Run all checks across packages (root only)      |
 | `fix`          | Root    | Auto-fix all issues across packages (root only) |
+
+## Common Globs
+
+Reference globs used in lint-staged configs and package scripts. These are
+starting points — adjust the directory list (`src`, `test`, `scripts`) and file
+extensions to match the files in your repository.
+
+### Source files (ESLint)
+
+TypeScript and JavaScript files:
+
+| Context                       | Glob                               |
+| ----------------------------- | ---------------------------------- |
+| Package with `src` + `test`   | `{{src,test}/**/*,*}.{t,j}s{,x}`  |
+| Package with `src` only       | `{src/**/*,*}.{t,j}s{,x}`         |
+
+### All files (Prettier)
+
+Source files plus markdown, JSON, and YAML:
+
+| Context                       | Glob                                              |
+| ----------------------------- | ------------------------------------------------- |
+| Package with `src` + `test`   | `{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}` |
+| Package with `src` only       | `{src/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}`  |
+| Root global files             | `{*,.github/**/*}.{json{,5},md,y{,a}ml}`          |
+
+### ESLint config files
+
+Config files at the package root (used with the `configFiles` flavour):
+
+| Context         | Glob                    |
+| --------------- | ----------------------- |
+| ESLint config   | `*.{c,m,}{t,j}s`       |
 
 ## See Also
 
