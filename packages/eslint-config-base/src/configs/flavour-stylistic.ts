@@ -35,8 +35,10 @@ export const config = defineConfig([
 			/**
 			 * Require a blank line before block and line comments.
 			 * Comments belong to the following code block, so only enforce
-			 * before, not after. Allows comments at the start of blocks,
-			 * objects, arrays, and classes without a preceding blank line.
+			 * before, not after.
+			 *
+			 * Allows comments at the start of blocks, objects, arrays, classes,
+			 * interfaces, types, enums, and modules without a preceding blank line.
 			 *
 			 * @see https://eslint.style/rules/default/lines-around-comment
 			 */
@@ -49,6 +51,10 @@ export const config = defineConfig([
 					allowObjectStart: true,
 					allowArrayStart: true,
 					allowClassStart: true,
+					allowInterfaceStart: true,
+					allowTypeStart: true,
+					allowEnumStart: true,
+					allowModuleStart: true,
 				},
 			],
 
