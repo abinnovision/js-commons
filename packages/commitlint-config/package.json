@@ -18,19 +18,23 @@
 	},
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs"
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
 		}
 	},
 	"main": "./dist/index.cjs",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"types": "./dist/index.d.cts",
 	"files": [
 		"dist/"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --dts --format esm,cjs --clean",
+		"build": "tsdown",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"lint:check": "eslint 'src/**/*.{ts,js}'",
@@ -56,7 +60,7 @@
 		"@internal/tsconfig": "workspace:^",
 		"eslint": "^9.39.1",
 		"prettier": "^3.4.2",
-		"tsup": "^8.3.6",
+		"tsdown": "^0.21.3",
 		"typescript": "^5.9.3"
 	}
 }
