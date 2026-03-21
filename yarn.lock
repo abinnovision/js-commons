@@ -69,25 +69,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript":
-  version: 0.0.0-use.local
-  resolution: "@abinnovision/eslint-config-typescript@workspace:packages/eslint-config-typescript"
-  dependencies:
-    "@abinnovision/eslint-config-base": "workspace:^"
-    "@abinnovision/prettier-config": "workspace:^"
-    "@internal/tsconfig": "workspace:^"
-    "@typescript-eslint/eslint-plugin": "npm:^8.28.0"
-    "@typescript-eslint/parser": "npm:^8.28.0"
-    eslint: "npm:^9.39.1"
-    eslint-config-alloy: "npm:^5.1.2"
-    prettier: "npm:^3.4.2"
-    tsdown: "npm:^0.21.3"
-    typescript: "npm:^5.9.3"
-  peerDependencies:
-    eslint: ^9.0.0
-  languageName: unknown
-  linkType: soft
-
 "@abinnovision/prettier-config@workspace:^, @abinnovision/prettier-config@workspace:packages/prettier-config":
   version: 0.0.0-use.local
   resolution: "@abinnovision/prettier-config@workspace:packages/prettier-config"
@@ -1183,7 +1164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.56.0, @typescript-eslint/eslint-plugin@npm:^8.28.0":
+"@typescript-eslint/eslint-plugin@npm:8.56.0":
   version: 8.56.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.56.0"
   dependencies:
@@ -1203,7 +1184,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.56.0, @typescript-eslint/parser@npm:^8.28.0":
+"@typescript-eslint/parser@npm:8.56.0":
   version: 8.56.0
   resolution: "@typescript-eslint/parser@npm:8.56.0"
   dependencies:
@@ -2271,40 +2252,6 @@ __metadata:
   version: 4.0.0
   resolution: "escape-string-regexp@npm:4.0.0"
   checksum: 10/98b48897d93060f2322108bf29db0feba7dd774be96cd069458d1453347b25ce8682ecc39859d4bca2203cc0ab19c237bcc71755eff49a0f8d90beadeeba5cc5
-  languageName: node
-  linkType: hard
-
-"eslint-config-alloy@npm:^5.1.2":
-  version: 5.1.2
-  resolution: "eslint-config-alloy@npm:5.1.2"
-  peerDependencies:
-    "@babel/eslint-parser": 7.x
-    "@babel/preset-react": 7.x
-    "@typescript-eslint/eslint-plugin": ">=5.55.0"
-    "@typescript-eslint/parser": ">=5.0.0"
-    eslint: ">=8.24.0"
-    eslint-plugin-react: ">=7.31.8"
-    eslint-plugin-vue: ">=9.5.1"
-    typescript: 5.x
-    vue-eslint-parser: 9.x
-  peerDependenciesMeta:
-    "@babel/eslint-parser":
-      optional: true
-    "@babel/preset-react":
-      optional: true
-    "@typescript-eslint/eslint-plugin":
-      optional: true
-    "@typescript-eslint/parser":
-      optional: true
-    eslint-plugin-react:
-      optional: true
-    eslint-plugin-vue:
-      optional: true
-    typescript:
-      optional: true
-    vue-eslint-parser:
-      optional: true
-  checksum: 10/b3c34a1e0319b6bb6af07eba6c29ffaafc8092f7d379648073ec79f0c64d04b401251978e056ab8e54113e22c33162b83711181dd4ecc286a28bcfaa690b1104
   languageName: node
   linkType: hard
 
