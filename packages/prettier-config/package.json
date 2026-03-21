@@ -16,8 +16,20 @@
 		"email": "info@abigroup.io",
 		"url": "https://abigroup.io/"
 	},
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.cts",
 	"bin": {
 		"sync-editorconfig": "./dist/bin/sync-editorconfig.cjs"
 	},
@@ -26,7 +38,7 @@
 		"assets/"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --dts --format esm --clean && tsup src/bin/* --format cjs --clean -d dist/bin",
+		"build": "tsdown",
 		"format:check": "prettier --check 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"format:fix": "prettier --write 'src/**/*.{ts,js}' '**/*.{md,json,json5,yaml,yml}'",
 		"lint:check": "eslint 'src/**/*.{ts,js}'",
@@ -41,14 +53,14 @@
 			"prettier --write"
 		]
 	},
-	"prettier": "./dist/index.js",
+	"prettier": "./dist/index.mjs",
 	"devDependencies": {
 		"@internal/tsconfig": "workspace:^",
 		"@types/node": "^22.12.0",
 		"@types/prettier": "^3.0.0",
 		"eslint": "^9.39.1",
 		"prettier": "^3.4.2",
-		"tsup": "^8.3.6",
+		"tsdown": "^0.21.3",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {

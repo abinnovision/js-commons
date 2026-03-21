@@ -32,11 +32,13 @@
 	"devDependencies": {
 		"@abinnovision/commitlint-config": "workspace:^",
 		"@abinnovision/prettier-config": "workspace:^",
+		"@arethetypeswrong/core": "^0.18.2",
 		"@commitlint/cli": "^20.1.0",
 		"concurrently": "^9.2.1",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.0.0",
 		"prettier": "^3.4.2",
+		"publint": "^0.3.18",
 		"rimraf": "^6.0.1",
 		"sort-package-json": "^2.15.1",
 		"turbo": "^2.6.1"
