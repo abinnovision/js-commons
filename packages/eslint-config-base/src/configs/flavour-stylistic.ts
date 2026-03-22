@@ -117,4 +117,16 @@ export const config = defineConfig([
 			],
 		},
 	},
+
+	/**
+	 * Disable lines-around-comment for JSX/TSX files.
+	 * The rule lacks AST support for JSX-specific contexts, causing
+	 * unresolvable conflicts with Prettier.
+	 */
+	{
+		files: ["**/*.{tsx,jsx}"],
+		rules: {
+			"@stylistic/lines-around-comment": "off",
+		},
+	},
 ]);
