@@ -6,7 +6,6 @@
 		"packages/commitlint-config": {},
 		"packages/eslint-config-base": {},
 		"packages/eslint-config-react": {},
-		"packages/eslint-config-typescript": {},
 		"packages/prettier-config": {}
 	}
 }
