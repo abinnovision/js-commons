@@ -33,32 +33,6 @@ export const config = defineConfig([
 			"@stylistic/spaced-comment": ["error", "always"],
 
 			/**
-			 * Require a blank line before block and line comments.
-			 * Comments belong to the following code block, so only enforce
-			 * before, not after.
-			 *
-			 * Allows comments at the start of blocks, objects, arrays, classes,
-			 * interfaces, types, enums, and modules without a preceding blank line.
-			 *
-			 * @see https://eslint.style/rules/default/lines-around-comment
-			 */
-			"@stylistic/lines-around-comment": [
-				"error",
-				{
-					beforeBlockComment: true,
-					beforeLineComment: true,
-					allowBlockStart: true,
-					allowObjectStart: true,
-					allowArrayStart: true,
-					allowClassStart: true,
-					allowInterfaceStart: true,
-					allowTypeStart: true,
-					allowEnumStart: true,
-					allowModuleStart: true,
-				},
-			],
-
-			/**
 			 * Enforce line comments to be placed above the code line.
 			 *
 			 * @see https://eslint.style/rules/default/line-comment-position
@@ -115,18 +89,6 @@ export const config = defineConfig([
 				"error",
 				{ max: 1, maxBOF: 0, maxEOF: 0 },
 			],
-		},
-	},
-
-	/**
-	 * Disable lines-around-comment for JSX/TSX files.
-	 * The rule lacks AST support for JSX-specific contexts, causing
-	 * unresolvable conflicts with Prettier.
-	 */
-	{
-		files: ["**/*.{tsx,jsx}"],
-		rules: {
-			"@stylistic/lines-around-comment": "off",
 		},
 	},
 ]);
