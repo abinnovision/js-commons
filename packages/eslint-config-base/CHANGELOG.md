@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.2](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.2.1...eslint-config-base-v3.2.2) (2026-03-22)
+
+
+### Bug Fixes
+
+* remove lines-around-comment rule to resolve conflicts ([#594](https://github.com/abinnovision/js-commons/issues/594)) ([3414a8e](https://github.com/abinnovision/js-commons/commit/3414a8e76637a84c2e71248b9812b9edc17931b0))
+
 ## [3.2.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.2.0...eslint-config-base-v3.2.1) (2026-03-22)
 
 
