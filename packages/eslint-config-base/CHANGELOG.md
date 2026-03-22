@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.2.0...eslint-config-base-v3.2.1) (2026-03-22)
+
+
+### Bug Fixes
+
+* disable lines-around-comment rule for JSX/TSX files due to Prettier conflicts ([#591](https://github.com/abinnovision/js-commons/issues/591)) ([dcd975b](https://github.com/abinnovision/js-commons/commit/dcd975bfea406a2eed54ecb884cafd817e169aa3))
+
 ## [3.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.1.0...eslint-config-base-v3.2.0) (2026-03-08)
 
 
