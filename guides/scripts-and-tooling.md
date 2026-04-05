@@ -23,7 +23,7 @@ This creates a `.husky/` directory with sample hooks.
 
 Create `.husky/commit-msg` to enforce
 [Conventional Commits](https://www.conventionalcommits.org/)
-via [commitlint config](../packages/commitlint-config/README.md):
+via [commitlint config](../packages/commitlint-config/README.md) (see below):
 
 ```shell
 #!/bin/sh
@@ -50,6 +50,12 @@ yarn dedupe --check
 # ./node_modules/.bin/turbo boundaries
 ```
 
+### (Other hooks)
+
+Husky supports any git hook, so feel free to add more as needed.
+**Important:** If no further hooks are needed, you can remove all the other
+default hooks created by `husky init` to keep the repo clean.
+
 ## lint-staged
 
 Install lint-staged in the root of your project:
@@ -68,14 +74,12 @@ Add a `lint-staged` configuration to your `package.json`:
     "{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}": [
       "prettier --write"
     ],
-    "{{src,test}/**/*,*}.{t,j}s{,x}": ["eslint --fix"]
+    "{{src,test}/**/*,*}.{t,j}s{,x}": [
+      "eslint --fix"
+    ]
   }
 }
 ```
-
-> If your package has no `test` directory, drop `test` from the globs — e.g.
-> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
-> variants.
 
 ### Monorepo
 
@@ -93,8 +97,12 @@ sorting):
 ```json
 {
   "lint-staged": {
-    "{*,.github/**/*}.{json{,5},md,y{,a}ml}": ["prettier --write"],
-    "**/package.json": ["sort-package-json"]
+    "{*,.github/**/*}.{json{,5},md,y{,a}ml}": [
+      "prettier --write"
+    ],
+    "**/package.json": [
+      "sort-package-json"
+    ]
   }
 }
 ```
@@ -107,14 +115,12 @@ sorting):
     "{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}": [
       "prettier --write"
     ],
-    "{{src,test}/**/*,*}.{t,j}s{,x}": ["eslint --fix"]
+    "{{src,test}/**/*,*}.{t,j}s{,x}": [
+      "eslint --fix"
+    ]
   }
 }
 ```
-
-> If your package has no `test` directory, drop `test` from the globs — e.g.
-> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
-> variants.
 
 lint-staged automatically resolves the nearest config for each staged file, so
 both root and package configs run without additional setup.
@@ -143,10 +149,6 @@ Each package defines its own lint and format scripts:
 }
 ```
 
-> If your package has no `test` directory, drop `test` from the globs — e.g.
-> `{src/**/*,*}.{t,j}s{,x}`. See [common globs](#common-globs) for all
-> variants.
-
 ### Monorepo root scripts
 
 The root `package.json` orchestrates checks across all packages. Root-level
@@ -171,10 +173,16 @@ root correctly delegate to each package:
 {
   "tasks": {
     "check": {
-      "dependsOn": ["format:check", "lint:check"]
+      "dependsOn": [
+        "format:check",
+        "lint:check"
+      ]
     },
     "fix": {
-      "dependsOn": ["format:fix", "lint:fix"]
+      "dependsOn": [
+        "format:fix",
+        "lint:fix"
+      ]
     },
     "format:check": {},
     "format:fix": {},
@@ -187,7 +195,7 @@ root correctly delegate to each package:
 ### Script overview
 
 | Script         | Scope   | Purpose                                         |
-| -------------- | ------- | ----------------------------------------------- |
+|----------------|---------|-------------------------------------------------|
 | `lint:check`   | Package | Check for ESLint errors                         |
 | `lint:fix`     | Package | Auto-fix ESLint errors                          |
 | `format:check` | Package | Check Prettier formatting                       |
@@ -206,7 +214,7 @@ repository.
 TypeScript and JavaScript files:
 
 | Context                     | Glob                             |
-| --------------------------- | -------------------------------- |
+|-----------------------------|----------------------------------|
 | Package with `src` + `test` | `{{src,test}/**/*,*}.{t,j}s{,x}` |
 | Package with `src` only     | `{src/**/*,*}.{t,j}s{,x}`        |
 
@@ -215,7 +223,7 @@ TypeScript and JavaScript files:
 Source files plus markdown, JSON, and YAML:
 
 | Context                     | Glob                                                   |
-| --------------------------- | ------------------------------------------------------ |
+|-----------------------------|--------------------------------------------------------|
 | Package with `src` + `test` | `{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}` |
 | Package with `src` only     | `{src/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}`        |
 | Root global files           | `{*,.github/**/*}.{json{,5},md,y{,a}ml}`               |
@@ -225,7 +233,7 @@ Source files plus markdown, JSON, and YAML:
 Config files at the package root (used with the `configFiles` flavour):
 
 | Context       | Glob             |
-| ------------- | ---------------- |
+|---------------|------------------|
 | ESLint config | `*.{c,m,}{t,j}s` |
 
 ## See Also
