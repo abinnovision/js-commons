@@ -59,7 +59,7 @@ __metadata:
     "@eslint-react/eslint-plugin": "npm:^2.13.0"
     "@internal/tsconfig": "workspace:^"
     eslint: "npm:^9.39.1"
-    eslint-plugin-better-tailwindcss: "npm:^4.3.0"
+    eslint-plugin-better-tailwindcss: "npm:^4.3.2"
     eslint-plugin-react-hooks: "npm:^7.0.1"
     prettier: "npm:^3.6.2"
     tsdown: "npm:^0.21.3"
@@ -734,7 +734,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/css-tree@npm:^3.6.8":
+"@eslint/css-tree@npm:^3.6.9":
   version: 3.6.9
   resolution: "@eslint/css-tree@npm:3.6.9"
   dependencies:
@@ -2091,13 +2091,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.19.0, enhanced-resolve@npm:^5.7.0":
-  version: 5.19.0
-  resolution: "enhanced-resolve@npm:5.19.0"
+"enhanced-resolve@npm:^5.20.0, enhanced-resolve@npm:^5.7.0":
+  version: 5.20.1
+  resolution: "enhanced-resolve@npm:5.20.1"
   dependencies:
     graceful-fs: "npm:^4.2.4"
     tapable: "npm:^2.3.0"
-  checksum: 10/b537d52173bf1ba903c623f96a43ea3b51466ee2b606b2fcca30d73d453fd79c8683dccbb83523de27cd02763c906f11486e2591a4335e6afe49fa5ad6e67b83
+  checksum: 10/588afc56de97334e5742faebcf8177a504da08ea817d399f9901f35d8e9e5e6fa86b4c2ce95a99081f947764e09c9991cc0fc0ba5751bae455c329643a709187
   languageName: node
   linkType: hard
 
@@ -2278,13 +2278,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-better-tailwindcss@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "eslint-plugin-better-tailwindcss@npm:4.3.0"
+"eslint-plugin-better-tailwindcss@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "eslint-plugin-better-tailwindcss@npm:4.3.2"
   dependencies:
-    "@eslint/css-tree": "npm:^3.6.8"
+    "@eslint/css-tree": "npm:^3.6.9"
     "@valibot/to-json-schema": "npm:^1.5.0"
-    enhanced-resolve: "npm:^5.19.0"
+    enhanced-resolve: "npm:^5.20.0"
     jiti: "npm:^2.6.1"
     synckit: "npm:^0.11.12"
     tailwind-csstree: "npm:^0.1.4"
@@ -2299,7 +2299,7 @@ __metadata:
       optional: true
     oxlint:
       optional: true
-  checksum: 10/72c6767a016f48102be6d082d9be0ebd5218527dca0638c6bb7b63e45c376bb52802b6047bb3d623b410f0cba121876090ee8f7d588617d899de6b39c899416e
+  checksum: 10/7528fabc8b934d99589cd58a4d99b87023f00b3da6faa8cb39b2d2bc72ac2bdf9cd47a76ef17f053ff933294bf609c808207cb75db90e8f6d06633d769a697d6
   languageName: node
   linkType: hard
 

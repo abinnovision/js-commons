@@ -22,7 +22,7 @@ export const config = defineConfig([
 				"warn",
 
 				// Prefer single line when possible. We use tabs for indentation.
-				{ preferSingleLine: true, indent: "tab" },
+				{ preferSingleLine: true, indent: "tab", strictness: "loose" },
 			],
 
 			/**
