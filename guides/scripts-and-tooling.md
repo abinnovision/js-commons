@@ -50,7 +50,7 @@ yarn dedupe --check
 # ./node_modules/.bin/turbo boundaries
 ```
 
-### (Other hooks)
+### Cleanup
 
 Husky supports any git hook, so feel free to add more as needed.
 **Important:** If no further hooks are needed, you can remove all the other
