@@ -2,7 +2,7 @@
 
 Shared JS/TS configurations for abi group GmbH projects.
 
-## Packages
+## Packages Overview
 
 - **[@abinnovision/eslint-config-base](./packages/eslint-config-base)** — ESLint for JS/TS with NestJS, Vitest, and config file flavours.
 - **[@abinnovision/eslint-config-react](./packages/eslint-config-react)** — ESLint for React with optional Tailwind CSS support.
@@ -11,27 +11,16 @@ Shared JS/TS configurations for abi group GmbH projects.
 
 ## Getting Started
 
-Set up all `@abinnovision` config packages in your project:
+This repo provides shared configs for:
 
-1. **Prettier** — Install and reference the shared config in your `package.json`.
-   See [@abinnovision/prettier-config](./packages/prettier-config).
-
-2. **ESLint** — Install and create an `eslint.config.ts` with the base config.
-   Add flavours (NestJS, Vitest, Stylistic) as needed.
-   See [@abinnovision/eslint-config-base](./packages/eslint-config-base) or
-   [@abinnovision/eslint-config-react](./packages/eslint-config-react) for React
-   projects.
-
-3. **Commitlint** — Install and add the config to your `package.json`.
-   See [@abinnovision/commitlint-config](./packages/commitlint-config).
-
-4. **Husky, lint-staged & scripts** — Wire up git hooks, pre-commit checks, and
-   CI-friendly scripts.
-   See [Scripts & Tooling](./guides/scripts-and-tooling.md).
+- **Prettier** — See [@abinnovision/prettier-config](./packages/prettier-config).
+- **ESLint** — See [@abinnovision/eslint-config-base](./packages/eslint-config-base)
+  or [@abinnovision/eslint-config-react](./packages/eslint-config-react) for React.
+- **Commitlint** — See [@abinnovision/commitlint-config](./packages/commitlint-config).
 
 ## Guides
 
-- **[Scripts & Tooling](./guides/scripts-and-tooling.md)** — Husky, lint-staged, commitlint hooks, and recommended scripts.
+- **[Monorepo Scripts & Tooling](./guides/monorepo-scripts-and-tooling.md)** — Husky, lint-staged, commitlint hooks, and recommended scripts for a full monorepo setup.
 
 ## Development
 
