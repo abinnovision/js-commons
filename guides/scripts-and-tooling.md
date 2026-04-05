@@ -203,40 +203,7 @@ root correctly delegate to each package:
 | `check`        | Root    | Run all checks across packages (root only)      |
 | `fix`          | Root    | Auto-fix all issues across packages (root only) |
 
-## Common Globs
-
-Reference globs used in lint-staged configs and package scripts. Adjust the
-directory list (`src`, `test`, `scripts`) and file extensions to match your
-repository.
-
-### Source files (ESLint)
-
-TypeScript and JavaScript files:
-
-| Context                     | Glob                             |
-|-----------------------------|----------------------------------|
-| Package with `src` + `test` | `{{src,test}/**/*,*}.{t,j}s{,x}` |
-| Package with `src` only     | `{src/**/*,*}.{t,j}s{,x}`        |
-
-### All files (Prettier)
-
-Source files plus markdown, JSON, and YAML:
-
-| Context                     | Glob                                                   |
-|-----------------------------|--------------------------------------------------------|
-| Package with `src` + `test` | `{{src,test}/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}` |
-| Package with `src` only     | `{src/**/*,*}.{{t,j}s{,x},json{,5},md,y{,a}ml}`        |
-| Root global files           | `{*,.github/**/*}.{json{,5},md,y{,a}ml}`               |
-
-### ESLint config files
-
-Config files at the package root (used with the `configFiles` flavour):
-
-| Context       | Glob             |
-|---------------|------------------|
-| ESLint config | `*.{c,m,}{t,j}s` |
-
-## See Also
+## References
 
 - [@abinnovision/eslint-config-base](../packages/eslint-config-base/README.md)
 - [@abinnovision/eslint-config-react](../packages/eslint-config-react/README.md)
