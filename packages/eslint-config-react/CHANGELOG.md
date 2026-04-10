@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.1.0...eslint-config-react-v3.1.1) (2026-04-05)
+
+
+### Bug Fixes
+
+* enforce consistent line wrapping with loose strictness ([#596](https://github.com/abinnovision/js-commons/issues/596)) ([df6b53b](https://github.com/abinnovision/js-commons/commit/df6b53b8912ebf32697ba8b1acd5a34f2ab1d277))
+
 ## [3.1.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.0.3...eslint-config-react-v3.1.0) (2026-02-28)
 
 
