@@ -1,6 +1,6 @@
 import jseslint from "@eslint/js";
 import { defineConfig } from "eslint/config";
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImport from "eslint-plugin-import-x";
 import unusedImports from "eslint-plugin-unused-imports";
 import tseslint from "typescript-eslint";
 
@@ -14,7 +14,6 @@ export const config = defineConfig([
 			ecmaVersion: "latest",
 		},
 		plugins: {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 			import: eslintPluginImport,
 			uimports: unusedImports,
 		},
