@@ -1,1 +1,2 @@
 ./node_modules/.bin/commitlint --edit "$1"
+entire hooks git commit-msg "$1" || exit 1

@@ -1,0 +1,1 @@
+entire hooks git post-commit 2>/dev/null || true
