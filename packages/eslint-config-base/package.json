@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/eslint-config-base",
-	"version": "3.2.2",
+	"version": "3.3.0",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
