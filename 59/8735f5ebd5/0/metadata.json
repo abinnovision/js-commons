@@ -1,0 +1,56 @@
+{
+  "cli_version": "0.5.6",
+  "checkpoint_id": "598735f5ebd5",
+  "session_id": "4b5c0c2b-307c-4fe9-9c2b-4d1f397ff728",
+  "strategy": "manual-commit",
+  "created_at": "2026-04-28T10:35:02.999138Z",
+  "branch": "chore/add-entire",
+  "checkpoints_count": 1,
+  "files_touched": [
+    ".husky/commit-msg",
+    ".husky/post-commit",
+    ".husky/post-rewrite",
+    ".husky/pre-push",
+    ".husky/prepare-commit-msg"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "dccaee605452",
+  "token_usage": {
+    "input_tokens": 18,
+    "cache_creation_tokens": 45716,
+    "cache_read_tokens": 127275,
+    "output_tokens": 2017,
+    "api_call_count": 6
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-04-28T10:35:02.995057Z",
+    "agent_lines": 4,
+    "agent_removed": 0,
+    "human_added": 1,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 5,
+    "total_lines_changed": 5,
+    "agent_percentage": 80,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 144,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/agents/entire-search.md": 25,
+        ".claude/settings.json": 84,
+        ".claude/settings.local.json": 34,
+        ".husky/prepare-commit-msg": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.husky/prepare-commit-msg:
+      entire hooks git prepare-commit-msg "$1" "$2" 2>/dev/null || true
+
+    .husky/commit-msg:
+      entire hooks git commit-msg "$1" || exit 1
+
+    .husky/post-commit:
+      entire hooks git post-commit 2>/dev/null || true
+
+    .husky/post-rewrite:
+      entire hooks git post-rewrite "$1" 2>/dev/null || true
+
+    .husky/pre-push:
+      entire hooks git pre-push "$1" || true
+
+Add those to the .husky
+
+---
+
+continue
