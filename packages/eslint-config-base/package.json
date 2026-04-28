@@ -1,12 +1,6 @@
 {
 	"name": "@abinnovision/eslint-config-base",
 	"version": "3.2.2",
-	"publishConfig": {
-		"npm": true,
-		"ghpr": true,
-		"npmAccess": "public"
-	},
-	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
@@ -16,6 +10,7 @@
 		"email": "info@abigroup.io",
 		"url": "https://abigroup.io/"
 	},
+	"type": "module",
 	"exports": {
 		".": {
 			"import": {
@@ -51,10 +46,10 @@
 	},
 	"prettier": "@abinnovision/prettier-config",
 	"dependencies": {
-		"@eslint/js": "^9.0.0",
+		"@eslint/js": "^10.0.0",
 		"@stylistic/eslint-plugin": "^5.10.0",
 		"@vitest/eslint-plugin": "^1.6.9",
-		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-import-x": "^4.16.2",
 		"eslint-plugin-unused-imports": "^4.4.1",
 		"globals": "^17.3.0",
 		"typescript-eslint": "^8.56.0"
@@ -62,12 +57,17 @@
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
 		"@internal/tsconfig": "workspace:^",
-		"eslint": "^9.39.1",
+		"eslint": "^10.0.0",
 		"prettier": "^3.4.2",
 		"tsdown": "^0.21.3",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
-		"eslint": "^9.0.0"
+		"eslint": "^9.0.0 || ^10.0.0"
+	},
+	"publishConfig": {
+		"ghpr": true,
+		"npm": true,
+		"npmAccess": "public"
 	}
 }

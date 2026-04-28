@@ -1,12 +1,6 @@
 {
 	"name": "@abinnovision/commitlint-config",
 	"version": "2.2.4",
-	"publishConfig": {
-		"npm": true,
-		"ghpr": true,
-		"npmAccess": "public"
-	},
-	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
@@ -16,6 +10,7 @@
 		"email": "info@abigroup.io",
 		"url": "https://abigroup.io/"
 	},
+	"type": "module",
 	"exports": {
 		".": {
 			"import": {
@@ -58,9 +53,14 @@
 		"@abinnovision/prettier-config": "workspace:^",
 		"@commitlint/types": "^20.0.0",
 		"@internal/tsconfig": "workspace:^",
-		"eslint": "^9.39.1",
+		"eslint": "^10.0.0",
 		"prettier": "^3.4.2",
 		"tsdown": "^0.21.3",
 		"typescript": "^5.9.3"
+	},
+	"publishConfig": {
+		"ghpr": true,
+		"npm": true,
+		"npmAccess": "public"
 	}
 }

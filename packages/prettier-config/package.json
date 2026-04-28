@@ -1,12 +1,6 @@
 {
 	"name": "@abinnovision/prettier-config",
 	"version": "2.1.5",
-	"publishConfig": {
-		"npm": true,
-		"ghpr": true,
-		"npmAccess": "public"
-	},
-	"type": "module",
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
@@ -16,6 +10,7 @@
 		"email": "info@abigroup.io",
 		"url": "https://abigroup.io/"
 	},
+	"type": "module",
 	"exports": {
 		".": {
 			"import": {
@@ -58,12 +53,17 @@
 		"@internal/tsconfig": "workspace:^",
 		"@types/node": "^22.12.0",
 		"@types/prettier": "^3.0.0",
-		"eslint": "^9.39.1",
+		"eslint": "^10.0.0",
 		"prettier": "^3.4.2",
 		"tsdown": "^0.21.3",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
 		"prettier": "^2.4.0 || ^3.0.0"
+	},
+	"publishConfig": {
+		"ghpr": true,
+		"npm": true,
+		"npmAccess": "public"
 	}
 }
