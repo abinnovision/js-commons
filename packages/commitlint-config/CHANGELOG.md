@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.4...commitlint-config-v2.3.0) (2026-04-28)
+
+
+### Features
+
+* support ESLint 10 in shared configs ([#599](https://github.com/abinnovision/js-commons/issues/599)) ([4de4c56](https://github.com/abinnovision/js-commons/commit/4de4c562df5b43b15de7b52637c7d82bd15e498f))
+
 ## [2.2.4](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.3...commitlint-config-v2.2.4) (2026-02-19)
 
 
