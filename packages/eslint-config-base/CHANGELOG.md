@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.3.0...eslint-config-base-v3.4.0) (2026-04-28)
+
+
+### Features
+
+* add complementary import-x rules to shared base config ([#602](https://github.com/abinnovision/js-commons/issues/602)) ([5e84da1](https://github.com/abinnovision/js-commons/commit/5e84da10aebab4f31ba2712d87c5ed65a71a9d13))
+
 ## [3.3.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.2.2...eslint-config-base-v3.3.0) (2026-04-28)
 
 
