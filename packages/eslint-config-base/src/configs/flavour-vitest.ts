@@ -188,6 +188,15 @@ export const config = defineConfig([
 			"no-console": "off",
 
 			/**
+			 * Allow importing devDependencies in test files.
+			 * Already covered by the base rule's allowlist; kept here as an explicit
+			 * override for consumers that overlay this config on different file globs.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-extraneous-dependencies.md
+			 */
+			"import/no-extraneous-dependencies": "off",
+
+			/**
 			 * Disallow focused tests.
 			 * Prevents .only from being committed.
 			 *
