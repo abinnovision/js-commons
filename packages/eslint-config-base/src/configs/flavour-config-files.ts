@@ -45,6 +45,14 @@ export const config = defineConfig([
 			"max-lines-per-function": "off",
 
 			/**
+			 * Allow importing devDependencies in build/config files.
+			 * Tools like vite, vitest, tsdown are typically devDependencies.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-extraneous-dependencies.md
+			 */
+			"import/no-extraneous-dependencies": "off",
+
+			/**
 			 * Disallow require statements except in import statements.
 			 * Disabled for CommonJS config files.
 			 *

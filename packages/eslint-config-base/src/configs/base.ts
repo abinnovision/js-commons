@@ -396,7 +396,7 @@ export const config = defineConfig([
 			/**
 			 * Enforce a convention in module import order.
 			 *
-			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/order.md
 			 */
 			"import/order": [
 				"error",
@@ -420,23 +420,108 @@ export const config = defineConfig([
 			/**
 			 * Require exports to be placed at the end of the file.
 			 *
-			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/exports-last.md
 			 */
 			"import/exports-last": "warn",
 
 			/**
 			 * Require imports to be placed before other statements.
 			 *
-			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/first.md
 			 */
 			"import/first": "error",
 
 			/**
 			 * Require a newline after import statements.
 			 *
-			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/newline-after-import.md
 			 */
 			"import/newline-after-import": "error",
+
+			/**
+			 * Forbid repeated import of the same module.
+			 *
+			 * Catches splits introduced when consistent-type-imports auto-fixes
+			 * a file that already had a value-only import from the same module.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-duplicates.md
+			 */
+			"import/no-duplicates": ["error", { "prefer-inline": false }],
+
+			/**
+			 * Forbid a module from importing itself.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-self-import.md
+			 */
+			"import/no-self-import": "error",
+
+			/**
+			 * Forbid unnecessary path segments in import and require statements.
+			 * `noUselessIndex` is left at its default of `false` because pure
+			 * ESM / NodeNext resolution does not auto-resolve `./foo` to
+			 * `./foo/index.js`, so trimming `/index.js` would break imports.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-useless-path-segments.md
+			 */
+			"import/no-useless-path-segments": "error",
+
+			/**
+			 * Forbid empty named import blocks (`import {} from "foo"`).
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-empty-named-blocks.md
+			 */
+			"import/no-empty-named-blocks": "error",
+
+			/**
+			 * Forbid `export let` / `export var` declarations.
+			 * Aligns with the existing `no-var` / `prefer-const` rules.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-mutable-exports.md
+			 */
+			"import/no-mutable-exports": "error",
+
+			/**
+			 * Forbid importing packages through relative paths.
+			 * Forces using the workspace name (e.g. `@abinnovision/eslint-config-base`)
+			 * instead of `../../eslint-config-base/src/...` between monorepo packages.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-relative-packages.md
+			 */
+			"import/no-relative-packages": "error",
+
+			/**
+			 * Enforce or ban the use of inline type-only markers.
+			 * `prefer-top-level` complements `@typescript-eslint/consistent-type-imports`
+			 * by also banning mixed `import { type Foo, bar }` forms.
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/consistent-type-specifier-style.md
+			 */
+			"import/consistent-type-specifier-style": ["error", "prefer-top-level"],
+
+			/**
+			 * Forbid importing from packages that aren't declared in the package's
+			 * `dependencies` / `peerDependencies` / `optionalDependencies`.
+			 * Globs in `devDependencies` are file patterns where dev-only imports
+			 * are allowed (tests, configs, build scripts).
+			 *
+			 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-extraneous-dependencies.md
+			 */
+			"import/no-extraneous-dependencies": [
+				"error",
+				{
+					devDependencies: [
+						"**/*.{test,spec}.{ts,tsx,js,jsx,mts,mjs,cts,cjs}",
+						"**/__tests__/**/*.{ts,tsx,js,jsx}",
+						"**/*.config.{ts,js,mts,mjs,cts,cjs}",
+						"**/vitest.config.{ts,js,mts,mjs}",
+						"**/eslint.config.{ts,js,mts,mjs}",
+						"**/scripts/**/*.{ts,js,mts,mjs,cts,cjs}",
+					],
+					optionalDependencies: false,
+					peerDependencies: true,
+					bundledDependencies: true,
+				},
+			],
 
 			/**
 			 * Unused Imports Handling
