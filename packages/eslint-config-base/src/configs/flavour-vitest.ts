@@ -15,6 +15,8 @@ export const config = defineConfig([
 			"**/*.test.{ts,tsx,js,jsx}",
 			"**/*.spec.{ts,tsx,js,jsx}",
 			"**/__tests__/**/*.{ts,tsx,js,jsx}",
+			"**/test/**/*.{ts,tsx,js,jsx}",
+			"**/tests/**/*.{ts,tsx,js,jsx}",
 		],
 		plugins: {
 			vitest,

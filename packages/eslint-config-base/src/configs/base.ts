@@ -512,6 +512,8 @@ export const config = defineConfig([
 					devDependencies: [
 						"**/*.{test,spec}.{ts,tsx,js,jsx,mts,mjs,cts,cjs}",
 						"**/__tests__/**/*.{ts,tsx,js,jsx}",
+						"**/test/**/*.{ts,tsx,js,jsx,mts,mjs,cts,cjs}",
+						"**/tests/**/*.{ts,tsx,js,jsx,mts,mjs,cts,cjs}",
 						"**/*.config.{ts,js,mts,mjs,cts,cjs}",
 						"**/vitest.config.{ts,js,mts,mjs}",
 						"**/eslint.config.{ts,js,mts,mjs}",
