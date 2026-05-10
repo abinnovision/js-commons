@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.4.0...eslint-config-base-v3.4.1) (2026-05-10)
+
+
+### Bug Fixes
+
+* add support for additional test directory patterns ([#604](https://github.com/abinnovision/js-commons/issues/604)) ([8eee69b](https://github.com/abinnovision/js-commons/commit/8eee69b96dd490cb4aff6464b20294d6642b9fec))
+
 ## [3.4.0](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.3.0...eslint-config-base-v3.4.0) (2026-04-28)
 
 
