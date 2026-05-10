@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.6.1",
+  "checkpoint_id": "7a1da8b797fe",
+  "strategy": "manual-commit",
+  "branch": "fix/vitest-dir-imports",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "packages/eslint-config-base/src/configs/base.ts",
+    "packages/eslint-config-base/src/configs/flavour-vitest.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/7a/1da8b797fe/0/metadata.json",
+      "transcript": "/7a/1da8b797fe/0/full.jsonl",
+      "content_hash": "/7a/1da8b797fe/0/content_hash.txt",
+      "prompt": "/7a/1da8b797fe/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 48,
+    "cache_creation_tokens": 57867,
+    "cache_read_tokens": 322158,
+    "output_tokens": 3269,
+    "api_call_count": 8
+  }
+}

@@ -1,0 +1,6 @@
+Just noticed when I'm in a test file within the <package>/test which should be vite world, it shouts:
+
+ESLint: 'vitest' should be listed in the project's dependencies, not devDependencies. (import/no-extraneous-dependencies)
+
+---
+Any idea how we can add this in
