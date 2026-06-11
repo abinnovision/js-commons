@@ -1,6 +1,10 @@
 {
 	"name": "@abinnovision/eslint-config-react",
 	"version": "3.2.0",
+	"homepage": "https://github.com/abinnovision/js-commons",
+	"bugs": {
+		"url": "https://github.com/abinnovision/js-commons/issues"
+	},
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},

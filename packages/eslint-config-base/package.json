@@ -1,6 +1,10 @@
 {
 	"name": "@abinnovision/eslint-config-base",
 	"version": "3.4.1",
+	"homepage": "https://github.com/abinnovision/js-commons",
+	"bugs": {
+		"url": "https://github.com/abinnovision/js-commons/issues"
+	},
 	"repository": {
 		"url": "https://github.com/abinnovision/js-commons"
 	},
