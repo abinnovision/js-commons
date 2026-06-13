@@ -1,47 +1,50 @@
 {
-	"name": "@internal/js-commons",
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
-	"scripts": {
-		"build": "turbo build",
-		"check": "concurrently 'yarn:format:check' 'turbo check'",
-		"clean": "rimraf packages/*/dist",
-		"fix": "concurrently 'yarn:format:fix' 'turbo fix'",
-		"format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
-		"format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
-		"postinstall": "husky install",
-		"sort:check": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json' --check",
-		"sort:fix": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json'"
-	},
-	"commitlint": {
-		"extends": [
-			"@abinnovision/commitlint-config"
-		]
-	},
-	"lint-staged": {
-		"{*,.github/**/*}.{md,json,json5,yaml,yml}": [
-			"prettier --write"
-		],
-		"**/package.json": [
-			"sort-package-json"
-		]
-	},
-	"prettier": "@abinnovision/prettier-config",
-	"devDependencies": {
-		"@abinnovision/commitlint-config": "workspace:^",
-		"@abinnovision/prettier-config": "workspace:^",
-		"@arethetypeswrong/core": "^0.18.2",
-		"@commitlint/cli": "^20.1.0",
-		"concurrently": "^9.2.1",
-		"husky": "^9.1.7",
-		"lint-staged": "^16.0.0",
-		"prettier": "^3.4.2",
-		"publint": "^0.3.18",
-		"rimraf": "^6.0.1",
-		"sort-package-json": "^2.15.1",
-		"turbo": "^2.6.1"
-	},
-	"packageManager": "yarn@4.13.0"
+  "name": "@internal/js-commons",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "check": "concurrently 'yarn:format:check' 'turbo check'",
+    "clean": "rimraf packages/*/dist",
+    "fix": "concurrently 'yarn:format:fix' 'turbo fix'",
+    "format:check": "prettier --check '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+    "format:fix": "prettier --write '{*,.github/**/*}.{md,json,json5,yaml,yml}'",
+    "postinstall": "husky install",
+    "sort:check": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json' --check",
+    "sort:fix": "sort-package-json '{apps,packages}/**!(node_modules)/package.json' 'package.json'"
+  },
+  "commitlint": {
+    "extends": [
+      "@abinnovision/commitlint-config"
+    ]
+  },
+  "lint-staged": {
+    "{*,.github/**/*}.{md,json,json5,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/package.json": [
+      "sort-package-json"
+    ]
+  },
+  "prettier": "@abinnovision/prettier-config",
+  "devDependencies": {
+    "@abinnovision/commitlint-config": "workspace:^",
+    "@abinnovision/prettier-config": "workspace:^",
+    "@arethetypeswrong/core": "^0.18.2",
+    "@commitlint/cli": "^20.1.0",
+    "concurrently": "^9.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.4.2",
+    "publint": "^0.3.18",
+    "rimraf": "^6.0.1",
+    "sort-package-json": "^2.15.1",
+    "turbo": "^2.6.1"
+  },
+  "packageManager": "yarn@4.13.0",
+  "bugs": {
+    "url": "https://github.com/abinnovision/js-commons/issues"
+  }
 }
