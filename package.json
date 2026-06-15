@@ -41,7 +41,7 @@
 		"publint": "^0.3.18",
 		"rimraf": "^6.0.1",
 		"sort-package-json": "^2.15.1",
-		"turbo": "^2.6.1"
+		"turbo": "^2.9.14"
 	},
 	"packageManager": "yarn@4.17.0"
 }
