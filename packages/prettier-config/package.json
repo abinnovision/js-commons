@@ -1,12 +1,21 @@
 {
 	"name": "@abinnovision/prettier-config",
 	"version": "2.2.0",
+	"description": "Shared Prettier configuration with an opinionated .editorconfig.",
+	"keywords": [
+		"prettier",
+		"prettier-config",
+		"editorconfig",
+		"formatting"
+	],
 	"homepage": "https://github.com/abinnovision/js-commons",
 	"bugs": {
 		"url": "https://github.com/abinnovision/js-commons/issues"
 	},
 	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
+		"type": "git",
+		"url": "git+https://github.com/abinnovision/js-commons.git",
+		"directory": "packages/prettier-config"
 	},
 	"license": "Apache-2.0",
 	"author": {
