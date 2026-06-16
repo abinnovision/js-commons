@@ -1,12 +1,20 @@
 {
 	"name": "@abinnovision/commitlint-config",
 	"version": "2.3.0",
+	"description": "Commitlint configuration based on Conventional Commits with abi group GmbH adjustments.",
+	"keywords": [
+		"commitlint",
+		"commitlint-config",
+		"conventional-commits"
+	],
 	"homepage": "https://github.com/abinnovision/js-commons",
 	"bugs": {
 		"url": "https://github.com/abinnovision/js-commons/issues"
 	},
 	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
+		"type": "git",
+		"url": "git+https://github.com/abinnovision/js-commons.git",
+		"directory": "packages/commitlint-config"
 	},
 	"license": "Apache-2.0",
 	"author": {

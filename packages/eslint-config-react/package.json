@@ -1,12 +1,21 @@
 {
 	"name": "@abinnovision/eslint-config-react",
 	"version": "3.2.0",
+	"description": "Shared ESLint configuration for React applications, building on @abinnovision/eslint-config-base.",
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"react",
+		"typescript"
+	],
 	"homepage": "https://github.com/abinnovision/js-commons",
 	"bugs": {
 		"url": "https://github.com/abinnovision/js-commons/issues"
 	},
 	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
+		"type": "git",
+		"url": "git+https://github.com/abinnovision/js-commons.git",
+		"directory": "packages/eslint-config-react"
 	},
 	"license": "Apache-2.0",
 	"author": {

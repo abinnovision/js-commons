@@ -1,12 +1,21 @@
 {
 	"name": "@abinnovision/eslint-config-base",
 	"version": "3.4.1",
+	"description": "Shared ESLint configuration for JavaScript and TypeScript projects.",
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"typescript",
+		"javascript"
+	],
 	"homepage": "https://github.com/abinnovision/js-commons",
 	"bugs": {
 		"url": "https://github.com/abinnovision/js-commons/issues"
 	},
 	"repository": {
-		"url": "https://github.com/abinnovision/js-commons"
+		"type": "git",
+		"url": "git+https://github.com/abinnovision/js-commons.git",
+		"directory": "packages/eslint-config-base"
 	},
 	"license": "Apache-2.0",
 	"author": {
