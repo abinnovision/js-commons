@@ -70,9 +70,9 @@
 	"devDependencies": {
 		"@abinnovision/prettier-config": "workspace:^",
 		"@internal/tsconfig": "workspace:^",
-		"eslint": "^10.0.0",
-		"prettier": "^3.4.2",
-		"tsdown": "^0.21.3",
+		"eslint": "^10.7.0",
+		"prettier": "^3.9.5",
+		"tsdown": "^0.22.5",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
