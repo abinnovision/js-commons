@@ -43,70 +43,105 @@ export const config = defineConfig([
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-dangerously-set-innerhtml
 			 */
-			"@eslint-react/dom/no-dangerously-set-innerhtml": "error",
+			"@eslint-react/dom-no-dangerously-set-innerhtml": "error",
 
 			/**
 			 * Disallow dangerouslySetInnerHTML with children.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-dangerously-set-innerhtml-with-children
 			 */
-			"@eslint-react/dom/no-dangerously-set-innerhtml-with-children": "error",
+			"@eslint-react/dom-no-dangerously-set-innerhtml-with-children": "error",
 
 			/**
 			 * Disallow javascript: URLs.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-script-url
 			 */
-			"@eslint-react/dom/no-script-url": "error",
+			"@eslint-react/dom-no-script-url": "error",
 
 			/**
 			 * Enforce security attributes on target="_blank" links.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-unsafe-target-blank
 			 */
-			"@eslint-react/dom/no-unsafe-target-blank": "error",
+			"@eslint-react/dom-no-unsafe-target-blank": "error",
 
 			/**
 			 * Require sandbox attribute on iframes.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-missing-iframe-sandbox
 			 */
-			"@eslint-react/dom/no-missing-iframe-sandbox": "error",
+			"@eslint-react/dom-no-missing-iframe-sandbox": "error",
 
 			/**
 			 * Disallow unsafe iframe sandbox values.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-unsafe-iframe-sandbox
 			 */
-			"@eslint-react/dom/no-unsafe-iframe-sandbox": "error",
+			"@eslint-react/dom-no-unsafe-iframe-sandbox": "error",
+
+			/**
+			 * Disallow string style prop; use an object instead.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/dom-no-string-style-prop
+			 */
+			"@eslint-react/dom-no-string-style-prop": "error",
+
+			/**
+			 * Disallow unknown DOM properties.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/dom-no-unknown-property
+			 */
+			"@eslint-react/dom-no-unknown-property": "error",
+
+			/**
+			 * Require an explicit type attribute on button elements.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/dom-no-missing-button-type
+			 */
+			"@eslint-react/dom-no-missing-button-type": "warn",
 
 			/**
 			 * Prevent memory leaks from event listeners.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-event-listener
 			 */
-			"@eslint-react/web-api/no-leaked-event-listener": "error",
+			"@eslint-react/web-api-no-leaked-event-listener": "error",
 
 			/**
 			 * Prevent memory leaks from intervals.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-interval
 			 */
-			"@eslint-react/web-api/no-leaked-interval": "error",
+			"@eslint-react/web-api-no-leaked-interval": "error",
 
 			/**
 			 * Prevent memory leaks from timeouts.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-timeout
 			 */
-			"@eslint-react/web-api/no-leaked-timeout": "error",
+			"@eslint-react/web-api-no-leaked-timeout": "error",
 
 			/**
 			 * Prevent memory leaks from resize observers.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-resize-observer
 			 */
-			"@eslint-react/web-api/no-leaked-resize-observer": "error",
+			"@eslint-react/web-api-no-leaked-resize-observer": "error",
+
+			/**
+			 * Prevent memory leaks from unaborted fetch requests.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-fetch
+			 */
+			"@eslint-react/web-api-no-leaked-fetch": "error",
+
+			/**
+			 * Prevent memory leaks from intersection observers.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-intersection-observer
+			 */
+			"@eslint-react/web-api-no-leaked-intersection-observer": "error",
 
 			/**
 			 * Warn against using array indices as keys.
@@ -130,32 +165,18 @@ export const config = defineConfig([
 			"@eslint-react/no-unstable-context-value": "warn",
 
 			/**
-			 * Warn against unnecessary useCallback.
+			 * Warn against referential-type values used as default props.
 			 *
-			 * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-callback
+			 * @see https://eslint-react.xyz/docs/rules/no-unstable-default-props
 			 */
-			"@eslint-react/no-unnecessary-use-callback": "warn",
+			"@eslint-react/no-unstable-default-props": "warn",
 
 			/**
-			 * Warn against unnecessary useMemo.
+			 * Prevent leaked values (e.g. 0/NaN) from conditional rendering.
 			 *
-			 * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-memo
+			 * @see https://eslint-react.xyz/docs/rules/no-leaked-conditional-rendering
 			 */
-			"@eslint-react/no-unnecessary-use-memo": "warn",
-
-			/**
-			 * Disallow duplicate props in JSX.
-			 *
-			 * @see https://eslint-react.xyz/docs/rules/jsx-no-duplicate-props
-			 */
-			"@eslint-react/jsx-no-duplicate-props": "error",
-
-			/**
-			 * Disallow undefined components in JSX.
-			 *
-			 * @see https://eslint-react.xyz/docs/rules/jsx-no-undef
-			 */
-			"@eslint-react/jsx-no-undef": "error",
+			"@eslint-react/no-leaked-conditional-rendering": "error",
 
 			/**
 			 * Require keys for array elements.
@@ -165,11 +186,18 @@ export const config = defineConfig([
 			"@eslint-react/no-missing-key": "error",
 
 			/**
+			 * Disallow duplicate keys on sibling elements.
+			 *
+			 * @see https://eslint-react.xyz/docs/rules/no-duplicate-key
+			 */
+			"@eslint-react/no-duplicate-key": "error",
+
+			/**
 			 * Disallow children prop.
 			 *
-			 * @see https://eslint-react.xyz/docs/rules/no-children-prop
+			 * @see https://eslint-react.xyz/docs/rules/jsx-no-children-prop
 			 */
-			"@eslint-react/no-children-prop": "error",
+			"@eslint-react/jsx-no-children-prop": "error",
 
 			/**
 			 * Disallow direct state mutation.
@@ -179,18 +207,11 @@ export const config = defineConfig([
 			"@eslint-react/no-direct-mutation-state": "error",
 
 			/**
-			 * Disallow string refs.
-			 *
-			 * @see https://eslint-react.xyz/docs/rules/no-string-refs
-			 */
-			"@eslint-react/no-string-refs": "error",
-
-			/**
 			 * Disallow findDOMNode.
 			 *
 			 * @see https://eslint-react.xyz/docs/rules/dom-no-find-dom-node
 			 */
-			"@eslint-react/dom/no-find-dom-node": "error",
+			"@eslint-react/dom-no-find-dom-node": "error",
 		},
 	},
 ]);
