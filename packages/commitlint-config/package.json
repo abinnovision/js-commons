@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/commitlint-config",
-	"version": "2.3.0",
+	"version": "2.3.1",
 	"description": "Commitlint configuration based on Conventional Commits with abi group GmbH adjustments.",
 	"keywords": [
 		"commitlint",

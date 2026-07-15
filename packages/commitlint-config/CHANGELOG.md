@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.3.0...commitlint-config-v2.3.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([#623](https://github.com/abinnovision/js-commons/issues/623)) ([d8d4d55](https://github.com/abinnovision/js-commons/commit/d8d4d558fa08db29d8a7d97cc5b1be5a23709afe))
+
 ## [2.3.0](https://github.com/abinnovision/js-commons/compare/commitlint-config-v2.2.4...commitlint-config-v2.3.0) (2026-04-28)
 
 

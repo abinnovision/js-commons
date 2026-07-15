@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/eslint-config-react",
-	"version": "3.2.0",
+	"version": "4.0.0",
 	"description": "Shared ESLint configuration for React applications, building on @abinnovision/eslint-config-base.",
 	"keywords": [
 		"eslint",
