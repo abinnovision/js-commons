@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.2.0...eslint-config-react-v4.0.0) (2026-07-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **eslint-config-react:** migrate @eslint-react/eslint-plugin to v5 ([#625](https://github.com/abinnovision/js-commons/issues/625))
+
+### Bug Fixes
+
+* **eslint-config-react:** migrate @eslint-react/eslint-plugin to v5 ([#625](https://github.com/abinnovision/js-commons/issues/625)) ([f112ed3](https://github.com/abinnovision/js-commons/commit/f112ed38ef6f31daca77ecb040e0af0291a186f4))
+* upgrade dependencies ([#623](https://github.com/abinnovision/js-commons/issues/623)) ([d8d4d55](https://github.com/abinnovision/js-commons/commit/d8d4d558fa08db29d8a7d97cc5b1be5a23709afe))
+
 ## [3.2.0](https://github.com/abinnovision/js-commons/compare/eslint-config-react-v3.1.1...eslint-config-react-v3.2.0) (2026-04-28)
 
 

@@ -1,6 +1,6 @@
 {
 	"name": "@abinnovision/eslint-config-base",
-	"version": "3.4.1",
+	"version": "3.4.2",
 	"description": "Shared ESLint configuration for JavaScript and TypeScript projects.",
 	"keywords": [
 		"eslint",

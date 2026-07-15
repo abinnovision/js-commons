@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.2](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.4.1...eslint-config-base-v3.4.2) (2026-07-15)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([#623](https://github.com/abinnovision/js-commons/issues/623)) ([d8d4d55](https://github.com/abinnovision/js-commons/commit/d8d4d558fa08db29d8a7d97cc5b1be5a23709afe))
+
 ## [3.4.1](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.4.0...eslint-config-base-v3.4.1) (2026-05-10)
 
 
