@@ -25,4 +25,3 @@ jobs:
 
       # There are no tests currently
       test-types: ""
-    secrets: inherit
