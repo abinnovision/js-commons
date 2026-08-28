@@ -11,7 +11,7 @@ on:
 jobs:
   polyglot-monorepo-stack:
     name: CI/CD
-    uses: abinnovision/actions/.github/workflows/workflow.yaml@polyglot-monorepo-stack-v1
+    uses: abinnovision/actions/.github/workflows/workflow.yaml@polyglot-monorepo-stack-v2
     with:
       # Publishing configuration
       enable-package-publishing: true
