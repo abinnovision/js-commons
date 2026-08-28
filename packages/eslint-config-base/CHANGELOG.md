@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.3](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.4.2...eslint-config-base-v3.4.3) (2026-08-28)
+
+
+### Bug Fixes
+
+* **deps:** bump typescript-eslint from 8.63.0 to 8.64.0 ([#627](https://github.com/abinnovision/js-commons/issues/627)) ([5fcc87c](https://github.com/abinnovision/js-commons/commit/5fcc87cb4379ff7137fe4197064072eb8fb43adb))
+
 ## [3.4.2](https://github.com/abinnovision/js-commons/compare/eslint-config-base-v3.4.1...eslint-config-base-v3.4.2) (2026-07-15)
 
 

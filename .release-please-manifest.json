@@ -1,5 +1,5 @@
 {
-	"packages/eslint-config-base": "3.4.2",
+	"packages/eslint-config-base": "3.4.3",
 	"packages/eslint-config-react": "4.0.0",
 	"packages/prettier-config": "2.2.0",
 	"packages/commitlint-config": "2.3.1"
